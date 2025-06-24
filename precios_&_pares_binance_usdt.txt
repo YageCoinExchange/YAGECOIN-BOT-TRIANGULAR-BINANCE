@@ -1,0 +1,2860 @@
+Microsoft Windows [Versión 10.0.22000.2538]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\Administrador del PC>Cd C:\Users\Administrador del PC\Desktop\yagecoin-bot\backend
+
+C:\Users\Administrador del PC\Desktop\yagecoin-bot\backend>node route-finder.js
+🚀 INICIANDO BÚSQUEDA DE RUTAS REALES
+NaN
+🔍 Cargando mercados SPOT REALES de Binance...
+✅ Encontrados 3062 mercados SPOT activos
+
+🔍 Buscando rutas triangulares con lógica: TOKENA/USDT → TOKENA/TOKENB → TOKENB/USDT
+📊 Encontrados 405 pares con USDT
+
+🔍 Verificando 1129 rutas encontradas...
+✅ USDT → ETH → BTC → USDT
+   Símbolos: ETH/USDT → ETH/BTC → BTC/USDT
+✅ USDT → BNB → BTC → USDT
+   Símbolos: BNB/USDT → BNB/BTC → BTC/USDT
+✅ USDT → NEO → BTC → USDT
+   Símbolos: NEO/USDT → NEO/BTC → BTC/USDT
+✅ USDT → LTC → BTC → USDT
+   Símbolos: LTC/USDT → LTC/BTC → BTC/USDT
+✅ USDT → QTUM → BTC → USDT
+   Símbolos: QTUM/USDT → QTUM/BTC → BTC/USDT
+✅ USDT → ADA → BTC → USDT
+   Símbolos: ADA/USDT → ADA/BTC → BTC/USDT
+✅ USDT → XRP → BTC → USDT
+   Símbolos: XRP/USDT → XRP/BTC → BTC/USDT
+✅ USDT → BTC → TUSD → USDT
+   Símbolos: BTC/USDT → BTC/TUSD → TUSD/USDT
+✅ USDT → IOTA → BTC → USDT
+   Símbolos: IOTA/USDT → IOTA/BTC → BTC/USDT
+✅ USDT → XLM → BTC → USDT
+   Símbolos: XLM/USDT → XLM/BTC → BTC/USDT
+✅ USDT → ONT → BTC → USDT
+   Símbolos: ONT/USDT → ONT/BTC → BTC/USDT
+✅ USDT → TRX → BTC → USDT
+   Símbolos: TRX/USDT → TRX/BTC → BTC/USDT
+✅ USDT → ETC → BTC → USDT
+   Símbolos: ETC/USDT → ETC/BTC → BTC/USDT
+✅ USDT → ICX → BTC → USDT
+   Símbolos: ICX/USDT → ICX/BTC → BTC/USDT
+✅ USDT → VET → BTC → USDT
+   Símbolos: VET/USDT → VET/BTC → BTC/USDT
+✅ USDT → BTC → USDC → USDT
+   Símbolos: BTC/USDT → BTC/USDC → USDC/USDT
+✅ USDT → LINK → BTC → USDT
+   Símbolos: LINK/USDT → LINK/BTC → BTC/USDT
+✅ USDT → ONG → BTC → USDT
+   Símbolos: ONG/USDT → ONG/BTC → BTC/USDT
+❌ USDT → HOT → BTC → USDT
+   ❌ HOT/BTC no está activo
+✅ USDT → ZIL → BTC → USDT
+   Símbolos: ZIL/USDT → ZIL/BTC → BTC/USDT
+✅ USDT → ZRX → BTC → USDT
+   Símbolos: ZRX/USDT → ZRX/BTC → BTC/USDT
+✅ USDT → FET → BTC → USDT
+   Símbolos: FET/USDT → FET/BTC → BTC/USDT
+✅ USDT → BAT → BTC → USDT
+   Símbolos: BAT/USDT → BAT/BTC → BTC/USDT
+✅ USDT → ZEC → BTC → USDT
+   Símbolos: ZEC/USDT → ZEC/BTC → BTC/USDT
+❌ USDT → IOST → BTC → USDT
+   ❌ IOST/BTC no está activo
+❌ USDT → CELR → BTC → USDT
+   ❌ CELR/BTC no está activo
+✅ USDT → DASH → BTC → USDT
+   Símbolos: DASH/USDT → DASH/BTC → BTC/USDT
+✅ USDT → THETA → BTC → USDT
+   Símbolos: THETA/USDT → THETA/BTC → BTC/USDT
+✅ USDT → ENJ → BTC → USDT
+   Símbolos: ENJ/USDT → ENJ/BTC → BTC/USDT
+✅ USDT → ATOM → BTC → USDT
+   Símbolos: ATOM/USDT → ATOM/BTC → BTC/USDT
+✅ USDT → TFUEL → BTC → USDT
+   Símbolos: TFUEL/USDT → TFUEL/BTC → BTC/USDT
+❌ USDT → ONE → BTC → USDT
+   ❌ ONE/BTC no está activo
+✅ USDT → ALGO → BTC → USDT
+   Símbolos: ALGO/USDT → ALGO/BTC → BTC/USDT
+✅ USDT → DOGE → BTC → USDT
+   Símbolos: DOGE/USDT → DOGE/BTC → BTC/USDT
+✅ USDT → DUSK → BTC → USDT
+   Símbolos: DUSK/USDT → DUSK/BTC → BTC/USDT
+✅ USDT → ANKR → BTC → USDT
+   Símbolos: ANKR/USDT → ANKR/BTC → BTC/USDT
+❌ USDT → WIN → BTC → USDT
+   ❌ WIN/BTC no está activo
+❌ USDT → COS → BTC → USDT
+   ❌ COS/BTC no está activo
+✅ USDT → MTL → BTC → USDT
+   Símbolos: MTL/USDT → MTL/BTC → BTC/USDT
+❌ USDT → DENT → BTC → USDT
+   ❌ DENT/BTC no está activo
+✅ USDT → WAN → BTC → USDT
+   Símbolos: WAN/USDT → WAN/BTC → BTC/USDT
+❌ USDT → FUN → BTC → USDT
+   ❌ FUN/BTC no está activo
+❌ USDT → CVC → BTC → USDT
+   ❌ CVC/BTC no está activo
+✅ USDT → CHZ → BTC → USDT
+   Símbolos: CHZ/USDT → CHZ/BTC → BTC/USDT
+✅ USDT → BAND → BTC → USDT
+   Símbolos: BAND/USDT → BAND/BTC → BTC/USDT
+✅ USDT → XTZ → BTC → USDT
+   Símbolos: XTZ/USDT → XTZ/BTC → BTC/USDT
+✅ USDT → RVN → BTC → USDT
+   Símbolos: RVN/USDT → RVN/BTC → BTC/USDT
+✅ USDT → HBAR → BTC → USDT
+   Símbolos: HBAR/USDT → HBAR/BTC → BTC/USDT
+✅ USDT → NKN → BTC → USDT
+   Símbolos: NKN/USDT → NKN/BTC → BTC/USDT
+✅ USDT → STX → BTC → USDT
+   Símbolos: STX/USDT → STX/BTC → BTC/USDT
+✅ USDT → KAVA → BTC → USDT
+   Símbolos: KAVA/USDT → KAVA/BTC → BTC/USDT
+✅ USDT → ARPA → BTC → USDT
+   Símbolos: ARPA/USDT → ARPA/BTC → BTC/USDT
+✅ USDT → IOTX → BTC → USDT
+   Símbolos: IOTX/USDT → IOTX/BTC → BTC/USDT
+✅ USDT → RLC → BTC → USDT
+   Símbolos: RLC/USDT → RLC/BTC → BTC/USDT
+✅ USDT → BCH → BTC → USDT
+   Símbolos: BCH/USDT → BCH/BTC → BTC/USDT
+❌ USDT → FTT → BTC → USDT
+   ❌ FTT/BTC no está activo
+✅ USDT → BTC → EUR → USDT
+   Símbolos: BTC/USDT → BTC/EUR → EUR/USDT
+✅ USDT → OGN → BTC → USDT
+   Símbolos: OGN/USDT → OGN/BTC → BTC/USDT
+✅ USDT → LSK → BTC → USDT
+   Símbolos: LSK/USDT → LSK/BTC → BTC/USDT
+❌ USDT → BNT → BTC → USDT
+   ❌ BNT/BTC no está activo
+✅ USDT → LTO → BTC → USDT
+   Símbolos: LTO/USDT → LTO/BTC → BTC/USDT
+❌ USDT → MBL → BTC → USDT
+   ❌ MBL/BTC no está activo
+✅ USDT → COTI → BTC → USDT
+   Símbolos: COTI/USDT → COTI/BTC → BTC/USDT
+✅ USDT → DATA → BTC → USDT
+   Símbolos: DATA/USDT → DATA/BTC → BTC/USDT
+✅ USDT → SOL → BTC → USDT
+   Símbolos: SOL/USDT → SOL/BTC → BTC/USDT
+✅ USDT → CTSI → BTC → USDT
+   Símbolos: CTSI/USDT → CTSI/BTC → BTC/USDT
+✅ USDT → HIVE → BTC → USDT
+   Símbolos: HIVE/USDT → HIVE/BTC → BTC/USDT
+✅ USDT → CHR → BTC → USDT
+   Símbolos: CHR/USDT → CHR/BTC → BTC/USDT
+✅ USDT → ARDR → BTC → USDT
+   Símbolos: ARDR/USDT → ARDR/BTC → BTC/USDT
+❌ USDT → MDT → BTC → USDT
+   ❌ MDT/BTC no está activo
+✅ USDT → KNC → BTC → USDT
+   Símbolos: KNC/USDT → KNC/BTC → BTC/USDT
+✅ USDT → LRC → BTC → USDT
+   Símbolos: LRC/USDT → LRC/BTC → BTC/USDT
+✅ USDT → COMP → BTC → USDT
+   Símbolos: COMP/USDT → COMP/BTC → BTC/USDT
+❌ USDT → SC → BTC → USDT
+   ❌ SC/BTC no está activo
+✅ USDT → ZEN → BTC → USDT
+   Símbolos: ZEN/USDT → ZEN/BTC → BTC/USDT
+✅ USDT → SNX → BTC → USDT
+   Símbolos: SNX/USDT → SNX/BTC → BTC/USDT
+❌ USDT → DGB → BTC → USDT
+   ❌ DGB/BTC no está activo
+✅ USDT → SXP → BTC → USDT
+   Símbolos: SXP/USDT → SXP/BTC → BTC/USDT
+✅ USDT → MKR → BTC → USDT
+   Símbolos: MKR/USDT → MKR/BTC → BTC/USDT
+❌ USDT → DCR → BTC → USDT
+   ❌ DCR/BTC no está activo
+✅ USDT → STORJ → BTC → USDT
+   Símbolos: STORJ/USDT → STORJ/BTC → BTC/USDT
+✅ USDT → MANA → BTC → USDT
+   Símbolos: MANA/USDT → MANA/BTC → BTC/USDT
+✅ USDT → YFI → BTC → USDT
+   Símbolos: YFI/USDT → YFI/BTC → BTC/USDT
+✅ USDT → KMD → BTC → USDT
+   Símbolos: KMD/USDT → KMD/BTC → BTC/USDT
+✅ USDT → JST → BTC → USDT
+   Símbolos: JST/USDT → JST/BTC → BTC/USDT
+✅ USDT → CRV → BTC → USDT
+   Símbolos: CRV/USDT → CRV/BTC → BTC/USDT
+✅ USDT → SAND → BTC → USDT
+   Símbolos: SAND/USDT → SAND/BTC → BTC/USDT
+✅ USDT → NMR → BTC → USDT
+   Símbolos: NMR/USDT → NMR/BTC → BTC/USDT
+✅ USDT → DOT → BTC → USDT
+   Símbolos: DOT/USDT → DOT/BTC → BTC/USDT
+❌ USDT → LUNA → BTC → USDT
+   ❌ LUNA/BTC no está activo
+❌ USDT → RSR → BTC → USDT
+   ❌ RSR/BTC no está activo
+✅ USDT → PAXG → BTC → USDT
+   Símbolos: PAXG/USDT → PAXG/BTC → BTC/USDT
+✅ USDT → TRB → BTC → USDT
+   Símbolos: TRB/USDT → TRB/BTC → BTC/USDT
+✅ USDT → SUSHI → BTC → USDT
+   Símbolos: SUSHI/USDT → SUSHI/BTC → BTC/USDT
+✅ USDT → KSM → BTC → USDT
+   Símbolos: KSM/USDT → KSM/BTC → BTC/USDT
+✅ USDT → EGLD → BTC → USDT
+   Símbolos: EGLD/USDT → EGLD/BTC → BTC/USDT
+✅ USDT → DIA → BTC → USDT
+   Símbolos: DIA/USDT → DIA/BTC → BTC/USDT
+✅ USDT → RUNE → BTC → USDT
+   Símbolos: RUNE/USDT → RUNE/BTC → BTC/USDT
+✅ USDT → FIO → BTC → USDT
+   Símbolos: FIO/USDT → FIO/BTC → BTC/USDT
+✅ USDT → UMA → BTC → USDT
+   Símbolos: UMA/USDT → UMA/BTC → BTC/USDT
+✅ USDT → BEL → BTC → USDT
+   Símbolos: BEL/USDT → BEL/BTC → BTC/USDT
+✅ USDT → UNI → BTC → USDT
+   Símbolos: UNI/USDT → UNI/BTC → BTC/USDT
+✅ USDT → OXT → BTC → USDT
+   Símbolos: OXT/USDT → OXT/BTC → BTC/USDT
+❌ USDT → SUN → BTC → USDT
+   ❌ SUN/BTC no está activo
+✅ USDT → AVAX → BTC → USDT
+   Símbolos: AVAX/USDT → AVAX/BTC → BTC/USDT
+✅ USDT → FLM → BTC → USDT
+   Símbolos: FLM/USDT → FLM/BTC → BTC/USDT
+❌ USDT → UTK → BTC → USDT
+   ❌ UTK/BTC no está activo
+✅ USDT → XVS → BTC → USDT
+   Símbolos: XVS/USDT → XVS/BTC → BTC/USDT
+❌ USDT → ALPHA → BTC → USDT
+   ❌ ALPHA/BTC no está activo
+✅ USDT → AAVE → BTC → USDT
+   Símbolos: AAVE/USDT → AAVE/BTC → BTC/USDT
+✅ USDT → NEAR → BTC → USDT
+   Símbolos: NEAR/USDT → NEAR/BTC → BTC/USDT
+✅ USDT → FIL → BTC → USDT
+   Símbolos: FIL/USDT → FIL/BTC → BTC/USDT
+✅ USDT → INJ → BTC → USDT
+   Símbolos: INJ/USDT → INJ/BTC → BTC/USDT
+✅ USDT → AUDIO → BTC → USDT
+   Símbolos: AUDIO/USDT → AUDIO/BTC → BTC/USDT
+✅ USDT → CTK → BTC → USDT
+   Símbolos: CTK/USDT → CTK/BTC → BTC/USDT
+✅ USDT → AXS → BTC → USDT
+   Símbolos: AXS/USDT → AXS/BTC → BTC/USDT
+✅ USDT → STRAX → BTC → USDT
+   Símbolos: STRAX/USDT → STRAX/BTC → BTC/USDT
+✅ USDT → ROSE → BTC → USDT
+   Símbolos: ROSE/USDT → ROSE/BTC → BTC/USDT
+✅ USDT → AVA → BTC → USDT
+   Símbolos: AVA/USDT → AVA/BTC → BTC/USDT
+✅ USDT → SKL → BTC → USDT
+   Símbolos: SKL/USDT → SKL/BTC → BTC/USDT
+✅ USDT → GRT → BTC → USDT
+   Símbolos: GRT/USDT → GRT/BTC → BTC/USDT
+❌ USDT → JUV → BTC → USDT
+   ❌ JUV/BTC no está activo
+❌ USDT → PSG → BTC → USDT
+   ❌ PSG/BTC no está activo
+✅ USDT → 1INCH → BTC → USDT
+   Símbolos: 1INCH/USDT → 1INCH/BTC → BTC/USDT
+✅ USDT → OG → BTC → USDT
+   Símbolos: OG/USDT → OG/BTC → BTC/USDT
+❌ USDT → ATM → BTC → USDT
+   ❌ ATM/BTC no está activo
+❌ USDT → ASR → BTC → USDT
+   ❌ ASR/BTC no está activo
+✅ USDT → CELO → BTC → USDT
+   Símbolos: CELO/USDT → CELO/BTC → BTC/USDT
+✅ USDT → RIF → BTC → USDT
+   Símbolos: RIF/USDT → RIF/BTC → BTC/USDT
+❌ USDT → TRU → BTC → USDT
+   ❌ TRU/BTC no está activo
+❌ USDT → CKB → BTC → USDT
+   ❌ CKB/BTC no está activo
+❌ USDT → TWT → BTC → USDT
+   ❌ TWT/BTC no está activo
+✅ USDT → SFP → BTC → USDT
+   Símbolos: SFP/USDT → SFP/BTC → BTC/USDT
+✅ USDT → DODO → BTC → USDT
+   Símbolos: DODO/USDT → DODO/BTC → BTC/USDT
+✅ USDT → CAKE → BTC → USDT
+   Símbolos: CAKE/USDT → CAKE/BTC → BTC/USDT
+❌ USDT → ACM → BTC → USDT
+   ❌ ACM/BTC no está activo
+✅ USDT → FIS → BTC → USDT
+   Símbolos: FIS/USDT → FIS/BTC → BTC/USDT
+✅ USDT → OM → BTC → USDT
+   Símbolos: OM/USDT → OM/BTC → BTC/USDT
+❌ USDT → POND → BTC → USDT
+   ❌ POND/BTC no está activo
+❌ USDT → DEGO → BTC → USDT
+   ❌ DEGO/BTC no está activo
+❌ USDT → ALICE → BTC → USDT
+   ❌ ALICE/BTC no está activo
+❌ USDT → PERP → BTC → USDT
+   ❌ PERP/BTC no está activo
+✅ USDT → SUPER → BTC → USDT
+   Símbolos: SUPER/USDT → SUPER/BTC → BTC/USDT
+✅ USDT → CFX → BTC → USDT
+   Símbolos: CFX/USDT → CFX/BTC → BTC/USDT
+❌ USDT → TKO → BTC → USDT
+   ❌ TKO/BTC no está activo
+❌ USDT → TLM → BTC → USDT
+   ❌ TLM/BTC no está activo
+❌ USDT → BAR → BTC → USDT
+   ❌ BAR/BTC no está activo
+✅ USDT → FORTH → BTC → USDT
+   Símbolos: FORTH/USDT → FORTH/BTC → BTC/USDT
+✅ USDT → BAKE → BTC → USDT
+   Símbolos: BAKE/USDT → BAKE/BTC → BTC/USDT
+✅ USDT → ICP → BTC → USDT
+   Símbolos: ICP/USDT → ICP/BTC → BTC/USDT
+✅ USDT → AR → BTC → USDT
+   Símbolos: AR/USDT → AR/BTC → BTC/USDT
+✅ USDT → LPT → BTC → USDT
+   Símbolos: LPT/USDT → LPT/BTC → BTC/USDT
+❌ USDT → XVG → BTC → USDT
+   ❌ XVG/BTC no está activo
+✅ USDT → ATA → BTC → USDT
+   Símbolos: ATA/USDT → ATA/BTC → BTC/USDT
+❌ USDT → GTC → BTC → USDT
+   ❌ GTC/BTC no está activo
+✅ USDT → PHA → BTC → USDT
+   Símbolos: PHA/USDT → PHA/BTC → BTC/USDT
+❌ USDT → MLN → BTC → USDT
+   ❌ MLN/BTC no está activo
+❌ USDT → C98 → BTC → USDT
+   ❌ C98/BTC no está activo
+✅ USDT → QNT → BTC → USDT
+   Símbolos: QNT/USDT → QNT/BTC → BTC/USDT
+✅ USDT → FLOW → BTC → USDT
+   Símbolos: FLOW/USDT → FLOW/BTC → BTC/USDT
+✅ USDT → MINA → BTC → USDT
+   Símbolos: MINA/USDT → MINA/BTC → BTC/USDT
+❌ USDT → FARM → BTC → USDT
+   ❌ FARM/BTC no está activo
+❌ USDT → QUICK → BTC → USDT
+   ❌ QUICK/BTC no está activo
+❌ USDT → MBOX → BTC → USDT
+   ❌ MBOX/BTC no está activo
+✅ USDT → REQ → BTC → USDT
+   Símbolos: REQ/USDT → REQ/BTC → BTC/USDT
+✅ USDT → WAXP → BTC → USDT
+   Símbolos: WAXP/USDT → WAXP/BTC → BTC/USDT
+❌ USDT → GNO → BTC → USDT
+   ❌ GNO/BTC no está activo
+✅ USDT → DYDX → BTC → USDT
+   Símbolos: DYDX/USDT → DYDX/BTC → BTC/USDT
+❌ USDT → IDEX → BTC → USDT
+   ❌ IDEX/BTC no está activo
+❌ USDT → BTC → USDP → USDT
+   ❌ BTC/USDP no está activo
+✅ USDT → GALA → BTC → USDT
+   Símbolos: GALA/USDT → GALA/BTC → BTC/USDT
+✅ USDT → ILV → BTC → USDT
+   Símbolos: ILV/USDT → ILV/BTC → BTC/USDT
+✅ USDT → YGG → BTC → USDT
+   Símbolos: YGG/USDT → YGG/BTC → BTC/USDT
+✅ USDT → SYS → BTC → USDT
+   Símbolos: SYS/USDT → SYS/BTC → BTC/USDT
+✅ USDT → FIDA → BTC → USDT
+   Símbolos: FIDA/USDT → FIDA/BTC → BTC/USDT
+✅ USDT → AGLD → BTC → USDT
+   Símbolos: AGLD/USDT → AGLD/BTC → BTC/USDT
+❌ USDT → RAD → BTC → USDT
+   ❌ RAD/BTC no está activo
+✅ USDT → RARE → BTC → USDT
+   Símbolos: RARE/USDT → RARE/BTC → BTC/USDT
+❌ USDT → LAZIO → BTC → USDT
+   ❌ LAZIO/BTC no está activo
+❌ USDT → CHESS → BTC → USDT
+   ❌ CHESS/BTC no está activo
+✅ USDT → ADX → BTC → USDT
+   Símbolos: ADX/USDT → ADX/BTC → BTC/USDT
+✅ USDT → AUCTION → BTC → USDT
+   Símbolos: AUCTION/USDT → AUCTION/BTC → BTC/USDT
+✅ USDT → MOVR → BTC → USDT
+   Símbolos: MOVR/USDT → MOVR/BTC → BTC/USDT
+❌ USDT → CITY → BTC → USDT
+   ❌ CITY/BTC no está activo
+✅ USDT → ENS → BTC → USDT
+   Símbolos: ENS/USDT → ENS/BTC → BTC/USDT
+❌ USDT → QI → BTC → USDT
+   ❌ QI/BTC no está activo
+❌ USDT → PORTO → BTC → USDT
+   ❌ PORTO/BTC no está activo
+✅ USDT → POWR → BTC → USDT
+   Símbolos: POWR/USDT → POWR/BTC → BTC/USDT
+❌ USDT → JASMY → BTC → USDT
+   ❌ JASMY/BTC no está activo
+❌ USDT → AMP → BTC → USDT
+   ❌ AMP/BTC no está activo
+✅ USDT → PYR → BTC → USDT
+   Símbolos: PYR/USDT → PYR/BTC → BTC/USDT
+❌ USDT → ALCX → BTC → USDT
+   ❌ ALCX/BTC no está activo
+✅ USDT → SANTOS → BTC → USDT
+   Símbolos: SANTOS/USDT → SANTOS/BTC → BTC/USDT
+✅ USDT → BICO → BTC → USDT
+   Símbolos: BICO/USDT → BICO/BTC → BTC/USDT
+✅ USDT → FLUX → BTC → USDT
+   Símbolos: FLUX/USDT → FLUX/BTC → BTC/USDT
+❌ USDT → FXS → BTC → USDT
+   ❌ FXS/BTC no está activo
+❌ USDT → VOXEL → BTC → USDT
+   ❌ VOXEL/BTC no está activo
+❌ USDT → HIGH → BTC → USDT
+   ❌ HIGH/BTC no está activo
+❌ USDT → CVX → BTC → USDT
+   ❌ CVX/BTC no está activo
+✅ USDT → PEOPLE → BTC → USDT
+   Símbolos: PEOPLE/USDT → PEOPLE/BTC → BTC/USDT
+❌ USDT → SPELL → BTC → USDT
+   ❌ SPELL/BTC no está activo
+✅ USDT → JOE → BTC → USDT
+   Símbolos: JOE/USDT → JOE/BTC → BTC/USDT
+✅ USDT → ACH → BTC → USDT
+   Símbolos: ACH/USDT → ACH/BTC → BTC/USDT
+✅ USDT → IMX → BTC → USDT
+   Símbolos: IMX/USDT → IMX/BTC → BTC/USDT
+✅ USDT → GLMR → BTC → USDT
+   Símbolos: GLMR/USDT → GLMR/BTC → BTC/USDT
+✅ USDT → LOKA → BTC → USDT
+   Símbolos: LOKA/USDT → LOKA/BTC → BTC/USDT
+✅ USDT → SCRT → BTC → USDT
+   Símbolos: SCRT/USDT → SCRT/BTC → BTC/USDT
+✅ USDT → API3 → BTC → USDT
+   Símbolos: API3/USDT → API3/BTC → BTC/USDT
+❌ USDT → ACA → BTC → USDT
+   ❌ ACA/BTC no está activo
+✅ USDT → XNO → BTC → USDT
+   Símbolos: XNO/USDT → XNO/BTC → BTC/USDT
+❌ USDT → WOO → BTC → USDT
+   ❌ WOO/BTC no está activo
+❌ USDT → ALPINE → BTC → USDT
+   ❌ ALPINE/BTC no está activo
+✅ USDT → ASTR → BTC → USDT
+   Símbolos: ASTR/USDT → ASTR/BTC → BTC/USDT
+✅ USDT → GMT → BTC → USDT
+   Símbolos: GMT/USDT → GMT/BTC → BTC/USDT
+✅ USDT → KDA → BTC → USDT
+   Símbolos: KDA/USDT → KDA/BTC → BTC/USDT
+✅ USDT → APE → BTC → USDT
+   Símbolos: APE/USDT → APE/BTC → BTC/USDT
+✅ USDT → STEEM → BTC → USDT
+   Símbolos: STEEM/USDT → STEEM/BTC → BTC/USDT
+✅ USDT → NEXO → BTC → USDT
+   Símbolos: NEXO/USDT → NEXO/BTC → BTC/USDT
+✅ USDT → LDO → BTC → USDT
+   Símbolos: LDO/USDT → LDO/BTC → BTC/USDT
+✅ USDT → OP → BTC → USDT
+   Símbolos: OP/USDT → OP/BTC → BTC/USDT
+✅ USDT → STG → BTC → USDT
+   Símbolos: STG/USDT → STG/BTC → BTC/USDT
+❌ USDT → GMX → BTC → USDT
+   ❌ GMX/BTC no está activo
+✅ USDT → POLYX → BTC → USDT
+   Símbolos: POLYX/USDT → POLYX/BTC → BTC/USDT
+✅ USDT → APT → BTC → USDT
+   Símbolos: APT/USDT → APT/BTC → BTC/USDT
+❌ USDT → OSMO → BTC → USDT
+   ❌ OSMO/BTC no está activo
+✅ USDT → HFT → BTC → USDT
+   Símbolos: HFT/USDT → HFT/BTC → BTC/USDT
+✅ USDT → PHB → BTC → USDT
+   Símbolos: PHB/USDT → PHB/BTC → BTC/USDT
+❌ USDT → HOOK → BTC → USDT
+   ❌ HOOK/BTC no está activo
+✅ USDT → MAGIC → BTC → USDT
+   Símbolos: MAGIC/USDT → MAGIC/BTC → BTC/USDT
+❌ USDT → RPL → BTC → USDT
+   ❌ RPL/BTC no está activo
+❌ USDT → GNS → BTC → USDT
+   ❌ GNS/BTC no está activo
+❌ USDT → SYN → BTC → USDT
+   ❌ SYN/BTC no está activo
+✅ USDT → SSV → BTC → USDT
+   Símbolos: SSV/USDT → SSV/BTC → BTC/USDT
+❌ USDT → LQTY → BTC → USDT
+   ❌ LQTY/BTC no está activo
+✅ USDT → GAS → BTC → USDT
+   Símbolos: GAS/USDT → GAS/BTC → BTC/USDT
+✅ USDT → GLM → BTC → USDT
+   Símbolos: GLM/USDT → GLM/BTC → BTC/USDT
+❌ USDT → PROM → BTC → USDT
+   ❌ PROM/BTC no está activo
+❌ USDT → QKC → BTC → USDT
+   ❌ QKC/BTC no está activo
+✅ USDT → ID → BTC → USDT
+   Símbolos: ID/USDT → ID/BTC → BTC/USDT
+✅ USDT → ARB → BTC → USDT
+   Símbolos: ARB/USDT → ARB/BTC → BTC/USDT
+❌ USDT → RDNT → BTC → USDT
+   ❌ RDNT/BTC no está activo
+✅ USDT → WBTC → BTC → USDT
+   Símbolos: WBTC/USDT → WBTC/BTC → BTC/USDT
+❌ USDT → EDU → BTC → USDT
+   ❌ EDU/BTC no está activo
+✅ USDT → SUI → BTC → USDT
+   Símbolos: SUI/USDT → SUI/BTC → BTC/USDT
+✅ USDT → MAV → BTC → USDT
+   Símbolos: MAV/USDT → MAV/BTC → BTC/USDT
+✅ USDT → PENDLE → BTC → USDT
+   Símbolos: PENDLE/USDT → PENDLE/BTC → BTC/USDT
+✅ USDT → ARKM → BTC → USDT
+   Símbolos: ARKM/USDT → ARKM/BTC → BTC/USDT
+✅ USDT → WLD → BTC → USDT
+   Símbolos: WLD/USDT → WLD/BTC → BTC/USDT
+✅ USDT → BTC → FDUSD → USDT
+   Símbolos: BTC/USDT → BTC/FDUSD → FDUSD/USDT
+✅ USDT → SEI → BTC → USDT
+   Símbolos: SEI/USDT → SEI/BTC → BTC/USDT
+✅ USDT → CYBER → BTC → USDT
+   Símbolos: CYBER/USDT → CYBER/BTC → BTC/USDT
+❌ USDT → ARK → BTC → USDT
+   ❌ ARK/BTC no está activo
+❌ USDT → NTRN → BTC → USDT
+   ❌ NTRN/BTC no está activo
+✅ USDT → TIA → BTC → USDT
+   Símbolos: TIA/USDT → TIA/BTC → BTC/USDT
+✅ USDT → ORDI → BTC → USDT
+   Símbolos: ORDI/USDT → ORDI/BTC → BTC/USDT
+✅ USDT → PIVX → BTC → USDT
+   Símbolos: PIVX/USDT → PIVX/BTC → BTC/USDT
+❌ USDT → VIC → BTC → USDT
+   ❌ VIC/BTC no está activo
+❌ USDT → BLUR → BTC → USDT
+   ❌ BLUR/BTC no está activo
+❌ USDT → VANRY → BTC → USDT
+   ❌ VANRY/BTC no está activo
+❌ USDT → BTC → AEUR → USDT
+   ❌ BTC/AEUR no está activo
+❌ USDT → ACE → BTC → USDT
+   ❌ ACE/BTC no está activo
+✅ USDT → NFP → BTC → USDT
+   Símbolos: NFP/USDT → NFP/BTC → BTC/USDT
+✅ USDT → AI → BTC → USDT
+   Símbolos: AI/USDT → AI/BTC → BTC/USDT
+❌ USDT → XAI → BTC → USDT
+   ❌ XAI/BTC no está activo
+✅ USDT → MANTA → BTC → USDT
+   Símbolos: MANTA/USDT → MANTA/BTC → BTC/USDT
+✅ USDT → ALT → BTC → USDT
+   Símbolos: ALT/USDT → ALT/BTC → BTC/USDT
+✅ USDT → PYTH → BTC → USDT
+   Símbolos: PYTH/USDT → PYTH/BTC → BTC/USDT
+✅ USDT → RONIN → BTC → USDT
+   Símbolos: RONIN/USDT → RONIN/BTC → BTC/USDT
+❌ USDT → DYM → BTC → USDT
+   ❌ DYM/BTC no está activo
+❌ USDT → PIXEL → BTC → USDT
+   ❌ PIXEL/BTC no está activo
+❌ USDT → STRK → BTC → USDT
+   ❌ STRK/BTC no está activo
+✅ USDT → PORTAL → BTC → USDT
+   Símbolos: PORTAL/USDT → PORTAL/BTC → BTC/USDT
+✅ USDT → AXL → BTC → USDT
+   Símbolos: AXL/USDT → AXL/BTC → BTC/USDT
+✅ USDT → WIF → BTC → USDT
+   Símbolos: WIF/USDT → WIF/BTC → BTC/USDT
+❌ USDT → METIS → BTC → USDT
+   ❌ METIS/BTC no está activo
+✅ USDT → AEVO → BTC → USDT
+   Símbolos: AEVO/USDT → AEVO/BTC → BTC/USDT
+❌ USDT → BOME → BTC → USDT
+   ❌ BOME/BTC no está activo
+❌ USDT → ETHFI → BTC → USDT
+   ❌ ETHFI/BTC no está activo
+✅ USDT → ENA → BTC → USDT
+   Símbolos: ENA/USDT → ENA/BTC → BTC/USDT
+✅ USDT → W → BTC → USDT
+   Símbolos: W/USDT → W/BTC → BTC/USDT
+❌ USDT → TNSR → BTC → USDT
+   ❌ TNSR/BTC no está activo
+✅ USDT → SAGA → BTC → USDT
+   Símbolos: SAGA/USDT → SAGA/BTC → BTC/USDT
+✅ USDT → TAO → BTC → USDT
+   Símbolos: TAO/USDT → TAO/BTC → BTC/USDT
+✅ USDT → OMNI → BTC → USDT
+   Símbolos: OMNI/USDT → OMNI/BTC → BTC/USDT
+❌ USDT → REZ → BTC → USDT
+   ❌ REZ/BTC no está activo
+✅ USDT → BB → BTC → USDT
+   Símbolos: BB/USDT → BB/BTC → BTC/USDT
+✅ USDT → IO → BTC → USDT
+   Símbolos: IO/USDT → IO/BTC → BTC/USDT
+✅ USDT → ZK → BTC → USDT
+   Símbolos: ZK/USDT → ZK/BTC → BTC/USDT
+✅ USDT → ZRO → BTC → USDT
+   Símbolos: ZRO/USDT → ZRO/BTC → BTC/USDT
+✅ USDT → BANANA → BTC → USDT
+   Símbolos: BANANA/USDT → BANANA/BTC → BTC/USDT
+✅ USDT → RENDER → BTC → USDT
+   Símbolos: RENDER/USDT → RENDER/BTC → BTC/USDT
+✅ USDT → TON → BTC → USDT
+   Símbolos: TON/USDT → TON/BTC → BTC/USDT
+✅ USDT → BTC → EURI → USDT
+   Símbolos: BTC/USDT → BTC/EURI → EURI/USDT
+✅ USDT → SLF → BTC → USDT
+   Símbolos: SLF/USDT → SLF/BTC → BTC/USDT
+✅ USDT → POL → BTC → USDT
+   Símbolos: POL/USDT → POL/BTC → BTC/USDT
+✅ USDT → EIGEN → BTC → USDT
+   Símbolos: EIGEN/USDT → EIGEN/BTC → BTC/USDT
+✅ USDT → SCR → BTC → USDT
+   Símbolos: SCR/USDT → SCR/BTC → BTC/USDT
+✅ USDT → PNUT → BTC → USDT
+   Símbolos: PNUT/USDT → PNUT/BTC → BTC/USDT
+✅ USDT → USUAL → BTC → USDT
+   Símbolos: USUAL/USDT → USUAL/BTC → BTC/USDT
+❌ USDT → THE → BTC → USDT
+   ❌ THE/BTC no está activo
+✅ USDT → MOVE → BTC → USDT
+   Símbolos: MOVE/USDT → MOVE/BTC → BTC/USDT
+✅ USDT → ME → BTC → USDT
+   Símbolos: ME/USDT → ME/BTC → BTC/USDT
+✅ USDT → S → BTC → USDT
+   Símbolos: S/USDT → S/BTC → BTC/USDT
+✅ USDT → BERA → BTC → USDT
+   Símbolos: BERA/USDT → BERA/BTC → BTC/USDT
+✅ USDT → LAYER → BTC → USDT
+   Símbolos: LAYER/USDT → LAYER/BTC → BTC/USDT
+✅ USDT → HEI → BTC → USDT
+   Símbolos: HEI/USDT → HEI/BTC → BTC/USDT
+✅ USDT → KAITO → BTC → USDT
+   Símbolos: KAITO/USDT → KAITO/BTC → BTC/USDT
+✅ USDT → SHELL → BTC → USDT
+   Símbolos: SHELL/USDT → SHELL/BTC → BTC/USDT
+✅ USDT → RED → BTC → USDT
+   Símbolos: RED/USDT → RED/BTC → BTC/USDT
+✅ USDT → AWE → BTC → USDT
+   Símbolos: AWE/USDT → AWE/BTC → BTC/USDT
+✅ USDT → A → BTC → USDT
+   Símbolos: A/USDT → A/BTC → BTC/USDT
+✅ USDT → BNB → ETH → USDT
+   Símbolos: BNB/USDT → BNB/ETH → ETH/USDT
+❌ USDT → NEO → ETH → USDT
+   ❌ NEO/ETH no está activo
+✅ USDT → LTC → ETH → USDT
+   Símbolos: LTC/USDT → LTC/ETH → ETH/USDT
+✅ USDT → QTUM → ETH → USDT
+   Símbolos: QTUM/USDT → QTUM/ETH → ETH/USDT
+✅ USDT → ADA → ETH → USDT
+   Símbolos: ADA/USDT → ADA/ETH → ETH/USDT
+✅ USDT → XRP → ETH → USDT
+   Símbolos: XRP/USDT → XRP/ETH → ETH/USDT
+✅ USDT → ETH → TUSD → USDT
+   Símbolos: ETH/USDT → ETH/TUSD → TUSD/USDT
+✅ USDT → IOTA → ETH → USDT
+   Símbolos: IOTA/USDT → IOTA/ETH → ETH/USDT
+✅ USDT → XLM → ETH → USDT
+   Símbolos: XLM/USDT → XLM/ETH → ETH/USDT
+❌ USDT → ONT → ETH → USDT
+   ❌ ONT/ETH no está activo
+✅ USDT → TRX → ETH → USDT
+   Símbolos: TRX/USDT → TRX/ETH → ETH/USDT
+✅ USDT → ETC → ETH → USDT
+   Símbolos: ETC/USDT → ETC/ETH → ETH/USDT
+❌ USDT → ICX → ETH → USDT
+   ❌ ICX/ETH no está activo
+✅ USDT → VET → ETH → USDT
+   Símbolos: VET/USDT → VET/ETH → ETH/USDT
+✅ USDT → ETH → USDC → USDT
+   Símbolos: ETH/USDT → ETH/USDC → USDC/USDT
+✅ USDT → LINK → ETH → USDT
+   Símbolos: LINK/USDT → LINK/ETH → ETH/USDT
+✅ USDT → HOT → ETH → USDT
+   Símbolos: HOT/USDT → HOT/ETH → ETH/USDT
+✅ USDT → ZIL → ETH → USDT
+   Símbolos: ZIL/USDT → ZIL/ETH → ETH/USDT
+❌ USDT → ZRX → ETH → USDT
+   ❌ ZRX/ETH no está activo
+❌ USDT → BAT → ETH → USDT
+   ❌ BAT/ETH no está activo
+✅ USDT → ZEC → ETH → USDT
+   Símbolos: ZEC/USDT → ZEC/ETH → ETH/USDT
+❌ USDT → IOST → ETH → USDT
+   ❌ IOST/ETH no está activo
+❌ USDT → CELR → ETH → USDT
+   ❌ CELR/ETH no está activo
+✅ USDT → DASH → ETH → USDT
+   Símbolos: DASH/USDT → DASH/ETH → ETH/USDT
+❌ USDT → THETA → ETH → USDT
+   ❌ THETA/ETH no está activo
+❌ USDT → ENJ → ETH → USDT
+   ❌ ENJ/ETH no está activo
+✅ USDT → ATOM → ETH → USDT
+   Símbolos: ATOM/USDT → ATOM/ETH → ETH/USDT
+❌ USDT → ONE → ETH → USDT
+   ❌ ONE/ETH no está activo
+❌ USDT → ALGO → ETH → USDT
+   ❌ ALGO/ETH no está activo
+❌ USDT → MTL → ETH → USDT
+   ❌ MTL/ETH no está activo
+✅ USDT → DENT → ETH → USDT
+   Símbolos: DENT/USDT → DENT/ETH → ETH/USDT
+❌ USDT → WAN → ETH → USDT
+   ❌ WAN/ETH no está activo
+❌ USDT → FUN → ETH → USDT
+   ❌ FUN/ETH no está activo
+❌ USDT → CVC → ETH → USDT
+   ❌ CVC/ETH no está activo
+❌ USDT → XTZ → ETH → USDT
+   ❌ XTZ/ETH no está activo
+❌ USDT → KAVA → ETH → USDT
+   ❌ KAVA/ETH no está activo
+❌ USDT → ARPA → ETH → USDT
+   ❌ ARPA/ETH no está activo
+✅ USDT → IOTX → ETH → USDT
+   Símbolos: IOTX/USDT → IOTX/ETH → ETH/USDT
+✅ USDT → RLC → ETH → USDT
+   Símbolos: RLC/USDT → RLC/ETH → ETH/USDT
+❌ USDT → FTT → ETH → USDT
+   ❌ FTT/ETH no está activo
+✅ USDT → ETH → EUR → USDT
+   Símbolos: ETH/USDT → ETH/EUR → EUR/USDT
+❌ USDT → LSK → ETH → USDT
+   ❌ LSK/ETH no está activo
+❌ USDT → BNT → ETH → USDT
+   ❌ BNT/ETH no está activo
+❌ USDT → DATA → ETH → USDT
+   ❌ DATA/ETH no está activo
+✅ USDT → SOL → ETH → USDT
+   Símbolos: SOL/USDT → SOL/ETH → ETH/USDT
+❌ USDT → CHR → ETH → USDT
+   ❌ CHR/ETH no está activo
+❌ USDT → ARDR → ETH → USDT
+   ❌ ARDR/ETH no está activo
+❌ USDT → KNC → ETH → USDT
+   ❌ KNC/ETH no está activo
+✅ USDT → LRC → ETH → USDT
+   Símbolos: LRC/USDT → LRC/ETH → ETH/USDT
+✅ USDT → SC → ETH → USDT
+   Símbolos: SC/USDT → SC/ETH → ETH/USDT
+❌ USDT → ZEN → ETH → USDT
+   ❌ ZEN/ETH no está activo
+❌ USDT → SNX → ETH → USDT
+   ❌ SNX/ETH no está activo
+❌ USDT → STORJ → ETH → USDT
+   ❌ STORJ/ETH no está activo
+✅ USDT → MANA → ETH → USDT
+   Símbolos: MANA/USDT → MANA/ETH → ETH/USDT
+❌ USDT → KMD → ETH → USDT
+   ❌ KMD/ETH no está activo
+❌ USDT → CRV → ETH → USDT
+   ❌ CRV/ETH no está activo
+❌ USDT → SAND → ETH → USDT
+   ❌ SAND/ETH no está activo
+✅ USDT → DOT → ETH → USDT
+   Símbolos: DOT/USDT → DOT/ETH → ETH/USDT
+❌ USDT → LUNA → ETH → USDT
+   ❌ LUNA/ETH no está activo
+❌ USDT → KSM → ETH → USDT
+   ❌ KSM/ETH no está activo
+✅ USDT → EGLD → ETH → USDT
+   Símbolos: EGLD/USDT → EGLD/ETH → ETH/USDT
+✅ USDT → RUNE → ETH → USDT
+   Símbolos: RUNE/USDT → RUNE/ETH → ETH/USDT
+❌ USDT → BEL → ETH → USDT
+   ❌ BEL/ETH no está activo
+✅ USDT → UNI → ETH → USDT
+   Símbolos: UNI/USDT → UNI/ETH → ETH/USDT
+✅ USDT → AVAX → ETH → USDT
+   Símbolos: AVAX/USDT → AVAX/ETH → ETH/USDT
+✅ USDT → AAVE → ETH → USDT
+   Símbolos: AAVE/USDT → AAVE/ETH → ETH/USDT
+✅ USDT → NEAR → ETH → USDT
+   Símbolos: NEAR/USDT → NEAR/ETH → ETH/USDT
+✅ USDT → FIL → ETH → USDT
+   Símbolos: FIL/USDT → FIL/ETH → ETH/USDT
+✅ USDT → INJ → ETH → USDT
+   Símbolos: INJ/USDT → INJ/ETH → ETH/USDT
+✅ USDT → AXS → ETH → USDT
+   Símbolos: AXS/USDT → AXS/ETH → ETH/USDT
+❌ USDT → STRAX → ETH → USDT
+   ❌ STRAX/ETH no está activo
+❌ USDT → ROSE → ETH → USDT
+   ❌ ROSE/ETH no está activo
+✅ USDT → GRT → ETH → USDT
+   Símbolos: GRT/USDT → GRT/ETH → ETH/USDT
+❌ USDT → PUNDIX → ETH → USDT
+   ❌ PUNDIX/ETH no está activo
+✅ USDT → SLP → ETH → USDT
+   Símbolos: SLP/USDT → SLP/ETH → ETH/USDT
+✅ USDT → ICP → ETH → USDT
+   Símbolos: ICP/USDT → ICP/ETH → ETH/USDT
+✅ USDT → XVG → ETH → USDT
+   Símbolos: XVG/USDT → XVG/ETH → ETH/USDT
+❌ USDT → DEXE → ETH → USDT
+   ❌ DEXE/ETH no está activo
+❌ USDT → FARM → ETH → USDT
+   ❌ FARM/ETH no está activo
+❌ USDT → REQ → ETH → USDT
+   ❌ REQ/ETH no está activo
+❌ USDT → GHST → ETH → USDT
+   ❌ GHST/ETH no está activo
+❌ USDT → DYDX → ETH → USDT
+   ❌ DYDX/ETH no está activo
+❌ USDT → ETH → USDP → USDT
+   ❌ ETH/USDP no está activo
+✅ USDT → GALA → ETH → USDT
+   Símbolos: GALA/USDT → GALA/ETH → ETH/USDT
+❌ USDT → SYS → ETH → USDT
+   ❌ SYS/ETH no está activo
+❌ USDT → DF → ETH → USDT
+   ❌ DF/ETH no está activo
+✅ USDT → ADX → ETH → USDT
+   Símbolos: ADX/USDT → ADX/ETH → ETH/USDT
+✅ USDT → POWR → ETH → USDT
+   Símbolos: POWR/USDT → POWR/ETH → ETH/USDT
+❌ USDT → JASMY → ETH → USDT
+   ❌ JASMY/ETH no está activo
+❌ USDT → VOXEL → ETH → USDT
+   ❌ VOXEL/ETH no está activo
+❌ USDT → PEOPLE → ETH → USDT
+   ❌ PEOPLE/ETH no está activo
+❌ USDT → SCRT → ETH → USDT
+   ❌ SCRT/ETH no está activo
+❌ USDT → XNO → ETH → USDT
+   ❌ XNO/ETH no está activo
+❌ USDT → ASTR → ETH → USDT
+   ❌ ASTR/ETH no está activo
+❌ USDT → GMT → ETH → USDT
+   ❌ GMT/ETH no está activo
+❌ USDT → APE → ETH → USDT
+   ❌ APE/ETH no está activo
+❌ USDT → BSW → ETH → USDT
+   ❌ BSW/ETH no está activo
+✅ USDT → STEEM → ETH → USDT
+   Símbolos: STEEM/USDT → STEEM/ETH → ETH/USDT
+❌ USDT → REI → ETH → USDT
+   ❌ REI/ETH no está activo
+✅ USDT → OP → ETH → USDT
+   Símbolos: OP/USDT → OP/ETH → ETH/USDT
+✅ USDT → APT → ETH → USDT
+   Símbolos: APT/USDT → APT/ETH → ETH/USDT
+❌ USDT → HIFI → ETH → USDT
+   ❌ HIFI/ETH no está activo
+✅ USDT → SSV → ETH → USDT
+   Símbolos: SSV/USDT → SSV/ETH → ETH/USDT
+❌ USDT → GLM → ETH → USDT
+   ❌ GLM/ETH no está activo
+❌ USDT → QKC → ETH → USDT
+   ❌ QKC/ETH no está activo
+✅ USDT → ARB → ETH → USDT
+   Símbolos: ARB/USDT → ARB/ETH → ETH/USDT
+✅ USDT → WBTC → ETH → USDT
+   Símbolos: WBTC/USDT → WBTC/ETH → ETH/USDT
+✅ USDT → WBETH → ETH → USDT
+   Símbolos: WBETH/USDT → WBETH/ETH → ETH/USDT
+✅ USDT → ETH → FDUSD → USDT
+   Símbolos: ETH/USDT → ETH/FDUSD → FDUSD/USDT
+✅ USDT → CYBER → ETH → USDT
+   Símbolos: CYBER/USDT → CYBER/ETH → ETH/USDT
+❌ USDT → ARK → ETH → USDT
+   ❌ ARK/ETH no está activo
+❌ USDT → MEME → ETH → USDT
+   ❌ MEME/ETH no está activo
+❌ USDT → ETH → AEUR → USDT
+   ❌ ETH/AEUR no está activo
+✅ USDT → ETH → EURI → USDT
+   Símbolos: ETH/USDT → ETH/EURI → EURI/USDT
+✅ USDT → POL → ETH → USDT
+   Símbolos: POL/USDT → POL/ETH → ETH/USDT
+✅ USDT → S → ETH → USDT
+   Símbolos: S/USDT → S/ETH → ETH/USDT
+✅ USDT → A → ETH → USDT
+   Símbolos: A/USDT → A/ETH → ETH/USDT
+❌ USDT → NEO → BNB → USDT
+   ❌ NEO/BNB no está activo
+✅ USDT → LTC → BNB → USDT
+   Símbolos: LTC/USDT → LTC/BNB → BNB/USDT
+❌ USDT → QTUM → BNB → USDT
+   ❌ QTUM/BNB no está activo
+✅ USDT → ADA → BNB → USDT
+   Símbolos: ADA/USDT → ADA/BNB → BNB/USDT
+✅ USDT → XRP → BNB → USDT
+   Símbolos: XRP/USDT → XRP/BNB → BNB/USDT
+✅ USDT → BNB → TUSD → USDT
+   Símbolos: BNB/USDT → BNB/TUSD → TUSD/USDT
+❌ USDT → IOTA → BNB → USDT
+   ❌ IOTA/BNB no está activo
+❌ USDT → XLM → BNB → USDT
+   ❌ XLM/BNB no está activo
+❌ USDT → ONT → BNB → USDT
+   ❌ ONT/BNB no está activo
+✅ USDT → TRX → BNB → USDT
+   Símbolos: TRX/USDT → TRX/BNB → BNB/USDT
+✅ USDT → ETC → BNB → USDT
+   Símbolos: ETC/USDT → ETC/BNB → BNB/USDT
+❌ USDT → ICX → BNB → USDT
+   ❌ ICX/BNB no está activo
+✅ USDT → VET → BNB → USDT
+   Símbolos: VET/USDT → VET/BNB → BNB/USDT
+✅ USDT → BNB → USDC → USDT
+   Símbolos: BNB/USDT → BNB/USDC → USDC/USDT
+✅ USDT → LINK → BNB → USDT
+   Símbolos: LINK/USDT → LINK/BNB → BNB/USDT
+❌ USDT → ONG → BNB → USDT
+   ❌ ONG/BNB no está activo
+❌ USDT → HOT → BNB → USDT
+   ❌ HOT/BNB no está activo
+❌ USDT → ZIL → BNB → USDT
+   ❌ ZIL/BNB no está activo
+❌ USDT → ZRX → BNB → USDT
+   ❌ ZRX/BNB no está activo
+✅ USDT → FET → BNB → USDT
+   Símbolos: FET/USDT → FET/BNB → BNB/USDT
+❌ USDT → BAT → BNB → USDT
+   ❌ BAT/BNB no está activo
+❌ USDT → ZEC → BNB → USDT
+   ❌ ZEC/BNB no está activo
+❌ USDT → CELR → BNB → USDT
+   ❌ CELR/BNB no está activo
+❌ USDT → DASH → BNB → USDT
+   ❌ DASH/BNB no está activo
+❌ USDT → THETA → BNB → USDT
+   ❌ THETA/BNB no está activo
+❌ USDT → ENJ → BNB → USDT
+   ❌ ENJ/BNB no está activo
+❌ USDT → ATOM → BNB → USDT
+   ❌ ATOM/BNB no está activo
+❌ USDT → TFUEL → BNB → USDT
+   ❌ TFUEL/BNB no está activo
+❌ USDT → ONE → BNB → USDT
+   ❌ ONE/BNB no está activo
+❌ USDT → ALGO → BNB → USDT
+   ❌ ALGO/BNB no está activo
+❌ USDT → DOGE → BNB → USDT
+   ❌ DOGE/BNB no está activo
+❌ USDT → DUSK → BNB → USDT
+   ❌ DUSK/BNB no está activo
+❌ USDT → ANKR → BNB → USDT
+   ❌ ANKR/BNB no está activo
+❌ USDT → WIN → BNB → USDT
+   ❌ WIN/BNB no está activo
+❌ USDT → COS → BNB → USDT
+   ❌ COS/BNB no está activo
+❌ USDT → WAN → BNB → USDT
+   ❌ WAN/BNB no está activo
+❌ USDT → FUN → BNB → USDT
+   ❌ FUN/BNB no está activo
+❌ USDT → CVC → BNB → USDT
+   ❌ CVC/BNB no está activo
+✅ USDT → CHZ → BNB → USDT
+   Símbolos: CHZ/USDT → CHZ/BNB → BNB/USDT
+❌ USDT → BAND → BNB → USDT
+   ❌ BAND/BNB no está activo
+❌ USDT → XTZ → BNB → USDT
+   ❌ XTZ/BNB no está activo
+✅ USDT → HBAR → BNB → USDT
+   Símbolos: HBAR/USDT → HBAR/BNB → BNB/USDT
+❌ USDT → NKN → BNB → USDT
+   ❌ NKN/BNB no está activo
+✅ USDT → STX → BNB → USDT
+   Símbolos: STX/USDT → STX/BNB → BNB/USDT
+❌ USDT → KAVA → BNB → USDT
+   ❌ KAVA/BNB no está activo
+❌ USDT → ARPA → BNB → USDT
+   ❌ ARPA/BNB no está activo
+❌ USDT → RLC → BNB → USDT
+   ❌ RLC/BNB no está activo
+✅ USDT → BCH → BNB → USDT
+   Símbolos: BCH/USDT → BCH/BNB → BNB/USDT
+❌ USDT → FTT → BNB → USDT
+   ❌ FTT/BNB no está activo
+✅ USDT → BNB → EUR → USDT
+   Símbolos: BNB/USDT → BNB/EUR → EUR/USDT
+❌ USDT → OGN → BNB → USDT
+   ❌ OGN/BNB no está activo
+❌ USDT → LSK → BNB → USDT
+   ❌ LSK/BNB no está activo
+❌ USDT → LTO → BNB → USDT
+   ❌ LTO/BNB no está activo
+❌ USDT → MBL → BNB → USDT
+   ❌ MBL/BNB no está activo
+❌ USDT → COTI → BNB → USDT
+   ❌ COTI/BNB no está activo
+✅ USDT → SOL → BNB → USDT
+   Símbolos: SOL/USDT → SOL/BNB → BNB/USDT
+❌ USDT → CTSI → BNB → USDT
+   ❌ CTSI/BNB no está activo
+❌ USDT → HIVE → BNB → USDT
+   ❌ HIVE/BNB no está activo
+❌ USDT → CHR → BNB → USDT
+   ❌ CHR/BNB no está activo
+❌ USDT → ARDR → BNB → USDT
+   ❌ ARDR/BNB no está activo
+❌ USDT → MDT → BNB → USDT
+   ❌ MDT/BNB no está activo
+❌ USDT → KNC → BNB → USDT
+   ❌ KNC/BNB no está activo
+❌ USDT → LRC → BNB → USDT
+   ❌ LRC/BNB no está activo
+❌ USDT → COMP → BNB → USDT
+   ❌ COMP/BNB no está activo
+❌ USDT → ZEN → BNB → USDT
+   ❌ ZEN/BNB no está activo
+❌ USDT → SNX → BNB → USDT
+   ❌ SNX/BNB no está activo
+❌ USDT → VTHO → BNB → USDT
+   ❌ VTHO/BNB no está activo
+❌ USDT → SXP → BNB → USDT
+   ❌ SXP/BNB no está activo
+❌ USDT → MKR → BNB → USDT
+   ❌ MKR/BNB no está activo
+❌ USDT → DCR → BNB → USDT
+   ❌ DCR/BNB no está activo
+❌ USDT → MANA → BNB → USDT
+   ❌ MANA/BNB no está activo
+❌ USDT → YFI → BNB → USDT
+   ❌ YFI/BNB no está activo
+❌ USDT → JST → BNB → USDT
+   ❌ JST/BNB no está activo
+❌ USDT → CRV → BNB → USDT
+   ❌ CRV/BNB no está activo
+❌ USDT → SAND → BNB → USDT
+   ❌ SAND/BNB no está activo
+✅ USDT → DOT → BNB → USDT
+   Símbolos: DOT/USDT → DOT/BNB → BNB/USDT
+❌ USDT → LUNA → BNB → USDT
+   ❌ LUNA/BNB no está activo
+❌ USDT → RSR → BNB → USDT
+   ❌ RSR/BNB no está activo
+❌ USDT → PAXG → BNB → USDT
+   ❌ PAXG/BNB no está activo
+❌ USDT → TRB → BNB → USDT
+   ❌ TRB/BNB no está activo
+❌ USDT → SUSHI → BNB → USDT
+   ❌ SUSHI/BNB no está activo
+❌ USDT → KSM → BNB → USDT
+   ❌ KSM/BNB no está activo
+✅ USDT → EGLD → BNB → USDT
+   Símbolos: EGLD/USDT → EGLD/BNB → BNB/USDT
+❌ USDT → DIA → BNB → USDT
+   ❌ DIA/BNB no está activo
+❌ USDT → RUNE → BNB → USDT
+   ❌ RUNE/BNB no está activo
+❌ USDT → FIO → BNB → USDT
+   ❌ FIO/BNB no está activo
+❌ USDT → BEL → BNB → USDT
+   ❌ BEL/BNB no está activo
+❌ USDT → UNI → BNB → USDT
+   ❌ UNI/BNB no está activo
+✅ USDT → AVAX → BNB → USDT
+   Símbolos: AVAX/USDT → AVAX/BNB → BNB/USDT
+❌ USDT → FLM → BNB → USDT
+   ❌ FLM/BNB no está activo
+✅ USDT → XVS → BNB → USDT
+   Símbolos: XVS/USDT → XVS/BNB → BNB/USDT
+❌ USDT → ALPHA → BNB → USDT
+   ❌ ALPHA/BNB no está activo
+❌ USDT → AAVE → BNB → USDT
+   ❌ AAVE/BNB no está activo
+✅ USDT → NEAR → BNB → USDT
+   Símbolos: NEAR/USDT → NEAR/BNB → BNB/USDT
+❌ USDT → FIL → BNB → USDT
+   ❌ FIL/BNB no está activo
+✅ USDT → INJ → BNB → USDT
+   Símbolos: INJ/USDT → INJ/BNB → BNB/USDT
+✅ USDT → CTK → BNB → USDT
+   Símbolos: CTK/USDT → CTK/BNB → BNB/USDT
+✅ USDT → AXS → BNB → USDT
+   Símbolos: AXS/USDT → AXS/BNB → BNB/USDT
+❌ USDT → ROSE → BNB → USDT
+   ❌ ROSE/BNB no está activo
+❌ USDT → AVA → BNB → USDT
+   ❌ AVA/BNB no está activo
+✅ USDT → CAKE → BNB → USDT
+   Símbolos: CAKE/USDT → CAKE/BNB → BNB/USDT
+❌ USDT → ALICE → BNB → USDT
+   ❌ ALICE/BNB no está activo
+❌ USDT → TLM → BNB → USDT
+   ❌ TLM/BNB no está activo
+❌ USDT → BAKE → BNB → USDT
+   ❌ BAKE/BNB no está activo
+❌ USDT → SLP → BNB → USDT
+   ❌ SLP/BNB no está activo
+❌ USDT → ICP → BNB → USDT
+   ❌ ICP/BNB no está activo
+❌ USDT → AR → BNB → USDT
+   ❌ AR/BNB no está activo
+❌ USDT → MASK → BNB → USDT
+   ❌ MASK/BNB no está activo
+✅ USDT → LPT → BNB → USDT
+   Símbolos: LPT/USDT → LPT/BNB → BNB/USDT
+❌ USDT → ATA → BNB → USDT
+   ❌ ATA/BNB no está activo
+❌ USDT → GTC → BNB → USDT
+   ❌ GTC/BNB no está activo
+❌ USDT → MLN → BNB → USDT
+   ❌ MLN/BNB no está activo
+❌ USDT → C98 → BNB → USDT
+   ❌ C98/BNB no está activo
+❌ USDT → QNT → BNB → USDT
+   ❌ QNT/BNB no está activo
+❌ USDT → FLOW → BNB → USDT
+   ❌ FLOW/BNB no está activo
+❌ USDT → MINA → BNB → USDT
+   ❌ MINA/BNB no está activo
+❌ USDT → RAY → BNB → USDT
+   ❌ RAY/BNB no está activo
+❌ USDT → FARM → BNB → USDT
+   ❌ FARM/BNB no está activo
+❌ USDT → QUICK → BNB → USDT
+   ❌ QUICK/BNB no está activo
+❌ USDT → MBOX → BNB → USDT
+   ❌ MBOX/BNB no está activo
+❌ USDT → WAXP → BNB → USDT
+   ❌ WAXP/BNB no está activo
+❌ USDT → GNO → BNB → USDT
+   ❌ GNO/BNB no está activo
+❌ USDT → DYDX → BNB → USDT
+   ❌ DYDX/BNB no está activo
+❌ USDT → IDEX → BNB → USDT
+   ❌ IDEX/BNB no está activo
+❌ USDT → BNB → USDP → USDT
+   ❌ BNB/USDP no está activo
+❌ USDT → GALA → BNB → USDT
+   ❌ GALA/BNB no está activo
+❌ USDT → ILV → BNB → USDT
+   ❌ ILV/BNB no está activo
+❌ USDT → YGG → BNB → USDT
+   ❌ YGG/BNB no está activo
+❌ USDT → SYS → BNB → USDT
+   ❌ SYS/BNB no está activo
+❌ USDT → FIDA → BNB → USDT
+   ❌ FIDA/BNB no está activo
+❌ USDT → AGLD → BNB → USDT
+   ❌ AGLD/BNB no está activo
+❌ USDT → RAD → BNB → USDT
+   ❌ RAD/BNB no está activo
+❌ USDT → RARE → BNB → USDT
+   ❌ RARE/BNB no está activo
+❌ USDT → CHESS → BNB → USDT
+   ❌ CHESS/BNB no está activo
+❌ USDT → ADX → BNB → USDT
+   ❌ ADX/BNB no está activo
+❌ USDT → MOVR → BNB → USDT
+   ❌ MOVR/BNB no está activo
+❌ USDT → CITY → BNB → USDT
+   ❌ CITY/BNB no está activo
+❌ USDT → ENS → BNB → USDT
+   ❌ ENS/BNB no está activo
+❌ USDT → QI → BNB → USDT
+   ❌ QI/BNB no está activo
+❌ USDT → POWR → BNB → USDT
+   ❌ POWR/BNB no está activo
+❌ USDT → JASMY → BNB → USDT
+   ❌ JASMY/BNB no está activo
+❌ USDT → AMP → BNB → USDT
+   ❌ AMP/BNB no está activo
+❌ USDT → VOXEL → BNB → USDT
+   ❌ VOXEL/BNB no está activo
+❌ USDT → HIGH → BNB → USDT
+   ❌ HIGH/BNB no está activo
+❌ USDT → PEOPLE → BNB → USDT
+   ❌ PEOPLE/BNB no está activo
+❌ USDT → SPELL → BNB → USDT
+   ❌ SPELL/BNB no está activo
+❌ USDT → IMX → BNB → USDT
+   ❌ IMX/BNB no está activo
+❌ USDT → GLMR → BNB → USDT
+   ❌ GLMR/BNB no está activo
+❌ USDT → LOKA → BNB → USDT
+   ❌ LOKA/BNB no está activo
+❌ USDT → API3 → BNB → USDT
+   ❌ API3/BNB no está activo
+❌ USDT → WOO → BNB → USDT
+   ❌ WOO/BNB no está activo
+❌ USDT → GMT → BNB → USDT
+   ❌ GMT/BNB no está activo
+❌ USDT → APE → BNB → USDT
+   ❌ APE/BNB no está activo
+❌ USDT → BSW → BNB → USDT
+   ❌ BSW/BNB no está activo
+❌ USDT → BIFI → BNB → USDT
+   ❌ BIFI/BNB no está activo
+❌ USDT → STEEM → BNB → USDT
+   ❌ STEEM/BNB no está activo
+❌ USDT → REI → BNB → USDT
+   ❌ REI/BNB no está activo
+❌ USDT → OP → BNB → USDT
+   ❌ OP/BNB no está activo
+❌ USDT → PHB → BNB → USDT
+   ❌ PHB/BNB no está activo
+❌ USDT → HOOK → BNB → USDT
+   ❌ HOOK/BNB no está activo
+❌ USDT → PROM → BNB → USDT
+   ❌ PROM/BNB no está activo
+❌ USDT → ID → BNB → USDT
+   ❌ ID/BNB no está activo
+❌ USDT → EDU → BNB → USDT
+   ❌ EDU/BNB no está activo
+✅ USDT → SUI → BNB → USDT
+   Símbolos: SUI/USDT → SUI/BNB → BNB/USDT
+✅ USDT → ARKM → BNB → USDT
+   Símbolos: ARKM/USDT → ARKM/BNB → BNB/USDT
+✅ USDT → BNB → FDUSD → USDT
+   Símbolos: BNB/USDT → BNB/FDUSD → FDUSD/USDT
+✅ USDT → SEI → BNB → USDT
+   Símbolos: SEI/USDT → SEI/BNB → BNB/USDT
+✅ USDT → CYBER → BNB → USDT
+   Símbolos: CYBER/USDT → CYBER/BNB → BNB/USDT
+❌ USDT → IQ → BNB → USDT
+   ❌ IQ/BNB no está activo
+✅ USDT → NTRN → BNB → USDT
+   Símbolos: NTRN/USDT → NTRN/BNB → BNB/USDT
+❌ USDT → MEME → BNB → USDT
+   ❌ MEME/BNB no está activo
+❌ USDT → PIVX → BNB → USDT
+   ❌ PIVX/BNB no está activo
+❌ USDT → ACE → BNB → USDT
+   ❌ ACE/BNB no está activo
+❌ USDT → NFP → BNB → USDT
+   ❌ NFP/BNB no está activo
+✅ USDT → AI → BNB → USDT
+   Símbolos: AI/USDT → AI/BNB → BNB/USDT
+❌ USDT → XAI → BNB → USDT
+   ❌ XAI/BNB no está activo
+❌ USDT → MANTA → BNB → USDT
+   ❌ MANTA/BNB no está activo
+✅ USDT → ALT → BNB → USDT
+   Símbolos: ALT/USDT → ALT/BNB → BNB/USDT
+❌ USDT → PIXEL → BNB → USDT
+   ❌ PIXEL/BNB no está activo
+✅ USDT → PORTAL → BNB → USDT
+   Símbolos: PORTAL/USDT → PORTAL/BNB → BNB/USDT
+❌ USDT → AEVO → BNB → USDT
+   ❌ AEVO/BNB no está activo
+❌ USDT → ETHFI → BNB → USDT
+   ❌ ETHFI/BNB no está activo
+✅ USDT → ENA → BNB → USDT
+   Símbolos: ENA/USDT → ENA/BNB → BNB/USDT
+✅ USDT → SAGA → BNB → USDT
+   Símbolos: SAGA/USDT → SAGA/BNB → BNB/USDT
+❌ USDT → OMNI → BNB → USDT
+   ❌ OMNI/BNB no está activo
+❌ USDT → REZ → BNB → USDT
+   ❌ REZ/BNB no está activo
+✅ USDT → BB → BNB → USDT
+   Símbolos: BB/USDT → BB/BNB → BNB/USDT
+❌ USDT → NOT → BNB → USDT
+   ❌ NOT/BNB no está activo
+✅ USDT → IO → BNB → USDT
+   Símbolos: IO/USDT → IO/BNB → BNB/USDT
+✅ USDT → LISTA → BNB → USDT
+   Símbolos: LISTA/USDT → LISTA/BNB → BNB/USDT
+✅ USDT → BANANA → BNB → USDT
+   Símbolos: BANANA/USDT → BANANA/BNB → BNB/USDT
+❌ USDT → DOGS → BNB → USDT
+   ❌ DOGS/BNB no está activo
+✅ USDT → POL → BNB → USDT
+   Símbolos: POL/USDT → POL/BNB → BNB/USDT
+❌ USDT → CATI → BNB → USDT
+   ❌ CATI/BNB no está activo
+❌ USDT → HMSTR → BNB → USDT
+   ❌ HMSTR/BNB no está activo
+❌ USDT → THE → BNB → USDT
+   ❌ THE/BNB no está activo
+✅ USDT → MOVE → BNB → USDT
+   Símbolos: MOVE/USDT → MOVE/BNB → BNB/USDT
+❌ USDT → VANA → BNB → USDT
+   ❌ VANA/BNB no está activo
+✅ USDT → 1000CAT → BNB → USDT
+   Símbolos: 1000CAT/USDT → 1000CAT/BNB → BNB/USDT
+❌ USDT → PENGU → BNB → USDT
+   ❌ PENGU/BNB no está activo
+✅ USDT → BIO → BNB → USDT
+   Símbolos: BIO/USDT → BIO/BNB → BNB/USDT
+✅ USDT → S → BNB → USDT
+   Símbolos: S/USDT → S/BNB → BNB/USDT
+✅ USDT → SOLV → BNB → USDT
+   Símbolos: SOLV/USDT → SOLV/BNB → BNB/USDT
+❌ USDT → ANIME → BNB → USDT
+   ❌ ANIME/BNB no está activo
+✅ USDT → BERA → BNB → USDT
+   Símbolos: BERA/USDT → BERA/BNB → BNB/USDT
+✅ USDT → LAYER → BNB → USDT
+   Símbolos: LAYER/USDT → LAYER/BNB → BNB/USDT
+✅ USDT → KAITO → BNB → USDT
+   Símbolos: KAITO/USDT → KAITO/BNB → BNB/USDT
+✅ USDT → SHELL → BNB → USDT
+   Símbolos: SHELL/USDT → SHELL/BNB → BNB/USDT
+✅ USDT → GPS → BNB → USDT
+   Símbolos: GPS/USDT → GPS/BNB → BNB/USDT
+✅ USDT → BMT → BNB → USDT
+   Símbolos: BMT/USDT → BMT/BNB → BNB/USDT
+✅ USDT → NIL → BNB → USDT
+   Símbolos: NIL/USDT → NIL/BNB → BNB/USDT
+✅ USDT → PARTI → BNB → USDT
+   Símbolos: PARTI/USDT → PARTI/BNB → BNB/USDT
+✅ USDT → GUN → BNB → USDT
+   Símbolos: GUN/USDT → GUN/BNB → BNB/USDT
+✅ USDT → BABY → BNB → USDT
+   Símbolos: BABY/USDT → BABY/BNB → BNB/USDT
+✅ USDT → KERNEL → BNB → USDT
+   Símbolos: KERNEL/USDT → KERNEL/BNB → BNB/USDT
+✅ USDT → WCT → BNB → USDT
+   Símbolos: WCT/USDT → WCT/BNB → BNB/USDT
+✅ USDT → HYPER → BNB → USDT
+   Símbolos: HYPER/USDT → HYPER/BNB → BNB/USDT
+✅ USDT → INIT → BNB → USDT
+   Símbolos: INIT/USDT → INIT/BNB → BNB/USDT
+✅ USDT → SIGN → BNB → USDT
+   Símbolos: SIGN/USDT → SIGN/BNB → BNB/USDT
+✅ USDT → STO → BNB → USDT
+   Símbolos: STO/USDT → STO/BNB → BNB/USDT
+✅ USDT → SXT → BNB → USDT
+   Símbolos: SXT/USDT → SXT/BNB → BNB/USDT
+✅ USDT → NXPC → BNB → USDT
+   Símbolos: NXPC/USDT → NXPC/BNB → BNB/USDT
+✅ USDT → HAEDAL → BNB → USDT
+   Símbolos: HAEDAL/USDT → HAEDAL/BNB → BNB/USDT
+✅ USDT → HUMA → BNB → USDT
+   Símbolos: HUMA/USDT → HUMA/BNB → BNB/USDT
+✅ USDT → SOPH → BNB → USDT
+   Símbolos: SOPH/USDT → SOPH/BNB → BNB/USDT
+✅ USDT → RESOLV → BNB → USDT
+   Símbolos: RESOLV/USDT → RESOLV/BNB → BNB/USDT
+✅ USDT → HOME → BNB → USDT
+   Símbolos: HOME/USDT → HOME/BNB → BNB/USDT
+✅ USDT → SPK → BNB → USDT
+   Símbolos: SPK/USDT → SPK/BNB → BNB/USDT
+❌ USDT → NEO → TUSD → USDT
+   ❌ NEO/TUSD no está activo
+✅ USDT → NEO → USDC → USDT
+   Símbolos: NEO/USDT → NEO/USDC → USDC/USDT
+❌ USDT → LTC → TUSD → USDT
+   ❌ LTC/TUSD no está activo
+✅ USDT → LTC → USDC → USDT
+   Símbolos: LTC/USDT → LTC/USDC → USDC/USDT
+✅ USDT → LTC → EUR → USDT
+   Símbolos: LTC/USDT → LTC/EUR → EUR/USDT
+✅ USDT → LTC → FDUSD → USDT
+   Símbolos: LTC/USDT → LTC/FDUSD → FDUSD/USDT
+❌ USDT → ADA → TUSD → USDT
+   ❌ ADA/TUSD no está activo
+✅ USDT → ADA → USDC → USDT
+   Símbolos: ADA/USDT → ADA/USDC → USDC/USDT
+✅ USDT → ADA → EUR → USDT
+   Símbolos: ADA/USDT → ADA/EUR → EUR/USDT
+✅ USDT → ADA → FDUSD → USDT
+   Símbolos: ADA/USDT → ADA/FDUSD → FDUSD/USDT
+✅ USDT → XRP → TUSD → USDT
+   Símbolos: XRP/USDT → XRP/TUSD → TUSD/USDT
+✅ USDT → TRX → XRP → USDT
+   Símbolos: TRX/USDT → TRX/XRP → XRP/USDT
+✅ USDT → XRP → USDC → USDT
+   Símbolos: XRP/USDT → XRP/USDC → USDC/USDT
+✅ USDT → XRP → EUR → USDT
+   Símbolos: XRP/USDT → XRP/EUR → EUR/USDT
+✅ USDT → XRP → FDUSD → USDT
+   Símbolos: XRP/USDT → XRP/FDUSD → FDUSD/USDT
+❌ USDT → XLM → TUSD → USDT
+   ❌ XLM/TUSD no está activo
+❌ USDT → TRX → TUSD → USDT
+   ❌ TRX/TUSD no está activo
+❌ USDT → ETC → TUSD → USDT
+   ❌ ETC/TUSD no está activo
+❌ USDT → USDC → TUSD → USDT
+   ❌ USDC/TUSD no está activo
+❌ USDT → LINK → TUSD → USDT
+   ❌ LINK/TUSD no está activo
+❌ USDT → BAT → TUSD → USDT
+   ❌ BAT/TUSD no está activo
+❌ USDT → ZEC → TUSD → USDT
+   ❌ ZEC/TUSD no está activo
+❌ USDT → ATOM → TUSD → USDT
+   ❌ ATOM/TUSD no está activo
+❌ USDT → TFUEL → TUSD → USDT
+   ❌ TFUEL/TUSD no está activo
+❌ USDT → ONE → TUSD → USDT
+   ❌ ONE/TUSD no está activo
+❌ USDT → ALGO → TUSD → USDT
+   ❌ ALGO/TUSD no está activo
+✅ USDT → DOGE → TUSD → USDT
+   Símbolos: DOGE/USDT → DOGE/TUSD → TUSD/USDT
+❌ USDT → ANKR → TUSD → USDT
+   ❌ ANKR/TUSD no está activo
+❌ USDT → BCH → TUSD → USDT
+   ❌ BCH/TUSD no está activo
+✅ USDT → SOL → TUSD → USDT
+   Símbolos: SOL/USDT → SOL/TUSD → TUSD/USDT
+❌ USDT → COMP → TUSD → USDT
+   ❌ COMP/TUSD no está activo
+❌ USDT → DOT → TUSD → USDT
+   ❌ DOT/TUSD no está activo
+❌ USDT → RUNE → TUSD → USDT
+   ❌ RUNE/TUSD no está activo
+❌ USDT → AVAX → TUSD → USDT
+   ❌ AVAX/TUSD no está activo
+❌ USDT → INJ → TUSD → USDT
+   ❌ INJ/TUSD no está activo
+❌ USDT → CAKE → TUSD → USDT
+   ❌ CAKE/TUSD no está activo
+❌ USDT → CFX → TUSD → USDT
+   ❌ CFX/TUSD no está activo
+❌ USDT → SHIB → TUSD → USDT
+   ❌ SHIB/TUSD no está activo
+❌ USDT → XVG → TUSD → USDT
+   ❌ XVG/TUSD no está activo
+❌ USDT → QUICK → TUSD → USDT
+   ❌ QUICK/TUSD no está activo
+❌ USDT → LDO → TUSD → USDT
+   ❌ LDO/TUSD no está activo
+❌ USDT → OP → TUSD → USDT
+   ❌ OP/TUSD no está activo
+❌ USDT → PHB → TUSD → USDT
+   ❌ PHB/TUSD no está activo
+❌ USDT → SSV → TUSD → USDT
+   ❌ SSV/TUSD no está activo
+❌ USDT → ID → TUSD → USDT
+   ❌ ID/TUSD no está activo
+✅ USDT → ARB → TUSD → USDT
+   Símbolos: ARB/USDT → ARB/TUSD → TUSD/USDT
+❌ USDT → RDNT → TUSD → USDT
+   ❌ RDNT/TUSD no está activo
+❌ USDT → EDU → TUSD → USDT
+   ❌ EDU/TUSD no está activo
+❌ USDT → SUI → TUSD → USDT
+   ❌ SUI/TUSD no está activo
+❌ USDT → PEPE → TUSD → USDT
+   ❌ PEPE/TUSD no está activo
+❌ USDT → FLOKI → TUSD → USDT
+   ❌ FLOKI/TUSD no está activo
+❌ USDT → MAV → TUSD → USDT
+   ❌ MAV/TUSD no está activo
+❌ USDT → PENDLE → TUSD → USDT
+   ❌ PENDLE/TUSD no está activo
+❌ USDT → ARKM → TUSD → USDT
+   ❌ ARKM/TUSD no está activo
+❌ USDT → SEI → TUSD → USDT
+   ❌ SEI/TUSD no está activo
+❌ USDT → CYBER → TUSD → USDT
+   ❌ CYBER/TUSD no está activo
+❌ USDT → TIA → TUSD → USDT
+   ❌ TIA/TUSD no está activo
+❌ USDT → MEME → TUSD → USDT
+   ❌ MEME/TUSD no está activo
+❌ USDT → ORDI → TUSD → USDT
+   ❌ ORDI/TUSD no está activo
+❌ USDT → NFP → TUSD → USDT
+   ❌ NFP/TUSD no está activo
+❌ USDT → AI → TUSD → USDT
+   ❌ AI/TUSD no está activo
+❌ USDT → XAI → TUSD → USDT
+   ❌ XAI/TUSD no está activo
+✅ USDT → IOTA → USDC → USDT
+   Símbolos: IOTA/USDT → IOTA/USDC → USDC/USDT
+❌ USDT → IOTA → FDUSD → USDT
+   ❌ IOTA/FDUSD no está activo
+✅ USDT → XLM → USDC → USDT
+   Símbolos: XLM/USDT → XLM/USDC → USDC/USDT
+✅ USDT → XLM → EUR → USDT
+   Símbolos: XLM/USDT → XLM/EUR → EUR/USDT
+✅ USDT → XLM → FDUSD → USDT
+   Símbolos: XLM/USDT → XLM/FDUSD → FDUSD/USDT
+✅ USDT → ONT → USDC → USDT
+   Símbolos: ONT/USDT → ONT/USDC → USDC/USDT
+✅ USDT → TRX → USDC → USDT
+   Símbolos: TRX/USDT → TRX/USDC → USDC/USDT
+✅ USDT → WIN → TRX → USDT
+   Símbolos: WIN/USDT → WIN/TRX → TRX/USDT
+✅ USDT → TRX → EUR → USDT
+   Símbolos: TRX/USDT → TRX/EUR → EUR/USDT
+✅ USDT → TRX → FDUSD → USDT
+   Símbolos: TRX/USDT → TRX/FDUSD → FDUSD/USDT
+❌ USDT → ETC → USDC → USDT
+   ❌ ETC/USDC no está activo
+❌ USDT → ETC → EUR → USDT
+   ❌ ETC/EUR no está activo
+✅ USDT → ETC → FDUSD → USDT
+   Símbolos: ETC/USDT → ETC/FDUSD → FDUSD/USDT
+✅ USDT → VET → USDC → USDT
+   Símbolos: VET/USDT → VET/USDC → USDC/USDT
+✅ USDT → VET → EUR → USDT
+   Símbolos: VET/USDT → VET/EUR → EUR/USDT
+✅ USDT → LINK → USDC → USDT
+   Símbolos: LINK/USDT → LINK/USDC → USDC/USDT
+✅ USDT → FET → USDC → USDT
+   Símbolos: FET/USDT → FET/USDC → USDC/USDT
+❌ USDT → BAT → USDC → USDT
+   ❌ BAT/USDC no está activo
+❌ USDT → ZEC → USDC → USDT
+   ❌ ZEC/USDC no está activo
+✅ USDT → THETA → USDC → USDT
+   Símbolos: THETA/USDT → THETA/USDC → USDC/USDT
+✅ USDT → ENJ → USDC → USDT
+   Símbolos: ENJ/USDT → ENJ/USDC → USDC/USDT
+✅ USDT → ATOM → USDC → USDT
+   Símbolos: ATOM/USDT → ATOM/USDC → USDC/USDT
+❌ USDT → TFUEL → USDC → USDT
+   ❌ TFUEL/USDC no está activo
+❌ USDT → ONE → USDC → USDT
+   ❌ ONE/USDC no está activo
+✅ USDT → ALGO → USDC → USDT
+   Símbolos: ALGO/USDT → ALGO/USDC → USDC/USDT
+✅ USDT → DOGE → USDC → USDT
+   Símbolos: DOGE/USDT → DOGE/USDC → USDC/USDT
+❌ USDT → DUSK → USDC → USDT
+   ❌ DUSK/USDC no está activo
+❌ USDT → ANKR → USDC → USDT
+   ❌ ANKR/USDC no está activo
+❌ USDT → WIN → USDC → USDT
+   ❌ WIN/USDC no está activo
+✅ USDT → CVC → USDC → USDT
+   Símbolos: CVC/USDT → CVC/USDC → USDC/USDT
+✅ USDT → CHZ → USDC → USDT
+   Símbolos: CHZ/USDT → CHZ/USDC → USDC/USDT
+✅ USDT → XTZ → USDC → USDT
+   Símbolos: XTZ/USDT → XTZ/USDC → USDC/USDT
+✅ USDT → HBAR → USDC → USDT
+   Símbolos: HBAR/USDT → HBAR/USDC → USDC/USDT
+✅ USDT → STX → USDC → USDT
+   Símbolos: STX/USDT → STX/USDC → USDC/USDT
+✅ USDT → BCH → USDC → USDT
+   Símbolos: BCH/USDT → BCH/USDC → USDC/USDT
+✅ USDT → EUR → USDC → USDT
+   Símbolos: EUR/USDT → EUR/USDC → USDC/USDT
+✅ USDT → SOL → USDC → USDT
+   Símbolos: SOL/USDT → SOL/USDC → USDC/USDT
+✅ USDT → HIVE → USDC → USDT
+   Símbolos: HIVE/USDT → HIVE/USDC → USDC/USDT
+✅ USDT → ZEN → USDC → USDT
+   Símbolos: ZEN/USDT → ZEN/USDC → USDC/USDT
+✅ USDT → MKR → USDC → USDT
+   Símbolos: MKR/USDT → MKR/USDC → USDC/USDT
+✅ USDT → CRV → USDC → USDT
+   Símbolos: CRV/USDT → CRV/USDC → USDC/USDT
+✅ USDT → SAND → USDC → USDT
+   Símbolos: SAND/USDT → SAND/USDC → USDC/USDT
+✅ USDT → DOT → USDC → USDT
+   Símbolos: DOT/USDT → DOT/USDC → USDC/USDT
+✅ USDT → RSR → USDC → USDT
+   Símbolos: RSR/USDT → RSR/USDC → USDC/USDT
+✅ USDT → PAXG → USDC → USDT
+   Símbolos: PAXG/USDT → PAXG/USDC → USDC/USDT
+✅ USDT → TRB → USDC → USDT
+   Símbolos: TRB/USDT → TRB/USDC → USDC/USDT
+✅ USDT → SUSHI → USDC → USDT
+   Símbolos: SUSHI/USDT → SUSHI/USDC → USDC/USDT
+✅ USDT → EGLD → USDC → USDT
+   Símbolos: EGLD/USDT → EGLD/USDC → USDC/USDT
+✅ USDT → RUNE → USDC → USDT
+   Símbolos: RUNE/USDT → RUNE/USDC → USDC/USDT
+✅ USDT → UNI → USDC → USDT
+   Símbolos: UNI/USDT → UNI/USDC → USDC/USDT
+✅ USDT → AVAX → USDC → USDT
+   Símbolos: AVAX/USDT → AVAX/USDC → USDC/USDT
+✅ USDT → UTK → USDC → USDT
+   Símbolos: UTK/USDT → UTK/USDC → USDC/USDT
+✅ USDT → AAVE → USDC → USDT
+   Símbolos: AAVE/USDT → AAVE/USDC → USDC/USDT
+✅ USDT → NEAR → USDC → USDT
+   Símbolos: NEAR/USDT → NEAR/USDC → USDC/USDT
+✅ USDT → FIL → USDC → USDT
+   Símbolos: FIL/USDT → FIL/USDC → USDC/USDT
+✅ USDT → INJ → USDC → USDT
+   Símbolos: INJ/USDT → INJ/USDC → USDC/USDT
+✅ USDT → JUV → USDC → USDT
+   Símbolos: JUV/USDT → JUV/USDC → USDC/USDT
+✅ USDT → CKB → USDC → USDT
+   Símbolos: CKB/USDT → CKB/USDC → USDC/USDT
+✅ USDT → CAKE → USDC → USDT
+   Símbolos: CAKE/USDT → CAKE/USDC → USDC/USDT
+✅ USDT → OM → USDC → USDT
+   Símbolos: OM/USDT → OM/USDC → USDC/USDT
+✅ USDT → CFX → USDC → USDT
+   Símbolos: CFX/USDT → CFX/USDC → USDC/USDT
+✅ USDT → PUNDIX → USDC → USDT
+   Símbolos: PUNDIX/USDT → PUNDIX/USDC → USDC/USDT
+✅ USDT → TLM → USDC → USDT
+   Símbolos: TLM/USDT → TLM/USDC → USDC/USDT
+✅ USDT → SHIB → USDC → USDT
+   Símbolos: SHIB/USDT → SHIB/USDC → USDC/USDT
+✅ USDT → ICP → USDC → USDT
+   Símbolos: ICP/USDT → ICP/USDC → USDC/USDT
+✅ USDT → AR → USDC → USDT
+   Símbolos: AR/USDT → AR/USDC → USDC/USDT
+✅ USDT → MASK → USDC → USDT
+   Símbolos: MASK/USDT → MASK/USDC → USDC/USDT
+✅ USDT → PHA → USDC → USDT
+   Símbolos: PHA/USDT → PHA/USDC → USDC/USDT
+✅ USDT → QNT → USDC → USDT
+   Símbolos: QNT/USDT → QNT/USDC → USDC/USDT
+✅ USDT → RAY → USDC → USDT
+   Símbolos: RAY/USDT → RAY/USDC → USDC/USDT
+✅ USDT → DYDX → USDC → USDT
+   Símbolos: DYDX/USDT → DYDX/USDC → USDC/USDT
+✅ USDT → IDEX → USDC → USDT
+   Símbolos: IDEX/USDT → IDEX/USDC → USDC/USDT
+✅ USDT → GALA → USDC → USDT
+   Símbolos: GALA/USDT → GALA/USDC → USDC/USDT
+✅ USDT → YGG → USDC → USDT
+   Símbolos: YGG/USDT → YGG/USDC → USDC/USDT
+✅ USDT → DF → USDC → USDT
+   Símbolos: DF/USDT → DF/USDC → USDC/USDT
+✅ USDT → RARE → USDC → USDT
+   Símbolos: RARE/USDT → RARE/USDC → USDC/USDT
+✅ USDT → CHESS → USDC → USDT
+   Símbolos: CHESS/USDT → CHESS/USDC → USDC/USDT
+✅ USDT → AUCTION → USDC → USDT
+   Símbolos: AUCTION/USDT → AUCTION/USDC → USDC/USDT
+✅ USDT → ENS → USDC → USDT
+   Símbolos: ENS/USDT → ENS/USDC → USDC/USDT
+✅ USDT → FLUX → USDC → USDT
+   Símbolos: FLUX/USDT → FLUX/USDC → USDC/USDT
+✅ USDT → PEOPLE → USDC → USDT
+   Símbolos: PEOPLE/USDT → PEOPLE/USDC → USDC/USDT
+✅ USDT → ACH → USDC → USDT
+   Símbolos: ACH/USDT → ACH/USDC → USDC/USDT
+✅ USDT → API3 → USDC → USDT
+   Símbolos: API3/USDT → API3/USDC → USDC/USDT
+❌ USDT → BTTC → USDC → USDT
+   ❌ BTTC/USDC no está activo
+✅ USDT → T → USDC → USDT
+   Símbolos: T/USDT → T/USDC → USDC/USDT
+✅ USDT → GMT → USDC → USDT
+   Símbolos: GMT/USDT → GMT/USDC → USDC/USDT
+✅ USDT → APE → USDC → USDT
+   Símbolos: APE/USDT → APE/USDC → USDC/USDT
+✅ USDT → STEEM → USDC → USDT
+   Símbolos: STEEM/USDT → STEEM/USDC → USDC/USDT
+✅ USDT → LDO → USDC → USDT
+   Símbolos: LDO/USDT → LDO/USDC → USDC/USDT
+✅ USDT → OP → USDC → USDT
+   Símbolos: OP/USDT → OP/USDC → USDC/USDT
+✅ USDT → GMX → USDC → USDT
+   Símbolos: GMX/USDT → GMX/USDC → USDC/USDT
+✅ USDT → APT → USDC → USDT
+   Símbolos: APT/USDT → APT/USDC → USDC/USDT
+✅ USDT → OSMO → USDC → USDT
+   Símbolos: OSMO/USDT → OSMO/USDC → USDC/USDT
+❌ USDT → PHB → USDC → USDT
+   ❌ PHB/USDC no está activo
+✅ USDT → RPL → USDC → USDT
+   Símbolos: RPL/USDT → RPL/USDC → USDC/USDT
+✅ USDT → SYN → USDC → USDT
+   Símbolos: SYN/USDT → SYN/USDC → USDC/USDT
+✅ USDT → ARB → USDC → USDT
+   Símbolos: ARB/USDT → ARB/USDC → USDC/USDT
+✅ USDT → SUI → USDC → USDT
+   Símbolos: SUI/USDT → SUI/USDC → USDC/USDT
+✅ USDT → PEPE → USDC → USDT
+   Símbolos: PEPE/USDT → PEPE/USDC → USDC/USDT
+✅ USDT → FLOKI → USDC → USDT
+   Símbolos: FLOKI/USDT → FLOKI/USDC → USDC/USDT
+✅ USDT → PENDLE → USDC → USDT
+   Símbolos: PENDLE/USDT → PENDLE/USDC → USDC/USDT
+✅ USDT → ARKM → USDC → USDT
+   Símbolos: ARKM/USDT → ARKM/USDC → USDC/USDT
+✅ USDT → WLD → USDC → USDT
+   Símbolos: WLD/USDT → WLD/USDC → USDC/USDT
+✅ USDT → FDUSD → USDC → USDT
+   Símbolos: FDUSD/USDT → FDUSD/USDC → USDC/USDT
+✅ USDT → SEI → USDC → USDT
+   Símbolos: SEI/USDT → SEI/USDC → USDC/USDT
+✅ USDT → TIA → USDC → USDT
+   Símbolos: TIA/USDT → TIA/USDC → USDC/USDT
+✅ USDT → MEME → USDC → USDT
+   Símbolos: MEME/USDT → MEME/USDC → USDC/USDT
+✅ USDT → ORDI → USDC → USDT
+   Símbolos: ORDI/USDT → ORDI/USDC → USDC/USDT
+✅ USDT → BEAMX → USDC → USDT
+   Símbolos: BEAMX/USDT → BEAMX/USDC → USDC/USDT
+✅ USDT → BLUR → USDC → USDT
+   Símbolos: BLUR/USDT → BLUR/USDC → USDC/USDT
+✅ USDT → VANRY → USDC → USDT
+   Símbolos: VANRY/USDT → VANRY/USDC → USDC/USDT
+✅ USDT → JTO → USDC → USDT
+   Símbolos: JTO/USDT → JTO/USDC → USDC/USDT
+✅ USDT → 1000SATS → USDC → USDT
+   Símbolos: 1000SATS/USDT → 1000SATS/USDC → USDC/USDT
+✅ USDT → BONK → USDC → USDT
+   Símbolos: BONK/USDT → BONK/USDC → USDC/USDT
+✅ USDT → MANTA → USDC → USDT
+   Símbolos: MANTA/USDT → MANTA/USDC → USDC/USDT
+✅ USDT → ALT → USDC → USDT
+   Símbolos: ALT/USDT → ALT/USDC → USDC/USDT
+✅ USDT → JUP → USDC → USDT
+   Símbolos: JUP/USDT → JUP/USDC → USDC/USDT
+✅ USDT → PYTH → USDC → USDT
+   Símbolos: PYTH/USDT → PYTH/USDC → USDC/USDT
+✅ USDT → PIXEL → USDC → USDT
+   Símbolos: PIXEL/USDT → PIXEL/USDC → USDC/USDT
+✅ USDT → STRK → USDC → USDT
+   Símbolos: STRK/USDT → STRK/USDC → USDC/USDT
+✅ USDT → WIF → USDC → USDT
+   Símbolos: WIF/USDT → WIF/USDC → USDC/USDT
+✅ USDT → BOME → USDC → USDT
+   Símbolos: BOME/USDT → BOME/USDC → USDC/USDT
+✅ USDT → ETHFI → USDC → USDT
+   Símbolos: ETHFI/USDT → ETHFI/USDC → USDC/USDT
+✅ USDT → ENA → USDC → USDT
+   Símbolos: ENA/USDT → ENA/USDC → USDC/USDT
+✅ USDT → W → USDC → USDT
+   Símbolos: W/USDT → W/USDC → USDC/USDT
+✅ USDT → TNSR → USDC → USDT
+   Símbolos: TNSR/USDT → TNSR/USDC → USDC/USDT
+✅ USDT → SAGA → USDC → USDT
+   Símbolos: SAGA/USDT → SAGA/USDC → USDC/USDT
+✅ USDT → TAO → USDC → USDT
+   Símbolos: TAO/USDT → TAO/USDC → USDC/USDT
+✅ USDT → OMNI → USDC → USDT
+   Símbolos: OMNI/USDT → OMNI/USDC → USDC/USDT
+✅ USDT → REZ → USDC → USDT
+   Símbolos: REZ/USDT → REZ/USDC → USDC/USDT
+✅ USDT → BB → USDC → USDT
+   Símbolos: BB/USDT → BB/USDC → USDC/USDT
+✅ USDT → NOT → USDC → USDT
+   Símbolos: NOT/USDT → NOT/USDC → USDC/USDT
+✅ USDT → IO → USDC → USDT
+   Símbolos: IO/USDT → IO/USDC → USDC/USDT
+✅ USDT → ZK → USDC → USDT
+   Símbolos: ZK/USDT → ZK/USDC → USDC/USDT
+✅ USDT → ZRO → USDC → USDT
+   Símbolos: ZRO/USDT → ZRO/USDC → USDC/USDT
+✅ USDT → BANANA → USDC → USDT
+   Símbolos: BANANA/USDT → BANANA/USDC → USDC/USDT
+✅ USDT → RENDER → USDC → USDT
+   Símbolos: RENDER/USDT → RENDER/USDC → USDC/USDT
+✅ USDT → TON → USDC → USDT
+   Símbolos: TON/USDT → TON/USDC → USDC/USDT
+✅ USDT → DOGS → USDC → USDT
+   Símbolos: DOGS/USDT → DOGS/USDC → USDC/USDT
+✅ USDT → EURI → USDC → USDT
+   Símbolos: EURI/USDT → EURI/USDC → USDC/USDT
+✅ USDT → SLF → USDC → USDT
+   Símbolos: SLF/USDT → SLF/USDC → USDC/USDT
+✅ USDT → POL → USDC → USDT
+   Símbolos: POL/USDT → POL/USDC → USDC/USDT
+✅ USDT → NEIRO → USDC → USDT
+   Símbolos: NEIRO/USDT → NEIRO/USDC → USDC/USDT
+✅ USDT → TURBO → USDC → USDT
+   Símbolos: TURBO/USDT → TURBO/USDC → USDC/USDT
+✅ USDT → 1MBABYDOGE → USDC → USDT
+   Símbolos: 1MBABYDOGE/USDT → 1MBABYDOGE/USDC → USDC/USDT
+✅ USDT → CATI → USDC → USDT
+   Símbolos: CATI/USDT → CATI/USDC → USDC/USDT
+✅ USDT → HMSTR → USDC → USDT
+   Símbolos: HMSTR/USDT → HMSTR/USDC → USDC/USDT
+✅ USDT → EIGEN → USDC → USDT
+   Símbolos: EIGEN/USDT → EIGEN/USDC → USDC/USDT
+✅ USDT → KAIA → USDC → USDT
+   Símbolos: KAIA/USDT → KAIA/USDC → USDC/USDT
+✅ USDT → COW → USDC → USDT
+   Símbolos: COW/USDT → COW/USDC → USDC/USDT
+✅ USDT → CETUS → USDC → USDT
+   Símbolos: CETUS/USDT → CETUS/USDC → USDC/USDT
+✅ USDT → PNUT → USDC → USDT
+   Símbolos: PNUT/USDT → PNUT/USDC → USDC/USDT
+✅ USDT → ACT → USDC → USDT
+   Símbolos: ACT/USDT → ACT/USDC → USDC/USDT
+✅ USDT → USUAL → USDC → USDT
+   Símbolos: USUAL/USDT → USUAL/USDC → USDC/USDT
+✅ USDT → THE → USDC → USDT
+   Símbolos: THE/USDT → THE/USDC → USDC/USDT
+✅ USDT → ACX → USDC → USDT
+   Símbolos: ACX/USDT → ACX/USDC → USDC/USDT
+✅ USDT → ORCA → USDC → USDT
+   Símbolos: ORCA/USDT → ORCA/USDC → USDC/USDT
+✅ USDT → MOVE → USDC → USDT
+   Símbolos: MOVE/USDT → MOVE/USDC → USDC/USDT
+✅ USDT → VELODROME → USDC → USDT
+   Símbolos: VELODROME/USDT → VELODROME/USDC → USDC/USDT
+✅ USDT → VANA → USDC → USDT
+   Símbolos: VANA/USDT → VANA/USDC → USDC/USDT
+✅ USDT → 1000CAT → USDC → USDT
+   Símbolos: 1000CAT/USDT → 1000CAT/USDC → USDC/USDT
+✅ USDT → PENGU → USDC → USDT
+   Símbolos: PENGU/USDT → PENGU/USDC → USDC/USDT
+✅ USDT → BIO → USDC → USDT
+   Símbolos: BIO/USDT → BIO/USDC → USDC/USDT
+✅ USDT → AIXBT → USDC → USDT
+   Símbolos: AIXBT/USDT → AIXBT/USDC → USDC/USDT
+✅ USDT → CGPT → USDC → USDT
+   Símbolos: CGPT/USDT → CGPT/USDC → USDC/USDT
+✅ USDT → COOKIE → USDC → USDT
+   Símbolos: COOKIE/USDT → COOKIE/USDC → USDC/USDT
+✅ USDT → S → USDC → USDT
+   Símbolos: S/USDT → S/USDC → USDC/USDT
+✅ USDT → TRUMP → USDC → USDT
+   Símbolos: TRUMP/USDT → TRUMP/USDC → USDC/USDT
+✅ USDT → ANIME → USDC → USDT
+   Símbolos: ANIME/USDT → ANIME/USDC → USDC/USDT
+✅ USDT → BERA → USDC → USDT
+   Símbolos: BERA/USDT → BERA/USDC → USDC/USDT
+✅ USDT → 1000CHEEMS → USDC → USDT
+   Símbolos: 1000CHEEMS/USDT → 1000CHEEMS/USDC → USDC/USDT
+✅ USDT → TST → USDC → USDT
+   Símbolos: TST/USDT → TST/USDC → USDC/USDT
+✅ USDT → LAYER → USDC → USDT
+   Símbolos: LAYER/USDT → LAYER/USDC → USDC/USDT
+✅ USDT → HEI → USDC → USDT
+   Símbolos: HEI/USDT → HEI/USDC → USDC/USDT
+✅ USDT → KAITO → USDC → USDT
+   Símbolos: KAITO/USDT → KAITO/USDC → USDC/USDT
+✅ USDT → SHELL → USDC → USDT
+   Símbolos: SHELL/USDT → SHELL/USDC → USDC/USDT
+✅ USDT → RED → USDC → USDT
+   Símbolos: RED/USDT → RED/USDC → USDC/USDT
+✅ USDT → GPS → USDC → USDT
+   Símbolos: GPS/USDT → GPS/USDC → USDC/USDT
+✅ USDT → EPIC → USDC → USDT
+   Símbolos: EPIC/USDT → EPIC/USDC → USDC/USDT
+✅ USDT → BMT → USDC → USDT
+   Símbolos: BMT/USDT → BMT/USDC → USDC/USDT
+✅ USDT → FORM → USDC → USDT
+   Símbolos: FORM/USDT → FORM/USDC → USDC/USDT
+✅ USDT → NIL → USDC → USDT
+   Símbolos: NIL/USDT → NIL/USDC → USDC/USDT
+✅ USDT → PARTI → USDC → USDT
+   Símbolos: PARTI/USDT → PARTI/USDC → USDC/USDT
+✅ USDT → MUBARAK → USDC → USDT
+   Símbolos: MUBARAK/USDT → MUBARAK/USDC → USDC/USDT
+✅ USDT → TUT → USDC → USDT
+   Símbolos: TUT/USDT → TUT/USDC → USDC/USDT
+✅ USDT → BROCCOLI714 → USDC → USDT
+   Símbolos: BROCCOLI714/USDT → BROCCOLI714/USDC → USDC/USDT
+✅ USDT → BANANAS31 → USDC → USDT
+   Símbolos: BANANAS31/USDT → BANANAS31/USDC → USDC/USDT
+✅ USDT → GUN → USDC → USDT
+   Símbolos: GUN/USDT → GUN/USDC → USDC/USDT
+✅ USDT → BABY → USDC → USDT
+   Símbolos: BABY/USDT → BABY/USDC → USDC/USDT
+✅ USDT → ONDO → USDC → USDT
+   Símbolos: ONDO/USDT → ONDO/USDC → USDC/USDT
+✅ USDT → BIGTIME → USDC → USDT
+   Símbolos: BIGTIME/USDT → BIGTIME/USDC → USDC/USDT
+✅ USDT → VIRTUAL → USDC → USDT
+   Símbolos: VIRTUAL/USDT → VIRTUAL/USDC → USDC/USDT
+✅ USDT → KERNEL → USDC → USDT
+   Símbolos: KERNEL/USDT → KERNEL/USDC → USDC/USDT
+✅ USDT → WCT → USDC → USDT
+   Símbolos: WCT/USDT → WCT/USDC → USDC/USDT
+✅ USDT → HYPER → USDC → USDT
+   Símbolos: HYPER/USDT → HYPER/USDC → USDC/USDT
+✅ USDT → INIT → USDC → USDT
+   Símbolos: INIT/USDT → INIT/USDC → USDC/USDT
+✅ USDT → SIGN → USDC → USDT
+   Símbolos: SIGN/USDT → SIGN/USDC → USDC/USDT
+✅ USDT → STO → USDC → USDT
+   Símbolos: STO/USDT → STO/USDC → USDC/USDT
+✅ USDT → SYRUP → USDC → USDT
+   Símbolos: SYRUP/USDT → SYRUP/USDC → USDC/USDT
+✅ USDT → KMNO → USDC → USDT
+   Símbolos: KMNO/USDT → KMNO/USDC → USDC/USDT
+✅ USDT → SXT → USDC → USDT
+   Símbolos: SXT/USDT → SXT/USDC → USDC/USDT
+✅ USDT → NXPC → USDC → USDT
+   Símbolos: NXPC/USDT → NXPC/USDC → USDC/USDT
+✅ USDT → HAEDAL → USDC → USDT
+   Símbolos: HAEDAL/USDT → HAEDAL/USDC → USDC/USDT
+✅ USDT → HUMA → USDC → USDT
+   Símbolos: HUMA/USDT → HUMA/USDC → USDC/USDT
+✅ USDT → A → USDC → USDT
+   Símbolos: A/USDT → A/USDC → USDC/USDT
+✅ USDT → SOPH → USDC → USDT
+   Símbolos: SOPH/USDT → SOPH/USDC → USDC/USDT
+✅ USDT → RESOLV → USDC → USDT
+   Símbolos: RESOLV/USDT → RESOLV/USDC → USDC/USDT
+✅ USDT → HOME → USDC → USDT
+   Símbolos: HOME/USDT → HOME/USDC → USDC/USDT
+✅ USDT → SPK → USDC → USDT
+   Símbolos: SPK/USDT → SPK/USDC → USDC/USDT
+✅ USDT → LINK → EUR → USDT
+   Símbolos: LINK/USDT → LINK/EUR → EUR/USDT
+✅ USDT → LINK → FDUSD → USDT
+   Símbolos: LINK/USDT → LINK/FDUSD → FDUSD/USDT
+❌ USDT → HOT → EUR → USDT
+   ❌ HOT/EUR no está activo
+❌ USDT → ZIL → EUR → USDT
+   ❌ ZIL/EUR no está activo
+✅ USDT → FET → FDUSD → USDT
+   Símbolos: FET/USDT → FET/FDUSD → FDUSD/USDT
+❌ USDT → THETA → EUR → USDT
+   ❌ THETA/EUR no está activo
+❌ USDT → THETA → FDUSD → USDT
+   ❌ THETA/FDUSD no está activo
+❌ USDT → ENJ → EUR → USDT
+   ❌ ENJ/EUR no está activo
+✅ USDT → ATOM → EUR → USDT
+   Símbolos: ATOM/USDT → ATOM/EUR → EUR/USDT
+✅ USDT → ATOM → FDUSD → USDT
+   Símbolos: ATOM/USDT → ATOM/FDUSD → FDUSD/USDT
+❌ USDT → ALGO → FDUSD → USDT
+   ❌ ALGO/FDUSD no está activo
+✅ USDT → DOGE → EUR → USDT
+   Símbolos: DOGE/USDT → DOGE/EUR → EUR/USDT
+✅ USDT → SHIB → DOGE → USDT
+   Símbolos: SHIB/USDT → SHIB/DOGE → DOGE/USDT
+✅ USDT → DOGE → FDUSD → USDT
+   Símbolos: DOGE/USDT → DOGE/FDUSD → FDUSD/USDT
+✅ USDT → WIN → EUR → USDT
+   Símbolos: WIN/USDT → WIN/EUR → EUR/USDT
+❌ USDT → CHZ → EUR → USDT
+   ❌ CHZ/EUR no está activo
+❌ USDT → CHZ → FDUSD → USDT
+   ❌ CHZ/FDUSD no está activo
+✅ USDT → HBAR → FDUSD → USDT
+   Símbolos: HBAR/USDT → HBAR/FDUSD → FDUSD/USDT
+✅ USDT → STX → FDUSD → USDT
+   Símbolos: STX/USDT → STX/FDUSD → FDUSD/USDT
+✅ USDT → BCH → EUR → USDT
+   Símbolos: BCH/USDT → BCH/EUR → EUR/USDT
+✅ USDT → BCH → FDUSD → USDT
+   Símbolos: BCH/USDT → BCH/FDUSD → FDUSD/USDT
+✅ USDT → SOL → EUR → USDT
+   Símbolos: SOL/USDT → SOL/EUR → EUR/USDT
+❌ USDT → SXP → EUR → USDT
+   ❌ SXP/EUR no está activo
+❌ USDT → YFI → EUR → USDT
+   ❌ YFI/EUR no está activo
+✅ USDT → DOT → EUR → USDT
+   Símbolos: DOT/USDT → DOT/EUR → EUR/USDT
+❌ USDT → LUNA → EUR → USDT
+   ❌ LUNA/EUR no está activo
+✅ USDT → EGLD → EUR → USDT
+   Símbolos: EGLD/USDT → EGLD/EUR → EUR/USDT
+❌ USDT → RUNE → EUR → USDT
+   ❌ RUNE/EUR no está activo
+❌ USDT → UNI → EUR → USDT
+   ❌ UNI/EUR no está activo
+✅ USDT → AVAX → EUR → USDT
+   Símbolos: AVAX/USDT → AVAX/EUR → EUR/USDT
+✅ USDT → NEAR → EUR → USDT
+   Símbolos: NEAR/USDT → NEAR/EUR → EUR/USDT
+✅ USDT → GRT → EUR → USDT
+   Símbolos: GRT/USDT → GRT/EUR → EUR/USDT
+✅ USDT → SHIB → EUR → USDT
+   Símbolos: SHIB/USDT → SHIB/EUR → EUR/USDT
+✅ USDT → ICP → EUR → USDT
+   Símbolos: ICP/USDT → ICP/EUR → EUR/USDT
+✅ USDT → GALA → EUR → USDT
+   Símbolos: GALA/USDT → GALA/EUR → EUR/USDT
+❌ USDT → LAZIO → EUR → USDT
+   ❌ LAZIO/EUR no está activo
+❌ USDT → PORTO → EUR → USDT
+   ❌ PORTO/EUR no está activo
+❌ USDT → JASMY → EUR → USDT
+   ❌ JASMY/EUR no está activo
+❌ USDT → ALPINE → EUR → USDT
+   ❌ ALPINE/EUR no está activo
+✅ USDT → GMT → EUR → USDT
+   Símbolos: GMT/USDT → GMT/EUR → EUR/USDT
+❌ USDT → APE → EUR → USDT
+   ❌ APE/EUR no está activo
+✅ USDT → OP → EUR → USDT
+   Símbolos: OP/USDT → OP/EUR → EUR/USDT
+✅ USDT → APT → EUR → USDT
+   Símbolos: APT/USDT → APT/EUR → EUR/USDT
+❌ USDT → ID → EUR → USDT
+   ❌ ID/EUR no está activo
+✅ USDT → ARB → EUR → USDT
+   Símbolos: ARB/USDT → ARB/EUR → EUR/USDT
+❌ USDT → EDU → EUR → USDT
+   ❌ EDU/EUR no está activo
+✅ USDT → SUI → EUR → USDT
+   Símbolos: SUI/USDT → SUI/EUR → EUR/USDT
+✅ USDT → PEPE → EUR → USDT
+   Símbolos: PEPE/USDT → PEPE/EUR → EUR/USDT
+✅ USDT → WLD → EUR → USDT
+   Símbolos: WLD/USDT → WLD/EUR → EUR/USDT
+❌ USDT → EUR → AEUR → USDT
+   ❌ EUR/AEUR no está activo
+✅ USDT → WIF → EUR → USDT
+   Símbolos: WIF/USDT → WIF/EUR → EUR/USDT
+✅ USDT → BOME → EUR → USDT
+   Símbolos: BOME/USDT → BOME/EUR → EUR/USDT
+❌ USDT → ENA → EUR → USDT
+   ❌ ENA/EUR no está activo
+❌ USDT → NOT → EUR → USDT
+   ❌ NOT/EUR no está activo
+✅ USDT → RENDER → EUR → USDT
+   Símbolos: RENDER/USDT → RENDER/EUR → EUR/USDT
+✅ USDT → EUR → EURI → USDT
+   Símbolos: EUR/USDT → EUR/EURI → EURI/USDT
+✅ USDT → POL → EUR → USDT
+   Símbolos: POL/USDT → POL/EUR → EUR/USDT
+❌ USDT → NEIRO → EUR → USDT
+   ❌ NEIRO/EUR no está activo
+✅ USDT → PNUT → EUR → USDT
+   Símbolos: PNUT/USDT → PNUT/EUR → EUR/USDT
+✅ USDT → ACT → EUR → USDT
+   Símbolos: ACT/USDT → ACT/EUR → EUR/USDT
+✅ USDT → S → EUR → USDT
+   Símbolos: S/USDT → S/EUR → EUR/USDT
+✅ USDT → TRUMP → EUR → USDT
+   Símbolos: TRUMP/USDT → TRUMP/EUR → EUR/USDT
+✅ USDT → BABY → EUR → USDT
+   Símbolos: BABY/USDT → BABY/EUR → EUR/USDT
+✅ USDT → SOL → FDUSD → USDT
+   Símbolos: SOL/USDT → SOL/FDUSD → FDUSD/USDT
+✅ USDT → BNSOL → SOL → USDT
+   Símbolos: BNSOL/USDT → BNSOL/SOL → SOL/USDT
+✅ USDT → HIVE → FDUSD → USDT
+   Símbolos: HIVE/USDT → HIVE/FDUSD → FDUSD/USDT
+✅ USDT → SAND → FDUSD → USDT
+   Símbolos: SAND/USDT → SAND/FDUSD → FDUSD/USDT
+✅ USDT → DOT → FDUSD → USDT
+   Símbolos: DOT/USDT → DOT/FDUSD → FDUSD/USDT
+❌ USDT → RSR → FDUSD → USDT
+   ❌ RSR/FDUSD no está activo
+❌ USDT → TRB → FDUSD → USDT
+   ❌ TRB/FDUSD no está activo
+✅ USDT → EGLD → FDUSD → USDT
+   Símbolos: EGLD/USDT → EGLD/FDUSD → FDUSD/USDT
+✅ USDT → RUNE → FDUSD → USDT
+   Símbolos: RUNE/USDT → RUNE/FDUSD → FDUSD/USDT
+✅ USDT → UNI → FDUSD → USDT
+   Símbolos: UNI/USDT → UNI/FDUSD → FDUSD/USDT
+✅ USDT → AVAX → FDUSD → USDT
+   Símbolos: AVAX/USDT → AVAX/FDUSD → FDUSD/USDT
+✅ USDT → AAVE → FDUSD → USDT
+   Símbolos: AAVE/USDT → AAVE/FDUSD → FDUSD/USDT
+✅ USDT → NEAR → FDUSD → USDT
+   Símbolos: NEAR/USDT → NEAR/FDUSD → FDUSD/USDT
+✅ USDT → FIL → FDUSD → USDT
+   Símbolos: FIL/USDT → FIL/FDUSD → FDUSD/USDT
+✅ USDT → INJ → FDUSD → USDT
+   Símbolos: INJ/USDT → INJ/FDUSD → FDUSD/USDT
+✅ USDT → GRT → FDUSD → USDT
+   Símbolos: GRT/USDT → GRT/FDUSD → FDUSD/USDT
+❌ USDT → SUPER → FDUSD → USDT
+   ❌ SUPER/FDUSD no está activo
+❌ USDT → TLM → FDUSD → USDT
+   ❌ TLM/FDUSD no está activo
+✅ USDT → SHIB → FDUSD → USDT
+   Símbolos: SHIB/USDT → SHIB/FDUSD → FDUSD/USDT
+✅ USDT → ICP → FDUSD → USDT
+   Símbolos: ICP/USDT → ICP/FDUSD → FDUSD/USDT
+✅ USDT → AR → FDUSD → USDT
+   Símbolos: AR/USDT → AR/FDUSD → FDUSD/USDT
+✅ USDT → RAY → FDUSD → USDT
+   Símbolos: RAY/USDT → RAY/FDUSD → FDUSD/USDT
+✅ USDT → DYDX → FDUSD → USDT
+   Símbolos: DYDX/USDT → DYDX/FDUSD → FDUSD/USDT
+❌ USDT → IDEX → FDUSD → USDT
+   ❌ IDEX/FDUSD no está activo
+✅ USDT → GALA → FDUSD → USDT
+   Símbolos: GALA/USDT → GALA/FDUSD → FDUSD/USDT
+✅ USDT → AUCTION → FDUSD → USDT
+   Símbolos: AUCTION/USDT → AUCTION/FDUSD → FDUSD/USDT
+✅ USDT → ENS → FDUSD → USDT
+   Símbolos: ENS/USDT → ENS/FDUSD → FDUSD/USDT
+✅ USDT → PEOPLE → FDUSD → USDT
+   Símbolos: PEOPLE/USDT → PEOPLE/FDUSD → FDUSD/USDT
+✅ USDT → APE → FDUSD → USDT
+   Símbolos: APE/USDT → APE/FDUSD → FDUSD/USDT
+✅ USDT → LDO → FDUSD → USDT
+   Símbolos: LDO/USDT → LDO/FDUSD → FDUSD/USDT
+✅ USDT → OP → FDUSD → USDT
+   Símbolos: OP/USDT → OP/FDUSD → FDUSD/USDT
+✅ USDT → APT → FDUSD → USDT
+   Símbolos: APT/USDT → APT/FDUSD → FDUSD/USDT
+❌ USDT → MAGIC → FDUSD → USDT
+   ❌ MAGIC/FDUSD no está activo
+❌ USDT → LQTY → FDUSD → USDT
+   ❌ LQTY/FDUSD no está activo
+❌ USDT → USTC → FDUSD → USDT
+   ❌ USTC/FDUSD no está activo
+❌ USDT → GAS → FDUSD → USDT
+   ❌ GAS/FDUSD no está activo
+✅ USDT → ARB → FDUSD → USDT
+   Símbolos: ARB/USDT → ARB/FDUSD → FDUSD/USDT
+✅ USDT → SUI → FDUSD → USDT
+   Símbolos: SUI/USDT → SUI/FDUSD → FDUSD/USDT
+✅ USDT → PEPE → FDUSD → USDT
+   Símbolos: PEPE/USDT → PEPE/FDUSD → FDUSD/USDT
+✅ USDT → FLOKI → FDUSD → USDT
+   Símbolos: FLOKI/USDT → FLOKI/FDUSD → FDUSD/USDT
+✅ USDT → PENDLE → FDUSD → USDT
+   Símbolos: PENDLE/USDT → PENDLE/FDUSD → FDUSD/USDT
+✅ USDT → ARKM → FDUSD → USDT
+   Símbolos: ARKM/USDT → ARKM/FDUSD → FDUSD/USDT
+✅ USDT → WLD → FDUSD → USDT
+   Símbolos: WLD/USDT → WLD/FDUSD → FDUSD/USDT
+✅ USDT → SEI → FDUSD → USDT
+   Símbolos: SEI/USDT → SEI/FDUSD → FDUSD/USDT
+✅ USDT → CYBER → FDUSD → USDT
+   Símbolos: CYBER/USDT → CYBER/FDUSD → FDUSD/USDT
+✅ USDT → TIA → FDUSD → USDT
+   Símbolos: TIA/USDT → TIA/FDUSD → FDUSD/USDT
+✅ USDT → MEME → FDUSD → USDT
+   Símbolos: MEME/USDT → MEME/FDUSD → FDUSD/USDT
+✅ USDT → ORDI → FDUSD → USDT
+   Símbolos: ORDI/USDT → ORDI/FDUSD → FDUSD/USDT
+❌ USDT → BLUR → FDUSD → USDT
+   ❌ BLUR/FDUSD no está activo
+✅ USDT → JTO → FDUSD → USDT
+   Símbolos: JTO/USDT → JTO/FDUSD → FDUSD/USDT
+✅ USDT → 1000SATS → FDUSD → USDT
+   Símbolos: 1000SATS/USDT → 1000SATS/FDUSD → FDUSD/USDT
+✅ USDT → BONK → FDUSD → USDT
+   Símbolos: BONK/USDT → BONK/FDUSD → FDUSD/USDT
+❌ USDT → ACE → FDUSD → USDT
+   ❌ ACE/FDUSD no está activo
+✅ USDT → NFP → FDUSD → USDT
+   Símbolos: NFP/USDT → NFP/FDUSD → FDUSD/USDT
+✅ USDT → AI → FDUSD → USDT
+   Símbolos: AI/USDT → AI/FDUSD → FDUSD/USDT
+❌ USDT → XAI → FDUSD → USDT
+   ❌ XAI/FDUSD no está activo
+✅ USDT → MANTA → FDUSD → USDT
+   Símbolos: MANTA/USDT → MANTA/FDUSD → FDUSD/USDT
+✅ USDT → ALT → FDUSD → USDT
+   Símbolos: ALT/USDT → ALT/FDUSD → FDUSD/USDT
+✅ USDT → JUP → FDUSD → USDT
+   Símbolos: JUP/USDT → JUP/FDUSD → FDUSD/USDT
+✅ USDT → PYTH → FDUSD → USDT
+   Símbolos: PYTH/USDT → PYTH/FDUSD → FDUSD/USDT
+✅ USDT → RONIN → FDUSD → USDT
+   Símbolos: RONIN/USDT → RONIN/FDUSD → FDUSD/USDT
+❌ USDT → DYM → FDUSD → USDT
+   ❌ DYM/FDUSD no está activo
+❌ USDT → PIXEL → FDUSD → USDT
+   ❌ PIXEL/FDUSD no está activo
+✅ USDT → STRK → FDUSD → USDT
+   Símbolos: STRK/USDT → STRK/FDUSD → FDUSD/USDT
+✅ USDT → PORTAL → FDUSD → USDT
+   Símbolos: PORTAL/USDT → PORTAL/FDUSD → FDUSD/USDT
+❌ USDT → AXL → FDUSD → USDT
+   ❌ AXL/FDUSD no está activo
+✅ USDT → WIF → FDUSD → USDT
+   Símbolos: WIF/USDT → WIF/FDUSD → FDUSD/USDT
+❌ USDT → METIS → FDUSD → USDT
+   ❌ METIS/FDUSD no está activo
+✅ USDT → AEVO → FDUSD → USDT
+   Símbolos: AEVO/USDT → AEVO/FDUSD → FDUSD/USDT
+✅ USDT → BOME → FDUSD → USDT
+   Símbolos: BOME/USDT → BOME/FDUSD → FDUSD/USDT
+✅ USDT → ETHFI → FDUSD → USDT
+   Símbolos: ETHFI/USDT → ETHFI/FDUSD → FDUSD/USDT
+✅ USDT → ENA → FDUSD → USDT
+   Símbolos: ENA/USDT → ENA/FDUSD → FDUSD/USDT
+✅ USDT → W → FDUSD → USDT
+   Símbolos: W/USDT → W/FDUSD → FDUSD/USDT
+✅ USDT → TNSR → FDUSD → USDT
+   Símbolos: TNSR/USDT → TNSR/FDUSD → FDUSD/USDT
+✅ USDT → SAGA → FDUSD → USDT
+   Símbolos: SAGA/USDT → SAGA/FDUSD → FDUSD/USDT
+✅ USDT → TAO → FDUSD → USDT
+   Símbolos: TAO/USDT → TAO/FDUSD → FDUSD/USDT
+✅ USDT → OMNI → FDUSD → USDT
+   Símbolos: OMNI/USDT → OMNI/FDUSD → FDUSD/USDT
+❌ USDT → REZ → FDUSD → USDT
+   ❌ REZ/FDUSD no está activo
+✅ USDT → BB → FDUSD → USDT
+   Símbolos: BB/USDT → BB/FDUSD → FDUSD/USDT
+✅ USDT → NOT → FDUSD → USDT
+   Símbolos: NOT/USDT → NOT/FDUSD → FDUSD/USDT
+✅ USDT → IO → FDUSD → USDT
+   Símbolos: IO/USDT → IO/FDUSD → FDUSD/USDT
+✅ USDT → ZK → FDUSD → USDT
+   Símbolos: ZK/USDT → ZK/FDUSD → FDUSD/USDT
+✅ USDT → LISTA → FDUSD → USDT
+   Símbolos: LISTA/USDT → LISTA/FDUSD → FDUSD/USDT
+✅ USDT → ZRO → FDUSD → USDT
+   Símbolos: ZRO/USDT → ZRO/FDUSD → FDUSD/USDT
+✅ USDT → BANANA → FDUSD → USDT
+   Símbolos: BANANA/USDT → BANANA/FDUSD → FDUSD/USDT
+✅ USDT → RENDER → FDUSD → USDT
+   Símbolos: RENDER/USDT → RENDER/FDUSD → FDUSD/USDT
+✅ USDT → TON → FDUSD → USDT
+   Símbolos: TON/USDT → TON/FDUSD → FDUSD/USDT
+✅ USDT → DOGS → FDUSD → USDT
+   Símbolos: DOGS/USDT → DOGS/FDUSD → FDUSD/USDT
+✅ USDT → POL → FDUSD → USDT
+   Símbolos: POL/USDT → POL/FDUSD → FDUSD/USDT
+✅ USDT → NEIRO → FDUSD → USDT
+   Símbolos: NEIRO/USDT → NEIRO/FDUSD → FDUSD/USDT
+❌ USDT → TURBO → FDUSD → USDT
+   ❌ TURBO/FDUSD no está activo
+✅ USDT → 1MBABYDOGE → FDUSD → USDT
+   Símbolos: 1MBABYDOGE/USDT → 1MBABYDOGE/FDUSD → FDUSD/USDT
+❌ USDT → CATI → FDUSD → USDT
+   ❌ CATI/FDUSD no está activo
+✅ USDT → HMSTR → FDUSD → USDT
+   Símbolos: HMSTR/USDT → HMSTR/FDUSD → FDUSD/USDT
+✅ USDT → EIGEN → FDUSD → USDT
+   Símbolos: EIGEN/USDT → EIGEN/FDUSD → FDUSD/USDT
+✅ USDT → SCR → FDUSD → USDT
+   Símbolos: SCR/USDT → SCR/FDUSD → FDUSD/USDT
+✅ USDT → PNUT → FDUSD → USDT
+   Símbolos: PNUT/USDT → PNUT/FDUSD → FDUSD/USDT
+✅ USDT → ACT → FDUSD → USDT
+   Símbolos: ACT/USDT → ACT/FDUSD → FDUSD/USDT
+✅ USDT → USUAL → FDUSD → USDT
+   Símbolos: USUAL/USDT → USUAL/FDUSD → FDUSD/USDT
+✅ USDT → THE → FDUSD → USDT
+   Símbolos: THE/USDT → THE/FDUSD → FDUSD/USDT
+❌ USDT → ACX → FDUSD → USDT
+   ❌ ACX/FDUSD no está activo
+❌ USDT → ORCA → FDUSD → USDT
+   ❌ ORCA/FDUSD no está activo
+✅ USDT → MOVE → FDUSD → USDT
+   Símbolos: MOVE/USDT → MOVE/FDUSD → FDUSD/USDT
+✅ USDT → ME → FDUSD → USDT
+   Símbolos: ME/USDT → ME/FDUSD → FDUSD/USDT
+✅ USDT → VANA → FDUSD → USDT
+   Símbolos: VANA/USDT → VANA/FDUSD → FDUSD/USDT
+✅ USDT → 1000CAT → FDUSD → USDT
+   Símbolos: 1000CAT/USDT → 1000CAT/FDUSD → FDUSD/USDT
+✅ USDT → PENGU → FDUSD → USDT
+   Símbolos: PENGU/USDT → PENGU/FDUSD → FDUSD/USDT
+✅ USDT → BIO → FDUSD → USDT
+   Símbolos: BIO/USDT → BIO/FDUSD → FDUSD/USDT
+✅ USDT → S → FDUSD → USDT
+   Símbolos: S/USDT → S/FDUSD → FDUSD/USDT
+✅ USDT → SOLV → FDUSD → USDT
+   Símbolos: SOLV/USDT → SOLV/FDUSD → FDUSD/USDT
+✅ USDT → TRUMP → FDUSD → USDT
+   Símbolos: TRUMP/USDT → TRUMP/FDUSD → FDUSD/USDT
+✅ USDT → ANIME → FDUSD → USDT
+   Símbolos: ANIME/USDT → ANIME/FDUSD → FDUSD/USDT
+✅ USDT → BERA → FDUSD → USDT
+   Símbolos: BERA/USDT → BERA/FDUSD → FDUSD/USDT
+✅ USDT → TST → FDUSD → USDT
+   Símbolos: TST/USDT → TST/FDUSD → FDUSD/USDT
+✅ USDT → LAYER → FDUSD → USDT
+   Símbolos: LAYER/USDT → LAYER/FDUSD → FDUSD/USDT
+✅ USDT → KAITO → FDUSD → USDT
+   Símbolos: KAITO/USDT → KAITO/FDUSD → FDUSD/USDT
+✅ USDT → SHELL → FDUSD → USDT
+   Símbolos: SHELL/USDT → SHELL/FDUSD → FDUSD/USDT
+✅ USDT → RED → FDUSD → USDT
+   Símbolos: RED/USDT → RED/FDUSD → FDUSD/USDT
+✅ USDT → GPS → FDUSD → USDT
+   Símbolos: GPS/USDT → GPS/FDUSD → FDUSD/USDT
+✅ USDT → BMT → FDUSD → USDT
+   Símbolos: BMT/USDT → BMT/FDUSD → FDUSD/USDT
+✅ USDT → NIL → FDUSD → USDT
+   Símbolos: NIL/USDT → NIL/FDUSD → FDUSD/USDT
+✅ USDT → PARTI → FDUSD → USDT
+   Símbolos: PARTI/USDT → PARTI/FDUSD → FDUSD/USDT
+✅ USDT → GUN → FDUSD → USDT
+   Símbolos: GUN/USDT → GUN/FDUSD → FDUSD/USDT
+✅ USDT → BABY → FDUSD → USDT
+   Símbolos: BABY/USDT → BABY/FDUSD → FDUSD/USDT
+✅ USDT → KERNEL → FDUSD → USDT
+   Símbolos: KERNEL/USDT → KERNEL/FDUSD → FDUSD/USDT
+✅ USDT → WCT → FDUSD → USDT
+   Símbolos: WCT/USDT → WCT/FDUSD → FDUSD/USDT
+✅ USDT → HYPER → FDUSD → USDT
+   Símbolos: HYPER/USDT → HYPER/FDUSD → FDUSD/USDT
+✅ USDT → INIT → FDUSD → USDT
+   Símbolos: INIT/USDT → INIT/FDUSD → FDUSD/USDT
+✅ USDT → SIGN → FDUSD → USDT
+   Símbolos: SIGN/USDT → SIGN/FDUSD → FDUSD/USDT
+✅ USDT → STO → FDUSD → USDT
+   Símbolos: STO/USDT → STO/FDUSD → FDUSD/USDT
+✅ USDT → SXT → FDUSD → USDT
+   Símbolos: SXT/USDT → SXT/FDUSD → FDUSD/USDT
+✅ USDT → NXPC → FDUSD → USDT
+   Símbolos: NXPC/USDT → NXPC/FDUSD → FDUSD/USDT
+✅ USDT → HAEDAL → FDUSD → USDT
+   Símbolos: HAEDAL/USDT → HAEDAL/FDUSD → FDUSD/USDT
+✅ USDT → HUMA → FDUSD → USDT
+   Símbolos: HUMA/USDT → HUMA/FDUSD → FDUSD/USDT
+✅ USDT → A → FDUSD → USDT
+   Símbolos: A/USDT → A/FDUSD → FDUSD/USDT
+✅ USDT → SOPH → FDUSD → USDT
+   Símbolos: SOPH/USDT → SOPH/FDUSD → FDUSD/USDT
+✅ USDT → RESOLV → FDUSD → USDT
+   Símbolos: RESOLV/USDT → RESOLV/FDUSD → FDUSD/USDT
+✅ USDT → HOME → FDUSD → USDT
+   Símbolos: HOME/USDT → HOME/FDUSD → FDUSD/USDT
+✅ USDT → SPK → FDUSD → USDT
+   Símbolos: SPK/USDT → SPK/FDUSD → FDUSD/USDT
+
+🧪 PROBANDO PRECIOS EN LAS PRIMERAS 5 RUTAS...
+
+💰 Probando precios para: USDT → ETH → BTC → USDT
+   ETH/USDT: Bid=2376.59, Ask=2376.6
+   ETH/BTC: Bid=0.02288, Ask=0.02289
+   BTC/USDT: Bid=103816.46, Ask=103816.47
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 0.420769 ETH
+   Paso 2: 0.420769 ETH → 18.382227 BTC
+   Paso 3: 18.382227 BTC → $1908377.69
+   🎯 Profit: 190737.7689%
+
+💰 Probando precios para: USDT → BNB → BTC → USDT
+   BNB/USDT: Bid=634.87, Ask=634.88
+   BNB/BTC: Bid=0.006115, Ask=0.006116
+   BTC/USDT: Bid=103806.42, Ask=103806.43
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 1.575101 BNB
+   Paso 2: 1.575101 BNB → 257.537738 BTC
+   Paso 3: 257.537738 BTC → $26734070.61
+   🎯 Profit: 2673307.0611%
+
+💰 Probando precios para: USDT → NEO → BTC → USDT
+   NEO/USDT: Bid=5.39, Ask=5.4
+   NEO/BTC: Bid=0.000052, Ask=0.0000521
+   BTC/USDT: Bid=103789.15, Ask=103789.16
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 185.185185 NEO
+   Paso 2: 185.185185 NEO → 3554418.141750 BTC
+   Paso 3: 3554418.141750 BTC → $368910037676.83
+   🎯 Profit: 36891003667.6832%
+
+💰 Probando precios para: USDT → LTC → BTC → USDT
+   LTC/USDT: Bid=84.02, Ask=84.03
+   LTC/BTC: Bid=0.000809, Ask=0.00081
+   BTC/USDT: Bid=103766.22, Ask=103766.23
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 11.900512 LTC
+   Paso 2: 11.900512 LTC → 14691.989780 BTC
+   Paso 3: 14691.989780 BTC → $1524532243.78
+   🎯 Profit: 152453124.3775%
+
+💰 Probando precios para: USDT → QTUM → BTC → USDT
+   QTUM/USDT: Bid=1.948, Ask=1.949
+   QTUM/BTC: Bid=0.00001874, Ask=0.00001881
+   BTC/USDT: Bid=103771.41, Ask=103771.42
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 513.083633 QTUM
+   Paso 2: 513.083633 QTUM → 27277173.452000 BTC
+   Paso 3: 27277173.452000 BTC → $2830590749928.60
+   🎯 Profit: 283059074892.8602%
+
+NaN
+📊 RESUMEN FINAL:
+✅ Rutas encontradas: 1129
+✅ Rutas verificadas: 716
+✅ Rutas con precios: 5
+
+🎯 TOP 5 RUTAS REALES RECOMENDADAS:
+1. USDT → QTUM → BTC → USDT
+   Profit actual: 283059074892.8602%
+   Símbolos: QTUM/USDT → QTUM/BTC → BTC/USDT
+
+2. USDT → NEO → BTC → USDT
+   Profit actual: 36891003667.6832%
+   Símbolos: NEO/USDT → NEO/BTC → BTC/USDT
+
+3. USDT → LTC → BTC → USDT
+   Profit actual: 152453124.3775%
+   Símbolos: LTC/USDT → LTC/BTC → BTC/USDT
+
+4. USDT → BNB → BTC → USDT
+   Profit actual: 2673307.0611%
+   Símbolos: BNB/USDT → BNB/BTC → BTC/USDT
+
+5. USDT → ETH → BTC → USDT
+   Profit actual: 190737.7689%
+   Símbolos: ETH/USDT → ETH/BTC → BTC/USDT
+
+🎉 BÚSQUEDA COMPLETADA!
+Usa las rutas mostradas arriba en tu bot - son 100% REALES y verificadas HOY
+
+C:\Users\Administrador del PC\Desktop\yagecoin-bot\backend>node route-finder.js
+🚀 INICIANDO BÚSQUEDA DE RUTAS REALES (LÓGICA CORREGIDA)
+NaN
+🔍 Cargando mercados SPOT REALES de Binance...
+✅ Encontrados 1457 mercados SPOT activos
+
+🔍 Buscando rutas triangulares: TOKENA/USDT → TOKENA/TOKENB → TOKENB/USDT
+📊 Encontrados 405 pares con USDT
+
+🔍 Verificando 716 rutas encontradas...
+✅ 716 rutas verificadas como válidas
+
+🧪 PROBANDO PRECIOS EN LAS PRIMERAS 10 RUTAS...
+
+💰 Probando precios para: USDT → ETH → BTC → USDT
+   ETH/USDT: Bid=2365.73, Ask=2365.74
+   ETH/BTC: Bid=0.02277, Ask=0.02278
+   BTC/USDT: Bid=103846.91, Ask=103846.92
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 0.422701 ETH
+   Paso 2: 0.422701 ETH → 0.009629 BTC
+   Paso 3: 0.009629 BTC → $999.95
+   🎯 Profit: 🔴 -0.0045%
+
+💰 Probando precios para: USDT → BNB → BTC → USDT
+   BNB/USDT: Bid=634.54, Ask=634.55
+   BNB/BTC: Bid=0.006109, Ask=0.00611
+   BTC/USDT: Bid=103849.99, Ask=103850
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 1.575920 BNB
+   Paso 2: 1.575920 BNB → 0.009629 BTC
+   Paso 3: 0.009629 BTC → $999.96
+   🎯 Profit: 🔴 -0.0042%
+
+💰 Probando precios para: USDT → NEO → BTC → USDT
+   NEO/USDT: Bid=5.4, Ask=5.41
+   NEO/BTC: Bid=0.000052, Ask=0.0000521
+   BTC/USDT: Bid=103823.46, Ask=103823.47
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 184.842884 NEO
+   Paso 2: 184.842884 NEO → 0.009630 BTC
+   Paso 3: 0.009630 BTC → $999.85
+   🎯 Profit: 🔴 -0.0147%
+
+💰 Probando precios para: USDT → LTC → BTC → USDT
+   LTC/USDT: Bid=83.96, Ask=83.97
+   LTC/BTC: Bid=0.000808, Ask=0.000809
+   BTC/USDT: Bid=103827.99, Ask=103828
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 11.909015 LTC
+   Paso 2: 11.909015 LTC → 0.009634 BTC
+   Paso 3: 0.009634 BTC → $1000.32
+   🎯 Profit: 🟢 0.0320%
+
+💰 Probando precios para: USDT → QTUM → BTC → USDT
+   QTUM/USDT: Bid=1.948, Ask=1.95
+   QTUM/BTC: Bid=0.00001873, Ask=0.0000188
+   BTC/USDT: Bid=103839.99, Ask=103840
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 512.820513 QTUM
+   Paso 2: 512.820513 QTUM → 0.009641 BTC
+   Paso 3: 0.009641 BTC → $1001.12
+   🎯 Profit: 🟢 0.1124%
+
+💰 Probando precios para: USDT → ADA → BTC → USDT
+   ADA/USDT: Bid=0.5653, Ask=0.5654
+   ADA/BTC: Bid=0.00000544, Ask=0.00000545
+   BTC/USDT: Bid=103848.01, Ask=103848.02
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 1768.659356 ADA
+   Paso 2: 1768.659356 ADA → 0.009639 BTC
+   Paso 3: 0.009639 BTC → $1001.01
+   🎯 Profit: 🟢 0.1011%
+
+💰 Probando precios para: USDT → XRP → BTC → USDT
+   XRP/USDT: Bid=2.0875, Ask=2.0876
+   XRP/BTC: Bid=0.0000201, Ask=0.00002011
+   BTC/USDT: Bid=103840.85, Ask=103840.86
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 479.018969 XRP
+   Paso 2: 479.018969 XRP → 0.009633 BTC
+   Paso 3: 0.009633 BTC → $1000.31
+   🎯 Profit: 🟢 0.0306%
+
+💰 Probando precios para: USDT → BTC → TUSD → USDT
+   BTC/USDT: Bid=103840.85, Ask=103840.86
+   BTC/TUSD: Bid=104080.98, Ask=104086.95
+   TUSD/USDT: Bid=0.9975, Ask=0.9976
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 0.009630 BTC
+   Paso 2: 0.009630 BTC → 1002.369876 TUSD
+   Paso 3: 1002.369876 TUSD → $999.86
+   🎯 Profit: 🔴 -0.0136%
+
+💰 Probando precios para: USDT → IOTA → BTC → USDT
+   IOTA/USDT: Bid=0.1574, Ask=0.1575
+   IOTA/BTC: Bid=0.00000151, Ask=0.00000152
+   BTC/USDT: Bid=103840.85, Ask=103840.86
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 6349.206349 IOTA
+   Paso 2: 6349.206349 IOTA → 0.009651 BTC
+   Paso 3: 0.009651 BTC → $1002.15
+   🎯 Profit: 🟢 0.2147%
+
+💰 Probando precios para: USDT → XLM → BTC → USDT
+   XLM/USDT: Bid=0.2396, Ask=0.2397
+   XLM/BTC: Bid=0.0000023, Ask=0.00000231
+   BTC/USDT: Bid=103840.85, Ask=103840.86
+   💡 Simulación con $1000:
+   Paso 1: $1000 → 4171.881519 XLM
+   Paso 2: 4171.881519 XLM → 0.009637 BTC
+   Paso 3: 0.009637 BTC → $1000.72
+   🎯 Profit: 🟢 0.0719%
+
+NaN
+📊 RESUMEN FINAL:
+✅ Rutas encontradas: 716
+✅ Rutas verificadas: 716
+✅ Rutas con precios: 10
+
+🎯 TOP 10 RUTAS REALES CON PROFITS CORRECTOS:
+1. USDT → IOTA → BTC → USDT
+   Profit: 🟢 0.2147%
+   Símbolos: IOTA/USDT → IOTA/BTC → BTC/USDT
+
+2. USDT → QTUM → BTC → USDT
+   Profit: 🟢 0.1124%
+   Símbolos: QTUM/USDT → QTUM/BTC → BTC/USDT
+
+3. USDT → ADA → BTC → USDT
+   Profit: 🟢 0.1011%
+   Símbolos: ADA/USDT → ADA/BTC → BTC/USDT
+
+4. USDT → XLM → BTC → USDT
+   Profit: 🟢 0.0719%
+   Símbolos: XLM/USDT → XLM/BTC → BTC/USDT
+
+5. USDT → LTC → BTC → USDT
+   Profit: 🟢 0.0320%
+   Símbolos: LTC/USDT → LTC/BTC → BTC/USDT
+
+6. USDT → XRP → BTC → USDT
+   Profit: 🟢 0.0306%
+   Símbolos: XRP/USDT → XRP/BTC → BTC/USDT
+
+7. USDT → BNB → BTC → USDT
+   Profit: 🔴 -0.0042%
+   Símbolos: BNB/USDT → BNB/BTC → BTC/USDT
+
+8. USDT → ETH → BTC → USDT
+   Profit: 🔴 -0.0045%
+   Símbolos: ETH/USDT → ETH/BTC → BTC/USDT
+
+9. USDT → BTC → TUSD → USDT
+   Profit: 🔴 -0.0136%
+   Símbolos: BTC/USDT → BTC/TUSD → TUSD/USDT
+
+10. USDT → NEO → BTC → USDT
+   Profit: 🔴 -0.0147%
+   Símbolos: NEO/USDT → NEO/BTC → BTC/USDT
+
+🎉 ENCONTRADAS 6 RUTAS RENTABLES:
+1. USDT → IOTA → BTC → USDT - Profit: +0.2147%
+2. USDT → QTUM → BTC → USDT - Profit: +0.1124%
+3. USDT → ADA → BTC → USDT - Profit: +0.1011%
+4. USDT → XLM → BTC → USDT - Profit: +0.0719%
+5. USDT → LTC → BTC → USDT - Profit: +0.0320%
+6. USDT → XRP → BTC → USDT - Profit: +0.0306%
+
+🎉 BÚSQUEDA COMPLETADA CON LÓGICA CORREGIDA!
+Las rutas mostradas tienen profits REALES y correctos
+✅ Usa las 6 rutas rentables en tu bot
+
+C:\Users\Administrador del PC\Desktop\yagecoin-bot\backend>node route-finder.js
+🎯 OBJETIVO: Encontrar las TOP 100 rutas más rentables
+⏱️  TIEMPO ESTIMADO: 10-15 minutos
+🔄 PROCESANDO...
+🚀 INICIANDO BÚSQUEDA COMPLETA DE TOP 100 RUTAS
+NaN
+🔍 Cargando TODOS los mercados SPOT de Binance...
+✅ Encontrados 1457 mercados SPOT activos
+
+🔍 Buscando TODAS las rutas triangulares posibles...
+📊 Encontrados 405 pares con USDT
+🎯 Encontradas 716 rutas triangulares posibles
+
+🔍 Verificando 716 rutas encontradas...
+✅ 716 rutas verificadas como válidas
+
+🧪 PROBANDO PRECIOS EN TODAS LAS 716 RUTAS...
+📦 Procesando en lotes de 20 para evitar rate limits
+📊 Total de lotes a procesar: 36
+
+📊 Procesando lote 1/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 2/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 3/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 4/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 5/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 6/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 7/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 8/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 9/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 10/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 11/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 12/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 13/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 14/36 (20 rutas)
+   📡 Obteniendo precios para 42 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 15/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 16/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 17/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 18/36 (20 rutas)
+   📡 Obteniendo precios para 38 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 19/36 (20 rutas)
+   📡 Obteniendo precios para 33 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 20/36 (20 rutas)
+   📡 Obteniendo precios para 37 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 21/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 22/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 23/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 24/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 25/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 26/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 27/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 28/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 29/36 (20 rutas)
+   📡 Obteniendo precios para 42 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 30/36 (20 rutas)
+   📡 Obteniendo precios para 42 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 31/36 (20 rutas)
+   📡 Obteniendo precios para 42 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 32/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 33/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 34/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 35/36 (20 rutas)
+   📡 Obteniendo precios para 41 símbolos...
+   ✅ Procesadas 20/20 rutas del lote
+   ⏳ Esperando 3 segundos antes del siguiente lote...
+
+📊 Procesando lote 36/36 (16 rutas)
+   📡 Obteniendo precios para 33 símbolos...
+   ✅ Procesadas 16/16 rutas del lote
+
+✅ COMPLETADO: 716 rutas procesadas con precios reales
+
+📊 GENERANDO REPORTE TOP 100...
+
+NaN
+📈 ESTADÍSTICAS GENERALES:
+📊 Total rutas analizadas: 716
+🟢 Rutas rentables (>0%): 566
+🔥 Rutas muy rentables (>0.1%): 256
+🎯 Mejor profit encontrado: 13.3027%
+📉 Peor profit encontrado: -0.3331%
+
+🏆 TOP 20 RUTAS MÁS RENTABLES:
+ 1. USDT → GUN → FDUSD → USDT
+    Profit: 🟢 13.3027%
+    Spread: 4.553%
+    Símbolos: GUN/USDT → GUN/FDUSD → FDUSD/USDT
+
+ 2. USDT → ZIL → BTC → USDT
+    Profit: 🟢 7.4252%
+    Spread: 3.365%
+    Símbolos: ZIL/USDT → ZIL/BTC → BTC/USDT
+
+ 3. USDT → FIO → BTC → USDT
+    Profit: 🟢 7.3069%
+    Spread: 5.151%
+    Símbolos: FIO/USDT → FIO/BTC → BTC/USDT
+
+ 4. USDT → GALA → BTC → USDT
+    Profit: 🟢 7.2540%
+    Spread: 2.589%
+    Símbolos: GALA/USDT → GALA/BTC → BTC/USDT
+
+ 5. USDT → ACH → BTC → USDT
+    Profit: 🟢 5.6767%
+    Spread: 3.939%
+    Símbolos: ACH/USDT → ACH/BTC → BTC/USDT
+
+ 6. USDT → ANKR → BTC → USDT
+    Profit: 🟢 5.5285%
+    Spread: 2.588%
+    Símbolos: ANKR/USDT → ANKR/BTC → BTC/USDT
+
+ 7. USDT → WAXP → BTC → USDT
+    Profit: 🟢 5.0430%
+    Spread: 1.771%
+    Símbolos: WAXP/USDT → WAXP/BTC → BTC/USDT
+
+ 8. USDT → SKL → BTC → USDT
+    Profit: 🟢 5.0135%
+    Spread: 1.980%
+    Símbolos: SKL/USDT → SKL/BTC → BTC/USDT
+
+ 9. USDT → IOTX → BTC → USDT
+    Profit: 🟢 3.6780%
+    Spread: 1.602%
+    Símbolos: IOTX/USDT → IOTX/BTC → BTC/USDT
+
+10. USDT → NKN → BTC → USDT
+    Profit: 🟢 2.8623%
+    Spread: 1.588%
+    Símbolos: NKN/USDT → NKN/BTC → BTC/USDT
+
+11. USDT → FLM → BTC → USDT
+    Profit: 🟢 2.7955%
+    Spread: 1.142%
+    Símbolos: FLM/USDT → FLM/BTC → BTC/USDT
+
+12. USDT → SYS → BTC → USDT
+    Profit: 🟢 2.7665%
+    Spread: 1.283%
+    Símbolos: SYS/USDT → SYS/BTC → BTC/USDT
+
+13. USDT → STRAX → BTC → USDT
+    Profit: 🟢 2.7030%
+    Spread: 1.734%
+    Símbolos: STRAX/USDT → STRAX/BTC → BTC/USDT
+
+14. USDT → CHZ → BTC → USDT
+    Profit: 🟢 2.5432%
+    Spread: 1.020%
+    Símbolos: CHZ/USDT → CHZ/BTC → BTC/USDT
+
+15. USDT → ZK → BTC → USDT
+    Profit: 🟢 2.3448%
+    Spread: 1.703%
+    Símbolos: ZK/USDT → ZK/BTC → BTC/USDT
+
+16. USDT → DODO → BTC → USDT
+    Profit: 🟢 2.3090%
+    Spread: 1.044%
+    Símbolos: DODO/USDT → DODO/BTC → BTC/USDT
+
+17. USDT → LTO → BTC → USDT
+    Profit: 🟢 2.1536%
+    Spread: 1.460%
+    Símbolos: LTO/USDT → LTO/BTC → BTC/USDT
+
+18. USDT → DENT → ETH → USDT
+    Profit: 🟢 2.1161%
+    Spread: 1.570%
+    Símbolos: DENT/USDT → DENT/ETH → ETH/USDT
+
+19. USDT → OGN → BTC → USDT
+    Profit: 🟢 2.0589%
+    Spread: 1.486%
+    Símbolos: OGN/USDT → OGN/BTC → BTC/USDT
+
+20. USDT → FIDA → BTC → USDT
+    Profit: 🟢 2.0011%
+    Spread: 1.225%
+    Símbolos: FIDA/USDT → FIDA/BTC → BTC/USDT
+
+
+💾 GUARDANDO TOP 100 EN ARCHIVOS...
+✅ Archivos guardados:
+   📄 top-100-routes.js (para usar en el bot)
+   📄 top-100-routes.json (para análisis)
+
+🎉 BÚSQUEDA COMPLETADA!
+✅ Usa el archivo 'top-100-routes.js' en tu bot para las mejores rutas
+
+NaN
+🏁 RESUMEN FINAL:
+🔍 Rutas encontradas: 716
+✅ Rutas verificadas: 716
+🧪 Rutas con precios: 716
+🏆 Top 100 seleccionadas: 100
+
+📁 Archivos generados listos para usar en tu bot!
+
+C:\Users\Administrador del PC\Desktop\yagecoin-bot\backend>

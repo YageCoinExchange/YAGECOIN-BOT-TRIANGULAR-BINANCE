@@ -1,0 +1,1907 @@
+{
+  "generatedAt": "2025-06-23T20:43:20.128Z",
+  "totalRoutesAnalyzed": 716,
+  "profitableRoutes": 100,
+  "top100Routes": [
+    {
+      "rank": 1,
+      "description": "USDT → GUN → FDUSD → USDT",
+      "route": [
+        "USDT",
+        "GUN",
+        "FDUSD"
+      ],
+      "symbols": [
+        "GUN/USDT",
+        "GUN/FDUSD",
+        "FDUSD/USDT"
+      ],
+      "profit": 13.3027,
+      "profitAmount": 133.03,
+      "avgSpread": 4.553,
+      "priority": 3,
+      "timestamp": "2025-06-23T20:43:16.017Z"
+    },
+    {
+      "rank": 2,
+      "description": "USDT → ZIL → BTC → USDT",
+      "route": [
+        "USDT",
+        "ZIL",
+        "BTC"
+      ],
+      "symbols": [
+        "ZIL/USDT",
+        "ZIL/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 7.4252,
+      "profitAmount": 74.25,
+      "avgSpread": 3.365,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:40:55.895Z"
+    },
+    {
+      "rank": 3,
+      "description": "USDT → FIO → BTC → USDT",
+      "route": [
+        "USDT",
+        "FIO",
+        "BTC"
+      ],
+      "symbols": [
+        "FIO/USDT",
+        "FIO/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 7.3069,
+      "profitAmount": 73.07,
+      "avgSpread": 5.151,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:12.605Z"
+    },
+    {
+      "rank": 4,
+      "description": "USDT → GALA → BTC → USDT",
+      "route": [
+        "USDT",
+        "GALA",
+        "BTC"
+      ],
+      "symbols": [
+        "GALA/USDT",
+        "GALA/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 7.254,
+      "profitAmount": 72.54,
+      "avgSpread": 2.589,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:20.729Z"
+    },
+    {
+      "rank": 5,
+      "description": "USDT → ACH → BTC → USDT",
+      "route": [
+        "USDT",
+        "ACH",
+        "BTC"
+      ],
+      "symbols": [
+        "ACH/USDT",
+        "ACH/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 5.6767,
+      "profitAmount": 56.77,
+      "avgSpread": 3.939,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:24.799Z"
+    },
+    {
+      "rank": 6,
+      "description": "USDT → ANKR → BTC → USDT",
+      "route": [
+        "USDT",
+        "ANKR",
+        "BTC"
+      ],
+      "symbols": [
+        "ANKR/USDT",
+        "ANKR/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 5.5285,
+      "profitAmount": 55.29,
+      "avgSpread": 2.588,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:40:59.952Z"
+    },
+    {
+      "rank": 7,
+      "description": "USDT → WAXP → BTC → USDT",
+      "route": [
+        "USDT",
+        "WAXP",
+        "BTC"
+      ],
+      "symbols": [
+        "WAXP/USDT",
+        "WAXP/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 5.043,
+      "profitAmount": 50.43,
+      "avgSpread": 1.771,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:20.729Z"
+    },
+    {
+      "rank": 8,
+      "description": "USDT → SKL → BTC → USDT",
+      "route": [
+        "USDT",
+        "SKL",
+        "BTC"
+      ],
+      "symbols": [
+        "SKL/USDT",
+        "SKL/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 5.0135,
+      "profitAmount": 50.13,
+      "avgSpread": 1.98,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:12.605Z"
+    },
+    {
+      "rank": 9,
+      "description": "USDT → IOTX → BTC → USDT",
+      "route": [
+        "USDT",
+        "IOTX",
+        "BTC"
+      ],
+      "symbols": [
+        "IOTX/USDT",
+        "IOTX/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 3.678,
+      "profitAmount": 36.78,
+      "avgSpread": 1.602,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:04.005Z"
+    },
+    {
+      "rank": 10,
+      "description": "USDT → NKN → BTC → USDT",
+      "route": [
+        "USDT",
+        "NKN",
+        "BTC"
+      ],
+      "symbols": [
+        "NKN/USDT",
+        "NKN/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 2.8623,
+      "profitAmount": 28.62,
+      "avgSpread": 1.588,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:40:59.952Z"
+    },
+    {
+      "rank": 11,
+      "description": "USDT → FLM → BTC → USDT",
+      "route": [
+        "USDT",
+        "FLM",
+        "BTC"
+      ],
+      "symbols": [
+        "FLM/USDT",
+        "FLM/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 2.7955,
+      "profitAmount": 27.95,
+      "avgSpread": 1.142,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:12.605Z"
+    },
+    {
+      "rank": 12,
+      "description": "USDT → SYS → BTC → USDT",
+      "route": [
+        "USDT",
+        "SYS",
+        "BTC"
+      ],
+      "symbols": [
+        "SYS/USDT",
+        "SYS/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 2.7665,
+      "profitAmount": 27.67,
+      "avgSpread": 1.283,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:20.729Z"
+    },
+    {
+      "rank": 13,
+      "description": "USDT → STRAX → BTC → USDT",
+      "route": [
+        "USDT",
+        "STRAX",
+        "BTC"
+      ],
+      "symbols": [
+        "STRAX/USDT",
+        "STRAX/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 2.703,
+      "profitAmount": 27.03,
+      "avgSpread": 1.734,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:12.605Z"
+    },
+    {
+      "rank": 14,
+      "description": "USDT → CHZ → BTC → USDT",
+      "route": [
+        "USDT",
+        "CHZ",
+        "BTC"
+      ],
+      "symbols": [
+        "CHZ/USDT",
+        "CHZ/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 2.5432,
+      "profitAmount": 25.43,
+      "avgSpread": 1.02,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:40:59.952Z"
+    },
+    {
+      "rank": 15,
+      "description": "USDT → ZK → BTC → USDT",
+      "route": [
+        "USDT",
+        "ZK",
+        "BTC"
+      ],
+      "symbols": [
+        "ZK/USDT",
+        "ZK/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 2.3448,
+      "profitAmount": 23.45,
+      "avgSpread": 1.703,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:32.931Z"
+    },
+    {
+      "rank": 16,
+      "description": "USDT → DODO → BTC → USDT",
+      "route": [
+        "USDT",
+        "DODO",
+        "BTC"
+      ],
+      "symbols": [
+        "DODO/USDT",
+        "DODO/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 2.309,
+      "profitAmount": 23.09,
+      "avgSpread": 1.044,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:16.687Z"
+    },
+    {
+      "rank": 17,
+      "description": "USDT → LTO → BTC → USDT",
+      "route": [
+        "USDT",
+        "LTO",
+        "BTC"
+      ],
+      "symbols": [
+        "LTO/USDT",
+        "LTO/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 2.1536,
+      "profitAmount": 21.54,
+      "avgSpread": 1.46,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:04.005Z"
+    },
+    {
+      "rank": 18,
+      "description": "USDT → DENT → ETH → USDT",
+      "route": [
+        "USDT",
+        "DENT",
+        "ETH"
+      ],
+      "symbols": [
+        "DENT/USDT",
+        "DENT/ETH",
+        "ETH/USDT"
+      ],
+      "profit": 2.1161,
+      "profitAmount": 21.16,
+      "avgSpread": 1.57,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:41.496Z"
+    },
+    {
+      "rank": 19,
+      "description": "USDT → OGN → BTC → USDT",
+      "route": [
+        "USDT",
+        "OGN",
+        "BTC"
+      ],
+      "symbols": [
+        "OGN/USDT",
+        "OGN/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 2.0589,
+      "profitAmount": 20.59,
+      "avgSpread": 1.486,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:04.005Z"
+    },
+    {
+      "rank": 20,
+      "description": "USDT → FIDA → BTC → USDT",
+      "route": [
+        "USDT",
+        "FIDA",
+        "BTC"
+      ],
+      "symbols": [
+        "FIDA/USDT",
+        "FIDA/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 2.0011,
+      "profitAmount": 20.01,
+      "avgSpread": 1.225,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:20.729Z"
+    },
+    {
+      "rank": 21,
+      "description": "USDT → COTI → BTC → USDT",
+      "route": [
+        "USDT",
+        "COTI",
+        "BTC"
+      ],
+      "symbols": [
+        "COTI/USDT",
+        "COTI/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.9829,
+      "profitAmount": 19.83,
+      "avgSpread": 0.737,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:04.005Z"
+    },
+    {
+      "rank": 22,
+      "description": "USDT → ARPA → BTC → USDT",
+      "route": [
+        "USDT",
+        "ARPA",
+        "BTC"
+      ],
+      "symbols": [
+        "ARPA/USDT",
+        "ARPA/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.969,
+      "profitAmount": 19.69,
+      "avgSpread": 1.997,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:04.005Z"
+    },
+    {
+      "rank": 23,
+      "description": "USDT → TFUEL → BTC → USDT",
+      "route": [
+        "USDT",
+        "TFUEL",
+        "BTC"
+      ],
+      "symbols": [
+        "TFUEL/USDT",
+        "TFUEL/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.9437,
+      "profitAmount": 19.44,
+      "avgSpread": 1.143,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:40:59.952Z"
+    },
+    {
+      "rank": 24,
+      "description": "USDT → RVN → BTC → USDT",
+      "route": [
+        "USDT",
+        "RVN",
+        "BTC"
+      ],
+      "symbols": [
+        "RVN/USDT",
+        "RVN/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.8189,
+      "profitAmount": 18.19,
+      "avgSpread": 2.403,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:40:59.952Z"
+    },
+    {
+      "rank": 25,
+      "description": "USDT → ALT → BTC → USDT",
+      "route": [
+        "USDT",
+        "ALT",
+        "BTC"
+      ],
+      "symbols": [
+        "ALT/USDT",
+        "ALT/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.8094,
+      "profitAmount": 18.09,
+      "avgSpread": 1.246,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:32.931Z"
+    },
+    {
+      "rank": 26,
+      "description": "USDT → BMT → FDUSD → USDT",
+      "route": [
+        "USDT",
+        "BMT",
+        "FDUSD"
+      ],
+      "symbols": [
+        "BMT/USDT",
+        "BMT/FDUSD",
+        "FDUSD/USDT"
+      ],
+      "profit": 1.7763,
+      "profitAmount": 17.76,
+      "avgSpread": 0.739,
+      "priority": 3,
+      "timestamp": "2025-06-23T20:43:16.017Z"
+    },
+    {
+      "rank": 27,
+      "description": "USDT → TST → FDUSD → USDT",
+      "route": [
+        "USDT",
+        "TST",
+        "FDUSD"
+      ],
+      "symbols": [
+        "TST/USDT",
+        "TST/FDUSD",
+        "FDUSD/USDT"
+      ],
+      "profit": 1.7644,
+      "profitAmount": 17.64,
+      "avgSpread": 1.666,
+      "priority": 3,
+      "timestamp": "2025-06-23T20:43:16.017Z"
+    },
+    {
+      "rank": 28,
+      "description": "USDT → LOKA → BTC → USDT",
+      "route": [
+        "USDT",
+        "LOKA",
+        "BTC"
+      ],
+      "symbols": [
+        "LOKA/USDT",
+        "LOKA/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.6961,
+      "profitAmount": 16.96,
+      "avgSpread": 0.746,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:24.799Z"
+    },
+    {
+      "rank": 29,
+      "description": "USDT → RARE → BTC → USDT",
+      "route": [
+        "USDT",
+        "RARE",
+        "BTC"
+      ],
+      "symbols": [
+        "RARE/USDT",
+        "RARE/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.523,
+      "profitAmount": 15.23,
+      "avgSpread": 0.812,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:20.729Z"
+    },
+    {
+      "rank": 30,
+      "description": "USDT → PEOPLE → BTC → USDT",
+      "route": [
+        "USDT",
+        "PEOPLE",
+        "BTC"
+      ],
+      "symbols": [
+        "PEOPLE/USDT",
+        "PEOPLE/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.5204,
+      "profitAmount": 15.2,
+      "avgSpread": 2.103,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:24.799Z"
+    },
+    {
+      "rank": 31,
+      "description": "USDT → NFP → BTC → USDT",
+      "route": [
+        "USDT",
+        "NFP",
+        "BTC"
+      ],
+      "symbols": [
+        "NFP/USDT",
+        "NFP/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.4753,
+      "profitAmount": 14.75,
+      "avgSpread": 0.703,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:32.930Z"
+    },
+    {
+      "rank": 32,
+      "description": "USDT → ASTR → BTC → USDT",
+      "route": [
+        "USDT",
+        "ASTR",
+        "BTC"
+      ],
+      "symbols": [
+        "ASTR/USDT",
+        "ASTR/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.47,
+      "profitAmount": 14.7,
+      "avgSpread": 1.602,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:24.799Z"
+    },
+    {
+      "rank": 33,
+      "description": "USDT → ENJ → BTC → USDT",
+      "route": [
+        "USDT",
+        "ENJ",
+        "BTC"
+      ],
+      "symbols": [
+        "ENJ/USDT",
+        "ENJ/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.4291,
+      "profitAmount": 14.29,
+      "avgSpread": 0.599,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:40:59.952Z"
+    },
+    {
+      "rank": 34,
+      "description": "USDT → ATA → BTC → USDT",
+      "route": [
+        "USDT",
+        "ATA",
+        "BTC"
+      ],
+      "symbols": [
+        "ATA/USDT",
+        "ATA/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.3902,
+      "profitAmount": 13.9,
+      "avgSpread": 1.045,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:16.687Z"
+    },
+    {
+      "rank": 35,
+      "description": "USDT → JST → BTC → USDT",
+      "route": [
+        "USDT",
+        "JST",
+        "BTC"
+      ],
+      "symbols": [
+        "JST/USDT",
+        "JST/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.2825,
+      "profitAmount": 12.82,
+      "avgSpread": 1.02,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:08.503Z"
+    },
+    {
+      "rank": 36,
+      "description": "USDT → BB → BTC → USDT",
+      "route": [
+        "USDT",
+        "BB",
+        "BTC"
+      ],
+      "symbols": [
+        "BB/USDT",
+        "BB/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.1817,
+      "profitAmount": 11.82,
+      "avgSpread": 0.873,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:32.931Z"
+    },
+    {
+      "rank": 37,
+      "description": "USDT → PORTAL → BTC → USDT",
+      "route": [
+        "USDT",
+        "PORTAL",
+        "BTC"
+      ],
+      "symbols": [
+        "PORTAL/USDT",
+        "PORTAL/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.1623,
+      "profitAmount": 11.62,
+      "avgSpread": 1.216,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:32.931Z"
+    },
+    {
+      "rank": 38,
+      "description": "USDT → GLMR → BTC → USDT",
+      "route": [
+        "USDT",
+        "GLMR",
+        "BTC"
+      ],
+      "symbols": [
+        "GLMR/USDT",
+        "GLMR/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.1608,
+      "profitAmount": 11.61,
+      "avgSpread": 0.589,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:24.799Z"
+    },
+    {
+      "rank": 39,
+      "description": "USDT → RIF → BTC → USDT",
+      "route": [
+        "USDT",
+        "RIF",
+        "BTC"
+      ],
+      "symbols": [
+        "RIF/USDT",
+        "RIF/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.0491,
+      "profitAmount": 10.49,
+      "avgSpread": 0.828,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:16.687Z"
+    },
+    {
+      "rank": 40,
+      "description": "USDT → AWE → BTC → USDT",
+      "route": [
+        "USDT",
+        "AWE",
+        "BTC"
+      ],
+      "symbols": [
+        "AWE/USDT",
+        "AWE/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 1.0347,
+      "profitAmount": 10.35,
+      "avgSpread": 0.659,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:37.436Z"
+    },
+    {
+      "rank": 41,
+      "description": "USDT → W → BTC → USDT",
+      "route": [
+        "USDT",
+        "W",
+        "BTC"
+      ],
+      "symbols": [
+        "W/USDT",
+        "W/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.987,
+      "profitAmount": 9.87,
+      "avgSpread": 0.641,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:32.931Z"
+    },
+    {
+      "rank": 42,
+      "description": "USDT → SHELL → BTC → USDT",
+      "route": [
+        "USDT",
+        "SHELL",
+        "BTC"
+      ],
+      "symbols": [
+        "SHELL/USDT",
+        "SHELL/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.9857,
+      "profitAmount": 9.86,
+      "avgSpread": 0.506,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:37.436Z"
+    },
+    {
+      "rank": 43,
+      "description": "USDT → DUSK → BTC → USDT",
+      "route": [
+        "USDT",
+        "DUSK",
+        "BTC"
+      ],
+      "symbols": [
+        "DUSK/USDT",
+        "DUSK/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.9845,
+      "profitAmount": 9.84,
+      "avgSpread": 0.777,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:40:59.952Z"
+    },
+    {
+      "rank": 44,
+      "description": "USDT → ONT → BTC → USDT",
+      "route": [
+        "USDT",
+        "ONT",
+        "BTC"
+      ],
+      "symbols": [
+        "ONT/USDT",
+        "ONT/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.9685,
+      "profitAmount": 9.68,
+      "avgSpread": 0.624,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:40:55.895Z"
+    },
+    {
+      "rank": 45,
+      "description": "USDT → ARDR → BTC → USDT",
+      "route": [
+        "USDT",
+        "ARDR",
+        "BTC"
+      ],
+      "symbols": [
+        "ARDR/USDT",
+        "ARDR/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.9397,
+      "profitAmount": 9.4,
+      "avgSpread": 0.468,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:04.006Z"
+    },
+    {
+      "rank": 46,
+      "description": "USDT → POLYX → BTC → USDT",
+      "route": [
+        "USDT",
+        "POLYX",
+        "BTC"
+      ],
+      "symbols": [
+        "POLYX/USDT",
+        "POLYX/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.9311,
+      "profitAmount": 9.31,
+      "avgSpread": 0.597,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:24.799Z"
+    },
+    {
+      "rank": 47,
+      "description": "USDT → JOE → BTC → USDT",
+      "route": [
+        "USDT",
+        "JOE",
+        "BTC"
+      ],
+      "symbols": [
+        "JOE/USDT",
+        "JOE/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.9304,
+      "profitAmount": 9.3,
+      "avgSpread": 0.518,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:24.799Z"
+    },
+    {
+      "rank": 48,
+      "description": "USDT → LAYER → BNB → USDT",
+      "route": [
+        "USDT",
+        "LAYER",
+        "BNB"
+      ],
+      "symbols": [
+        "LAYER/USDT",
+        "LAYER/BNB",
+        "BNB/USDT"
+      ],
+      "profit": 0.9264,
+      "profitAmount": 9.26,
+      "avgSpread": 0.648,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:42:01.863Z"
+    },
+    {
+      "rank": 49,
+      "description": "USDT → ACT → EUR → USDT",
+      "route": [
+        "USDT",
+        "ACT",
+        "EUR"
+      ],
+      "symbols": [
+        "ACT/USDT",
+        "ACT/EUR",
+        "EUR/USDT"
+      ],
+      "profit": 0.9123,
+      "profitAmount": 9.12,
+      "avgSpread": 0.54,
+      "priority": 3,
+      "timestamp": "2025-06-23T20:42:59.772Z"
+    },
+    {
+      "rank": 50,
+      "description": "USDT → HOT → ETH → USDT",
+      "route": [
+        "USDT",
+        "HOT",
+        "ETH"
+      ],
+      "symbols": [
+        "HOT/USDT",
+        "HOT/ETH",
+        "ETH/USDT"
+      ],
+      "profit": 0.8573,
+      "profitAmount": 8.57,
+      "avgSpread": 1.021,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:41.496Z"
+    },
+    {
+      "rank": 51,
+      "description": "USDT → HOME → BNB → USDT",
+      "route": [
+        "USDT",
+        "HOME",
+        "BNB"
+      ],
+      "symbols": [
+        "HOME/USDT",
+        "HOME/BNB",
+        "BNB/USDT"
+      ],
+      "profit": 0.8436,
+      "profitAmount": 8.44,
+      "avgSpread": 0.36,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:42:05.936Z"
+    },
+    {
+      "rank": 52,
+      "description": "USDT → ONG → BTC → USDT",
+      "route": [
+        "USDT",
+        "ONG",
+        "BTC"
+      ],
+      "symbols": [
+        "ONG/USDT",
+        "ONG/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.8157,
+      "profitAmount": 8.16,
+      "avgSpread": 0.442,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:40:55.895Z"
+    },
+    {
+      "rank": 53,
+      "description": "USDT → BICO → BTC → USDT",
+      "route": [
+        "USDT",
+        "BICO",
+        "BTC"
+      ],
+      "symbols": [
+        "BICO/USDT",
+        "BICO/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.7998,
+      "profitAmount": 8,
+      "avgSpread": 0.43,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:20.729Z"
+    },
+    {
+      "rank": 54,
+      "description": "USDT → MAV → BTC → USDT",
+      "route": [
+        "USDT",
+        "MAV",
+        "BTC"
+      ],
+      "symbols": [
+        "MAV/USDT",
+        "MAV/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.7883,
+      "profitAmount": 7.88,
+      "avgSpread": 0.836,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:28.865Z"
+    },
+    {
+      "rank": 55,
+      "description": "USDT → AEVO → BTC → USDT",
+      "route": [
+        "USDT",
+        "AEVO",
+        "BTC"
+      ],
+      "symbols": [
+        "AEVO/USDT",
+        "AEVO/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.7246,
+      "profitAmount": 7.25,
+      "avgSpread": 0.53,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:32.931Z"
+    },
+    {
+      "rank": 56,
+      "description": "USDT → LAYER → FDUSD → USDT",
+      "route": [
+        "USDT",
+        "LAYER",
+        "FDUSD"
+      ],
+      "symbols": [
+        "LAYER/USDT",
+        "LAYER/FDUSD",
+        "FDUSD/USDT"
+      ],
+      "profit": 0.7051,
+      "profitAmount": 7.05,
+      "avgSpread": 0.327,
+      "priority": 3,
+      "timestamp": "2025-06-23T20:43:16.017Z"
+    },
+    {
+      "rank": 57,
+      "description": "USDT → RESOLV → FDUSD → USDT",
+      "route": [
+        "USDT",
+        "RESOLV",
+        "FDUSD"
+      ],
+      "symbols": [
+        "RESOLV/USDT",
+        "RESOLV/FDUSD",
+        "FDUSD/USDT"
+      ],
+      "profit": 0.6857,
+      "profitAmount": 6.86,
+      "avgSpread": 0.527,
+      "priority": 3,
+      "timestamp": "2025-06-23T20:43:20.089Z"
+    },
+    {
+      "rank": 58,
+      "description": "USDT → SC → ETH → USDT",
+      "route": [
+        "USDT",
+        "SC",
+        "ETH"
+      ],
+      "symbols": [
+        "SC/USDT",
+        "SC/ETH",
+        "ETH/USDT"
+      ],
+      "profit": 0.6846,
+      "profitAmount": 6.85,
+      "avgSpread": 0.565,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:45.571Z"
+    },
+    {
+      "rank": 59,
+      "description": "USDT → HAEDAL → BNB → USDT",
+      "route": [
+        "USDT",
+        "HAEDAL",
+        "BNB"
+      ],
+      "symbols": [
+        "HAEDAL/USDT",
+        "HAEDAL/BNB",
+        "BNB/USDT"
+      ],
+      "profit": 0.6692,
+      "profitAmount": 6.69,
+      "avgSpread": 0.261,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:42:05.936Z"
+    },
+    {
+      "rank": 60,
+      "description": "USDT → LISTA → BNB → USDT",
+      "route": [
+        "USDT",
+        "LISTA",
+        "BNB"
+      ],
+      "symbols": [
+        "LISTA/USDT",
+        "LISTA/BNB",
+        "BNB/USDT"
+      ],
+      "profit": 0.6598,
+      "profitAmount": 6.6,
+      "avgSpread": 0.382,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:57.791Z"
+    },
+    {
+      "rank": 61,
+      "description": "USDT → TIA → BTC → USDT",
+      "route": [
+        "USDT",
+        "TIA",
+        "BTC"
+      ],
+      "symbols": [
+        "TIA/USDT",
+        "TIA/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.6586,
+      "profitAmount": 6.59,
+      "avgSpread": 0.25,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:28.866Z"
+    },
+    {
+      "rank": 62,
+      "description": "USDT → REQ → BTC → USDT",
+      "route": [
+        "USDT",
+        "REQ",
+        "BTC"
+      ],
+      "symbols": [
+        "REQ/USDT",
+        "REQ/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.6395,
+      "profitAmount": 6.39,
+      "avgSpread": 0.61,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:20.729Z"
+    },
+    {
+      "rank": 63,
+      "description": "USDT → DATA → BTC → USDT",
+      "route": [
+        "USDT",
+        "DATA",
+        "BTC"
+      ],
+      "symbols": [
+        "DATA/USDT",
+        "DATA/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.6389,
+      "profitAmount": 6.39,
+      "avgSpread": 2.403,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:04.005Z"
+    },
+    {
+      "rank": 64,
+      "description": "USDT → GUN → BNB → USDT",
+      "route": [
+        "USDT",
+        "GUN",
+        "BNB"
+      ],
+      "symbols": [
+        "GUN/USDT",
+        "GUN/BNB",
+        "BNB/USDT"
+      ],
+      "profit": 0.6303,
+      "profitAmount": 6.3,
+      "avgSpread": 0.541,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:42:01.864Z"
+    },
+    {
+      "rank": 65,
+      "description": "USDT → ICX → BTC → USDT",
+      "route": [
+        "USDT",
+        "ICX",
+        "BTC"
+      ],
+      "symbols": [
+        "ICX/USDT",
+        "ICX/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.6303,
+      "profitAmount": 6.3,
+      "avgSpread": 0.573,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:40:55.895Z"
+    },
+    {
+      "rank": 66,
+      "description": "USDT → 1INCH → BTC → USDT",
+      "route": [
+        "USDT",
+        "1INCH",
+        "BTC"
+      ],
+      "symbols": [
+        "1INCH/USDT",
+        "1INCH/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.6292,
+      "profitAmount": 6.29,
+      "avgSpread": 0.411,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:16.687Z"
+    },
+    {
+      "rank": 67,
+      "description": "USDT → USUAL → BTC → USDT",
+      "route": [
+        "USDT",
+        "USUAL",
+        "BTC"
+      ],
+      "symbols": [
+        "USUAL/USDT",
+        "USUAL/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.598,
+      "profitAmount": 5.98,
+      "avgSpread": 0.562,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:37.436Z"
+    },
+    {
+      "rank": 68,
+      "description": "USDT → BAKE → BTC → USDT",
+      "route": [
+        "USDT",
+        "BAKE",
+        "BTC"
+      ],
+      "symbols": [
+        "BAKE/USDT",
+        "BAKE/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.5932,
+      "profitAmount": 5.93,
+      "avgSpread": 0.397,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:16.687Z"
+    },
+    {
+      "rank": 69,
+      "description": "USDT → NIL → BNB → USDT",
+      "route": [
+        "USDT",
+        "NIL",
+        "BNB"
+      ],
+      "symbols": [
+        "NIL/USDT",
+        "NIL/BNB",
+        "BNB/USDT"
+      ],
+      "profit": 0.5692,
+      "profitAmount": 5.69,
+      "avgSpread": 0.371,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:42:01.863Z"
+    },
+    {
+      "rank": 70,
+      "description": "USDT → IO → BNB → USDT",
+      "route": [
+        "USDT",
+        "IO",
+        "BNB"
+      ],
+      "symbols": [
+        "IO/USDT",
+        "IO/BNB",
+        "BNB/USDT"
+      ],
+      "profit": 0.5594,
+      "profitAmount": 5.59,
+      "avgSpread": 0.319,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:57.791Z"
+    },
+    {
+      "rank": 71,
+      "description": "USDT → KERNEL → BNB → USDT",
+      "route": [
+        "USDT",
+        "KERNEL",
+        "BNB"
+      ],
+      "symbols": [
+        "KERNEL/USDT",
+        "KERNEL/BNB",
+        "BNB/USDT"
+      ],
+      "profit": 0.5529,
+      "profitAmount": 5.53,
+      "avgSpread": 0.313,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:42:01.864Z"
+    },
+    {
+      "rank": 72,
+      "description": "USDT → 1000CAT → BNB → USDT",
+      "route": [
+        "USDT",
+        "1000CAT",
+        "BNB"
+      ],
+      "symbols": [
+        "1000CAT/USDT",
+        "1000CAT/BNB",
+        "BNB/USDT"
+      ],
+      "profit": 0.5516,
+      "profitAmount": 5.52,
+      "avgSpread": 0.37,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:57.792Z"
+    },
+    {
+      "rank": 73,
+      "description": "USDT → VET → BTC → USDT",
+      "route": [
+        "USDT",
+        "VET",
+        "BTC"
+      ],
+      "symbols": [
+        "VET/USDT",
+        "VET/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.5469,
+      "profitAmount": 5.47,
+      "avgSpread": 1.771,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:40:55.895Z"
+    },
+    {
+      "rank": 74,
+      "description": "USDT → ILV → BTC → USDT",
+      "route": [
+        "USDT",
+        "ILV",
+        "BTC"
+      ],
+      "symbols": [
+        "ILV/USDT",
+        "ILV/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.5444,
+      "profitAmount": 5.44,
+      "avgSpread": 0.365,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:20.729Z"
+    },
+    {
+      "rank": 75,
+      "description": "USDT → ORDI → FDUSD → USDT",
+      "route": [
+        "USDT",
+        "ORDI",
+        "FDUSD"
+      ],
+      "symbols": [
+        "ORDI/USDT",
+        "ORDI/FDUSD",
+        "FDUSD/USDT"
+      ],
+      "profit": 0.5419,
+      "profitAmount": 5.42,
+      "avgSpread": 0.24,
+      "priority": 3,
+      "timestamp": "2025-06-23T20:43:03.829Z"
+    },
+    {
+      "rank": 76,
+      "description": "USDT → QTUM → ETH → USDT",
+      "route": [
+        "USDT",
+        "QTUM",
+        "ETH"
+      ],
+      "symbols": [
+        "QTUM/USDT",
+        "QTUM/ETH",
+        "ETH/USDT"
+      ],
+      "profit": 0.5375,
+      "profitAmount": 5.37,
+      "avgSpread": 0.26,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:41.496Z"
+    },
+    {
+      "rank": 77,
+      "description": "USDT → PYTH → BTC → USDT",
+      "route": [
+        "USDT",
+        "PYTH",
+        "BTC"
+      ],
+      "symbols": [
+        "PYTH/USDT",
+        "PYTH/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.5335,
+      "profitAmount": 5.33,
+      "avgSpread": 0.41,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:32.931Z"
+    },
+    {
+      "rank": 78,
+      "description": "USDT → SPK → BNB → USDT",
+      "route": [
+        "USDT",
+        "SPK",
+        "BNB"
+      ],
+      "symbols": [
+        "SPK/USDT",
+        "SPK/BNB",
+        "BNB/USDT"
+      ],
+      "profit": 0.5279,
+      "profitAmount": 5.28,
+      "avgSpread": 0.243,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:42:05.936Z"
+    },
+    {
+      "rank": 79,
+      "description": "USDT → THE → FDUSD → USDT",
+      "route": [
+        "USDT",
+        "THE",
+        "FDUSD"
+      ],
+      "symbols": [
+        "THE/USDT",
+        "THE/FDUSD",
+        "FDUSD/USDT"
+      ],
+      "profit": 0.5069,
+      "profitAmount": 5.07,
+      "avgSpread": 0.287,
+      "priority": 3,
+      "timestamp": "2025-06-23T20:43:11.949Z"
+    },
+    {
+      "rank": 80,
+      "description": "USDT → PARTI → FDUSD → USDT",
+      "route": [
+        "USDT",
+        "PARTI",
+        "FDUSD"
+      ],
+      "symbols": [
+        "PARTI/USDT",
+        "PARTI/FDUSD",
+        "FDUSD/USDT"
+      ],
+      "profit": 0.4844,
+      "profitAmount": 4.84,
+      "avgSpread": 0.488,
+      "priority": 3,
+      "timestamp": "2025-06-23T20:43:16.017Z"
+    },
+    {
+      "rank": 81,
+      "description": "USDT → PARTI → BNB → USDT",
+      "route": [
+        "USDT",
+        "PARTI",
+        "BNB"
+      ],
+      "symbols": [
+        "PARTI/USDT",
+        "PARTI/BNB",
+        "BNB/USDT"
+      ],
+      "profit": 0.4676,
+      "profitAmount": 4.68,
+      "avgSpread": 0.488,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:42:01.864Z"
+    },
+    {
+      "rank": 82,
+      "description": "USDT → NIL → FDUSD → USDT",
+      "route": [
+        "USDT",
+        "NIL",
+        "FDUSD"
+      ],
+      "symbols": [
+        "NIL/USDT",
+        "NIL/FDUSD",
+        "FDUSD/USDT"
+      ],
+      "profit": 0.458,
+      "profitAmount": 4.58,
+      "avgSpread": 0.24,
+      "priority": 3,
+      "timestamp": "2025-06-23T20:43:16.017Z"
+    },
+    {
+      "rank": 83,
+      "description": "USDT → IOTX → ETH → USDT",
+      "route": [
+        "USDT",
+        "IOTX",
+        "ETH"
+      ],
+      "symbols": [
+        "IOTX/USDT",
+        "IOTX/ETH",
+        "ETH/USDT"
+      ],
+      "profit": 0.4559,
+      "profitAmount": 4.56,
+      "avgSpread": 0.23,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:41.496Z"
+    },
+    {
+      "rank": 84,
+      "description": "USDT → HEI → BTC → USDT",
+      "route": [
+        "USDT",
+        "HEI",
+        "BTC"
+      ],
+      "symbols": [
+        "HEI/USDT",
+        "HEI/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.4395,
+      "profitAmount": 4.39,
+      "avgSpread": 0.251,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:37.436Z"
+    },
+    {
+      "rank": 85,
+      "description": "USDT → BERA → BTC → USDT",
+      "route": [
+        "USDT",
+        "BERA",
+        "BTC"
+      ],
+      "symbols": [
+        "BERA/USDT",
+        "BERA/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.437,
+      "profitAmount": 4.37,
+      "avgSpread": 0.2,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:37.436Z"
+    },
+    {
+      "rank": 86,
+      "description": "USDT → LISTA → FDUSD → USDT",
+      "route": [
+        "USDT",
+        "LISTA",
+        "FDUSD"
+      ],
+      "symbols": [
+        "LISTA/USDT",
+        "LISTA/FDUSD",
+        "FDUSD/USDT"
+      ],
+      "profit": 0.4347,
+      "profitAmount": 4.35,
+      "avgSpread": 0.243,
+      "priority": 3,
+      "timestamp": "2025-06-23T20:43:11.948Z"
+    },
+    {
+      "rank": 87,
+      "description": "USDT → BAT → BTC → USDT",
+      "route": [
+        "USDT",
+        "BAT",
+        "BTC"
+      ],
+      "symbols": [
+        "BAT/USDT",
+        "BAT/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.4295,
+      "profitAmount": 4.3,
+      "avgSpread": 0.318,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:40:59.952Z"
+    },
+    {
+      "rank": 88,
+      "description": "USDT → LRC → BTC → USDT",
+      "route": [
+        "USDT",
+        "LRC",
+        "BTC"
+      ],
+      "symbols": [
+        "LRC/USDT",
+        "LRC/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.4236,
+      "profitAmount": 4.24,
+      "avgSpread": 0.507,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:04.006Z"
+    },
+    {
+      "rank": 89,
+      "description": "USDT → FIS → BTC → USDT",
+      "route": [
+        "USDT",
+        "FIS",
+        "BTC"
+      ],
+      "symbols": [
+        "FIS/USDT",
+        "FIS/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.422,
+      "profitAmount": 4.22,
+      "avgSpread": 0.435,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:16.687Z"
+    },
+    {
+      "rank": 90,
+      "description": "USDT → OP → ETH → USDT",
+      "route": [
+        "USDT",
+        "OP",
+        "ETH"
+      ],
+      "symbols": [
+        "OP/USDT",
+        "OP/ETH",
+        "ETH/USDT"
+      ],
+      "profit": 0.4179,
+      "profitAmount": 4.18,
+      "avgSpread": 0.359,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:49.642Z"
+    },
+    {
+      "rank": 91,
+      "description": "USDT → NTRN → BNB → USDT",
+      "route": [
+        "USDT",
+        "NTRN",
+        "BNB"
+      ],
+      "symbols": [
+        "NTRN/USDT",
+        "NTRN/BNB",
+        "BNB/USDT"
+      ],
+      "profit": 0.417,
+      "profitAmount": 4.17,
+      "avgSpread": 0.284,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:57.791Z"
+    },
+    {
+      "rank": 92,
+      "description": "USDT → POWR → ETH → USDT",
+      "route": [
+        "USDT",
+        "POWR",
+        "ETH"
+      ],
+      "symbols": [
+        "POWR/USDT",
+        "POWR/ETH",
+        "ETH/USDT"
+      ],
+      "profit": 0.4143,
+      "profitAmount": 4.14,
+      "avgSpread": 0.257,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:49.642Z"
+    },
+    {
+      "rank": 93,
+      "description": "USDT → PENDLE → FDUSD → USDT",
+      "route": [
+        "USDT",
+        "PENDLE",
+        "FDUSD"
+      ],
+      "symbols": [
+        "PENDLE/USDT",
+        "PENDLE/FDUSD",
+        "FDUSD/USDT"
+      ],
+      "profit": 0.414,
+      "profitAmount": 4.14,
+      "avgSpread": 0.198,
+      "priority": 3,
+      "timestamp": "2025-06-23T20:43:03.829Z"
+    },
+    {
+      "rank": 94,
+      "description": "USDT → SPK → FDUSD → USDT",
+      "route": [
+        "USDT",
+        "SPK",
+        "FDUSD"
+      ],
+      "symbols": [
+        "SPK/USDT",
+        "SPK/FDUSD",
+        "FDUSD/USDT"
+      ],
+      "profit": 0.4068,
+      "profitAmount": 4.07,
+      "avgSpread": 0.214,
+      "priority": 3,
+      "timestamp": "2025-06-23T20:43:20.089Z"
+    },
+    {
+      "rank": 95,
+      "description": "USDT → SFP → BTC → USDT",
+      "route": [
+        "USDT",
+        "SFP",
+        "BTC"
+      ],
+      "symbols": [
+        "SFP/USDT",
+        "SFP/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.4053,
+      "profitAmount": 4.05,
+      "avgSpread": 0.537,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:16.687Z"
+    },
+    {
+      "rank": 96,
+      "description": "USDT → LRC → ETH → USDT",
+      "route": [
+        "USDT",
+        "LRC",
+        "ETH"
+      ],
+      "symbols": [
+        "LRC/USDT",
+        "LRC/ETH",
+        "ETH/USDT"
+      ],
+      "profit": 0.4025,
+      "profitAmount": 4.03,
+      "avgSpread": 0.201,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:45.571Z"
+    },
+    {
+      "rank": 97,
+      "description": "USDT → BANANA → BTC → USDT",
+      "route": [
+        "USDT",
+        "BANANA",
+        "BTC"
+      ],
+      "symbols": [
+        "BANANA/USDT",
+        "BANANA/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.3971,
+      "profitAmount": 3.97,
+      "avgSpread": 0.187,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:32.931Z"
+    },
+    {
+      "rank": 98,
+      "description": "USDT → FLUX → BTC → USDT",
+      "route": [
+        "USDT",
+        "FLUX",
+        "BTC"
+      ],
+      "symbols": [
+        "FLUX/USDT",
+        "FLUX/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.3839,
+      "profitAmount": 3.84,
+      "avgSpread": 0.204,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:20.729Z"
+    },
+    {
+      "rank": 99,
+      "description": "USDT → BANANA → BNB → USDT",
+      "route": [
+        "USDT",
+        "BANANA",
+        "BNB"
+      ],
+      "symbols": [
+        "BANANA/USDT",
+        "BANANA/BNB",
+        "BNB/USDT"
+      ],
+      "profit": 0.3833,
+      "profitAmount": 3.83,
+      "avgSpread": 0.289,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:57.791Z"
+    },
+    {
+      "rank": 100,
+      "description": "USDT → CTK → BTC → USDT",
+      "route": [
+        "USDT",
+        "CTK",
+        "BTC"
+      ],
+      "symbols": [
+        "CTK/USDT",
+        "CTK/BTC",
+        "BTC/USDT"
+      ],
+      "profit": 0.3696,
+      "profitAmount": 3.7,
+      "avgSpread": 0.176,
+      "priority": 1,
+      "timestamp": "2025-06-23T20:41:12.605Z"
+    }
+  ]
+}

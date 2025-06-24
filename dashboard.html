@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Bot de Arbitraje Triangular</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .status-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .status-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .opportunities-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .opportunity-card {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .route-path {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .profit-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .profit-percentage {
+            font-size: 24px;
+            font-weight: bold;
+            color: #FFD700;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        .btn-success {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+            color: white;
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, #f44336, #d32f2f);
+            color: white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        
+        .status-online {
+            background-color: #4CAF50;
+            animation: pulse 2s infinite;
+        }
+        
+        .status-offline {
+            background-color: #f44336;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        .no-opportunities {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #3498db;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔄 Bot de Arbitraje Triangular - Binance</h1>
+            <p>Monitoreo en tiempo real de oportunidades de arbitraje</p>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-primary" onclick="startBot()">
+                <span id="start-btn-text">Iniciar Bot</span>
+            </button>
+            <button class="btn btn-danger" onclick="stopBot()">Detener Bot</button>
+            <button class="btn btn-success" onclick="refreshData()">Actualizar Datos</button>
+        </div>
+        
+        <div class="status-grid">
+            <div class="status-card">
+                <h3>Estado del Bot</h3>
+                <p><span id="bot-status-indicator" class="status-indicator status-offline"></span>
+                   <span id="bot-status">Desconectado</span></p>
+            </div>
+            <div class="status-card">
+                <h3>Conexión Binance</h3>
+                <p><span id="binance-status-indicator" class="status-indicator status-offline"></span>
+                   <span id="binance-status">Desconectado</span></p>
+            </div>
+            <div class="status-card">
+                <h3>Oportunidades Encontradas</h3>
+                <p id="opportunities-count">0</p>
+            </div>
+            <div class="status-card">
+                <h3>Última Actualización</h3>
+                <p id="last-update">Nunca</p>
+            </div>
+        </div>
+        
+        <div class="opportunities-section">
+            <h2>🎯 Oportunidades de Arbitraje</h2>
+            <div id="opportunities-container">
+                <div class="no-opportunities">
+                    <div class="loading"></div>
+                    <p>Buscando oportunidades de arbitraje...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Inicializar Socket.IO
+        const socket = io();
+        
+        // Variables globales
+        let botRunning = false;
+        let opportunities = [];
+        
+        // Eventos del Socket
+        socket.on('connect', function() {
+            console.log('Conectado al servidor');
+            updateBotStatus('Conectado', true);
+        });
+        
+        socket.on('disconnect', function() {
+            console.log('Desconectado del servidor');
+            updateBotStatus('Desconectado', false);
+        });
+        
+        // Evento principal para recibir oportunidades
+        socket.on('arbitrage_opportunities', function(data) {
+            console.log('Oportunidades recibidas:', data);
+            if (data.opportunities && Array.isArray(data.opportunities)) {
+                opportunities = data.opportunities;
+                updateOpportunitiesDisplay();
+                updateLastUpdate();
+            }
+        });
+        
+        // Evento para estado del bot
+        socket.on('bot_status', function(data) {
+            console.log('Estado del bot:', data);
+            botRunning = data.running;
+            updateBotStatus(data.status, data.running);
+            updateBinanceStatus(data.binance_connected);
+        });
+        
+        // Evento para errores
+        socket.on('error_message', function(data) {
+            console.error('Error:', data.message);
+            alert('Error: ' + data.message);
+        });
+        
+        // Funciones de control
+        function startBot() {
+            const startBtn = document.getElementById('start-btn-text');
+            startBtn.innerHTML = '<div class="loading"></div> Iniciando...';
+            
+            socket.emit('start_bot');
+            
+            setTimeout(() => {
+                startBtn.textContent = 'Bot Iniciado';
+                botRunning = true;
+            }, 2000);
+        }
+        
+        function stopBot() {
+            socket.emit('stop_bot');
+            botRunning = false;
+            updateBotStatus('Detenido', false);
+            document.getElementById('start-btn-text').textContent = 'Iniciar Bot';
+        }
+        
+        function refreshData() {
+            socket.emit('request_opportunities');
+            updateLastUpdate();
+        }
+        
+        // Funciones de actualización de UI
+        function updateBotStatus(status, isOnline) {
+            const statusElement = document.getElementById('bot-status');
+            const indicatorElement = document.getElementById('bot-status-indicator');
+            
+            statusElement.textContent = status;
+            indicatorElement.className = `status-indicator ${isOnline ? 'status-online' : 'status-offline'}`;
+        }
+        
+        function updateBinanceStatus(isConnected) {
+            const statusElement = document.getElementById('binance-status');
+            const indicatorElement = document.getElementById('binance-status-indicator');
+            
+            statusElement.textContent = isConnected ? 'Conectado' : 'Desconectado';
+            indicatorElement.className = `status-indicator ${isConnected ? 'status-online' : 'status-offline'}`;
+        }
+        
+        function updateOpportunitiesDisplay() {
+            const container = document.getElementById('opportunities-container');
+            const countElement = document.getElementById('opportunities-count');
+            
+            countElement.textContent = opportunities.length;
+            
+            if (opportunities.length === 0) {
+                container.innerHTML = `
+                    <div class="no-opportunities">
+                        <p>No se encontraron oportunidades de arbitraje en este momento</p>
+                        <small>El bot sigue monitoreando el mercado...</small>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = '';
+            
+            opportunities.forEach((opportunity, index) => {
+                const opportunityCard = document.createElement('div');
+                opportunityCard.className = 'opportunity-card';
+                
+                const profitPercentage = (opportunity.profit_percentage || 0).toFixed(4);
+                const route = opportunity.route || ['?', '?', '?'];
+                
+                opportunityCard.innerHTML = `
+                    <div class="route-path">
+                        🔄 ${route[0]} → ${route[1]} → ${route[2]} → ${route[0]}
+                    </div>
+                    <div class="profit-info">
+                        <div>
+                            <strong>Ganancia Estimada:</strong> ${profitPercentage}%<br>
+                            <strong>Volumen:</strong> ${opportunity.volume || 'N/A'} ${route[0]}<br>
+                            <strong>Tiempo:</strong> ${new Date(opportunity.timestamp || Date.now()).toLocaleTimeString()}
+                        </div>
+                        <div class="profit-percentage">
+                            +${profitPercentage}%
+                        </div>
+                    </div>
+                `;
+                
+                container.appendChild(opportunityCard);
+            });
+        }
+        
+        function updateLastUpdate() {
+            const lastUpdateElement = document.getElementById('last-update');
+            lastUpdateElement.textContent = new Date().toLocaleTimeString();
+        }
+        
+        // Solicitar estado inicial al cargar la página
+        window.addEventListener('load', function() {
+            socket.emit('request_status');
+            socket.emit('request_opportunities');
+        });
+        
+        // Actualización automática cada 30 segundos
+        setInterval(function() {
+            if (botRunning) {
+                socket.emit('request_opportunities');
+            }
+        }, 30000);
+    </script>
+</body>
+</html>
