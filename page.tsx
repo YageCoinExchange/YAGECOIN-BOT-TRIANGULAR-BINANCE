@@ -1417,8 +1417,7 @@ export default function Dashboard() {
                     <div key={route.id} className="p-4 border rounded-lg">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4">
-                          <Switch checked={route.isActive} onCheckedChange={() => toggleRouteActive(route.id)} />
-                          <div className="flex-1">
+                          <Switch checked={route.isActive} onCheckedChange={() => toggleRouteActive(route.id)} />                      <div className="flex-1">
                             <p className="font-medium">{route.description}</p>
                             <p className="text-sm text-gray-500">{route.symbols.join(" → ")}</p>
                             <div className="flex gap-2 mt-1">
