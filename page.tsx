@@ -546,7 +546,7 @@ export default function Dashboard() {
           fees: TOTAL_FEES,
           feesWithBNB: TOTAL_FEES_WITH_BNB,
           estimatedTime: 4.2,
-          risk: "LOW",
+          risk: "LOW" as const,
         },
         {
           id: "2",
@@ -561,7 +561,7 @@ export default function Dashboard() {
           fees: TOTAL_FEES,
           feesWithBNB: TOTAL_FEES_WITH_BNB,
           estimatedTime: 3.8,
-          risk: "LOW",
+          risk: "LOW" as const,
         },
         {
           id: "3",
@@ -576,7 +576,7 @@ export default function Dashboard() {
           fees: TOTAL_FEES,
           feesWithBNB: TOTAL_FEES_WITH_BNB,
           estimatedTime: 5.1,
-          risk: "MEDIUM",
+          risk: "MEDIUM" as const,
         },
       ].filter((opp) => opp.grossProfit >= botConfig.minProfitThreshold)
 
@@ -1366,7 +1366,7 @@ export default function Dashboard() {
                           <Label>⭐ Prioridad: {newRoute.priority}</Label>
                           <Slider
                             value={[newRoute.priority]}
-                            onChange={(value) => setNewRoute(prev => ({ ...prev, priority: value[0] }))}
+                            onValueChange={(value: number[]) => setNewRoute(prev => ({ ...prev, priority: value[0] }))}
                             max={3}
                             min={1}
                             step={1}
@@ -1378,7 +1378,7 @@ export default function Dashboard() {
                           <Label>📈 Profit Esperado: {newRoute.expectedProfit}%</Label>
                           <Slider
                             value={[newRoute.expectedProfit]}
-                            onChange={(value) => setNewRoute(prev => ({ ...prev, expectedProfit: value[0] }))}
+                            onValueChange={(value: number[]) => setNewRoute(prev => ({ ...prev, expectedProfit: value[0] }))}
                             max={3.0}
                             min={0.1}
                             step={0.1}
@@ -1417,7 +1417,8 @@ export default function Dashboard() {
                     <div key={route.id} className="p-4 border rounded-lg">
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4">
-                          <Switch checked={route.isActive} onCheckedChange={() => toggleRouteActive(route.id)} />                      <div className="flex-1">
+                          <Switch checked={route.isActive} onChange={() => toggleRouteActive(route.id)} />
+                          <div className="flex-1">
                             <p className="font-medium">{route.description}</p>
                             <p className="text-sm text-gray-500">{route.symbols.join(" → ")}</p>
                             <div className="flex gap-2 mt-1">
@@ -1512,6 +1513,7 @@ export default function Dashboard() {
                   <h4 className="font-semibold mb-4">🎯 Configuración Global de Pares</h4>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div>
+                      </div>
                       <Label>📈 Profit mínimo para nuevos pares</Label>
                       <Input type="number" step="0.05" defaultValue={botConfig.minProfitThreshold} className="mt-2" />
                     </div>
