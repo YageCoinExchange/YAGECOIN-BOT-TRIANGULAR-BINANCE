@@ -178,10 +178,7 @@ export {
 }
 
 
-#Copilot said: Aquí tienes un resumen detallado sobre lo
-Aquí tienes un resumen detallado sobre lo que hace el archivo form.tsx:
-
-Propósito general
+#Propósito general
 El archivo form.tsx define un conjunto de componentes y hooks de React para construir formularios avanzados, reutilizables y altamente integrados con la librería react-hook-form. Los componentes están diseñados para ofrecer una estructura clara, soporte de validaciones, mensajes de error, accesibilidad y estilos consistentes en toda la aplicación.
 
 Componentes y lógica principal
