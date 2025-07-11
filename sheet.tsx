@@ -138,3 +138,81 @@ export {
   SheetTitle,
   SheetDescription,
 }
+
+
+## Análisis detallado de `sheet.tsx`
+
+El archivo `sheet.tsx` define una serie de **componentes reutilizables de React** para construir **"sheets"** (paneles deslizantes o "drawers") en la interfaz de usuario, utilizando como base la librería [@radix-ui/react-dialog](https://www.radix-ui.com/primitives/docs/components/dialog). Los sheets son paneles modales que aparecen desde un lado de la pantalla (derecha, izquierda, arriba o abajo) y se suelen usar para mostrar menús, formularios o información adicional sin abandonar la vista actual.
+
+---
+
+## ¿Qué hace exactamente este archivo?
+
+### 1. **Componentes base importados y wrappers**
+
+- **Sheet, SheetTrigger, SheetClose, SheetPortal**
+  - Son aliases directos de los componentes de Radix Dialog (`Root`, `Trigger`, `Close`, `Portal`), que gestionan la estructura y el ciclo de vida del sheet.
+
+- **SheetOverlay**
+  - Renderiza una superposición oscura (`Overlay`) que cubre el resto de la pantalla cuando el sheet está abierto. Usa animaciones para aparecer/desaparecer y puede recibir clases personalizadas.
+
+- **sheetVariants** (con `cva`)
+  - Define variantes de estilos para el panel según el lado desde el que aparece (`right`, `left`, `top`, `bottom`).
+  - Permite animaciones y estilos distintos para cada posición, usando utilidades de Tailwind y Radix.
+  - Es altamente configurable y se usa para generar las clases del contenido del sheet.
+
+---
+
+### 2. **Componentes principales del sheet**
+
+- **SheetContent**
+  - Renderiza el contenido principal del panel, posicionándolo (por defecto desde la derecha).
+  - Aplica animaciones y estilos según el lado desde el que aparece (usando `sheetVariants`).
+  - Incluye el botón de cierre (ícono X), posicionado en la esquina superior derecha.
+  - Permite pasar children (contenido) y clases personalizadas.
+
+- **SheetHeader**
+  - Wrapper para el encabezado del panel. Usa diseño responsivo y permite estilos personalizados.
+
+- **SheetFooter**
+  - Wrapper para el pie del panel. Por defecto, en mobile apila los elementos en columna inversa, y en escritorio los alinea horizontalmente hacia la derecha.
+
+- **SheetTitle**
+  - Componente para mostrar el título del sheet, estilizado con fuente semibold y tamaño grande.
+
+- **SheetDescription**
+  - Componente para colocar una descripción o subtítulo en el sheet, con estilos secundarios.
+
+---
+
+### 3. **Exportación**
+
+Todos los componentes (`Sheet`, `SheetPortal`, `SheetOverlay`, `SheetTrigger`, `SheetClose`, `SheetContent`, `SheetHeader`, `SheetFooter`, `SheetTitle`, `SheetDescription`) se exportan individualmente para poder ser usados y combinados en otras partes de la aplicación.
+
+---
+
+## **Resumen funcional**
+
+- **Permite crear paneles deslizantes (sheets/drawers) altamente personalizables y accesibles** con animaciones y posicionamiento flexible.
+- **Basado en Radix UI:** Aprovecha la accesibilidad, gestión de portales y ciclo de vida de modales de Radix.
+- **Personalización visual:** Soporta variantes de posición (derecha, izquierda, arriba, abajo) y estilos adaptables.
+- **Facilita la integración:** Los componentes pueden ser usados de forma modular para construir sheets complejos con encabezado, contenido, pie de página, títulos y descripciones.
+
+---
+
+## **Ejemplo de uso**
+
+```tsx
+<Sheet>
+  <SheetTrigger>Mostrar panel</SheetTrigger>
+  <SheetContent side="right">
+    <SheetHeader>
+      <SheetTitle>Título del panel</SheetTitle>
+      <SheetDescription>Descripción opcional</SheetDescription>
+    </SheetHeader>
+    <div>Contenido principal...</div>
+    <SheetFooter>
+      <button>Acción</button>
+    </SheetFooter>
+  </SheetContent>
+</Sheet>
