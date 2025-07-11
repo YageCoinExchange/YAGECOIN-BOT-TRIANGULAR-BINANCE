@@ -423,3 +423,69 @@ async function main() {
 
 // Ejecutar
 main()
+
+
+## Análisis detallado de `route-finder.js`
+
+El archivo `route-finder.js` implementa un **buscador automático de rutas de arbitraje triangular** para el exchange Binance. Su propósito es detectar, analizar y guardar las 100 rutas más rentables de trading entre criptomonedas en el mercado spot de Binance.
+
+---
+
+## ¿Qué hace exactamente este archivo?
+
+### 1. **Carga de Mercados SPOT**
+- Usa la librería **ccxt** para conectarse a la API de Binance y cargar todos los mercados SPOT activos.
+- Filtra y almacena los mercados relevantes (especialmente aquellos que involucran USDT como base o quote).
+
+### 2. **Búsqueda de Rutas Triangulares**
+- Detecta todos los pares que tienen USDT como quote.
+- Genera todas las **combinaciones posibles de rutas triangulares** del tipo:  
+  `USDT → TokenA → TokenB → USDT`  
+  (y la reversa: `USDT → TokenB → TokenA → USDT`)
+- Cada ruta queda representada con su secuencia de símbolos y una prioridad (alta, media, baja) según la popularidad de los tokens involucrados.
+
+### 3. **Verificación de Rutas**
+- Filtra las rutas para asegurar que todos los pares de la ruta existen y están activos en Binance.
+- Guarda solo las rutas verificadas como válidas.
+
+### 4. **Testeo de Rutas y Cálculo de Rentabilidad**
+- Divide las rutas verificadas en **lotes**, para evitar límites de tasa (rate limits) de la API.
+- Para cada lote:
+  - Obtiene precios de todos los símbolos necesarios de una vez.
+  - Calcula para cada ruta el **profit porcentual**, el amount de profit, el spread promedio y otros datos usando precios ask/bid reales del mercado.
+- Usa una lógica corregida para simular la secuencia de operaciones de arbitraje (conversión de USDT a TokenA, a TokenB, y de vuelta a USDT).
+
+### 5. **Generación de Reporte y Guardado**
+- Una vez probadas todas las rutas, las ordena por rentabilidad y selecciona las **100 más rentables**.
+- Imprime estadísticas generales y los datos de las 20 mejores rutas a consola.
+- Guarda dos archivos:
+  - `top-100-routes.js`: para utilizar directamente en el bot, con las rutas y profits.
+  - `top-100-routes.json`: para análisis, con detalles y métricas de cada ruta.
+
+### 6. **Flujo principal (`main`)**
+- Ejecuta todo el proceso de búsqueda, testeo y guardado de rutas.
+- Informa en consola el progreso, estadísticas y rutas generadas, y maneja errores fatales.
+
+---
+
+## **Características técnicas y profesionales**
+
+- **Batching:** Procesa rutas en lotes (batchSize = 20) para evitar sobrecargar la API.
+- **Cálculo avanzado:** Considera spreads, liquidez, y utiliza precios ask/bid para simular el arbitraje real.
+- **Priorización:** Ordena primero las rutas que involucran los tokens más populares.
+- **Persistencia:** Guarda resultados en archivos, listos para ser usados por el bot o para análisis externo.
+- **Robustez:** Maneja errores en la carga de mercados y en la obtención de precios, con logs detallados.
+
+---
+
+## **Resumen funcional**
+
+- Automatiza la detección y análisis de rutas triangulares de arbitraje en Binance.
+- Calcula rentabilidad real de cada ruta usando precios actuales.
+- Selecciona y guarda las mejores rutas para su uso en un bot de trading.
+
+---
+
+**En conclusión:**  
+Este archivo es el corazón del descubrimiento algorítmico de oportunidades de arbitraje en el ecosistema de Binance y genera los insumos clave para que el bot opere de manera rentable y eficiente.
+
