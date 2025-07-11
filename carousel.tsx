@@ -262,10 +262,7 @@ export {
 }
 
 
-#Copilot said: Por supuesto, aquí tienes un análisis detallado
-Por supuesto, aquí tienes un análisis detallado de lo que hace el archivo carousel.tsx:
-
-Propósito general
+#Propósito general
 El archivo carousel.tsx define un conjunto de componentes de React para implementar un carrusel reutilizable y accesible. Este carrusel permite mostrar elementos deslizables (slides) tanto en orientación horizontal como vertical, gestionando la navegación entre ellos, el enfoque mediante teclado y la accesibilidad. Utiliza la librería embla-carousel-react para la lógica central del carrusel y se integra con otros componentes UI de la aplicación.
 
 Componentes y lógica principal
