@@ -198,3 +198,93 @@ export {
   DropdownMenuSubTrigger,
   DropdownMenuRadioGroup,
 }
+
+#Propósito General
+El archivo dropdown-menu.tsx define una colección de componentes de React para construir menús desplegables (dropdown menus) accesibles y completamente personalizados, utilizando la librería @radix-ui/react-dropdown-menu como base. Los componentes están diseñados para ser altamente reutilizables y estilizados (probablemente con Tailwind CSS y la función cn) y ofrecen soporte para submenús, grupos, checkboxes, radios, atajos, y más.
+
+Componentes Definidos
+DropdownMenu
+Componente raíz del menú desplegable. Envuelve toda la lógica y el estado del menú.
+
+DropdownMenuTrigger
+Elemento que activa la apertura del menú (por ejemplo, un botón o ícono).
+
+DropdownMenuContent
+El contenedor principal del menú. Se renderiza en un portal para asegurar visibilidad y control de capas (z-index).
+Incluye estilos para fondo, borde, sombras y animaciones de apertura/cierre.
+
+DropdownMenuItem
+Elemento individual del menú (opción seleccionable).
+Soporta la prop inset para añadir indentación opcional.
+
+DropdownMenuCheckboxItem
+Elemento que actúa como una casilla de verificación dentro del menú.
+Muestra un check (<Check />) cuando está seleccionado.
+
+DropdownMenuRadioItem
+Elemento tipo radio dentro del menú (permite selección exclusiva dentro de un grupo).
+Muestra un círculo (<Circle />) cuando está seleccionado.
+
+DropdownMenuLabel
+Etiqueta o título de sección dentro del menú.
+Soporta la prop inset para indentación.
+
+DropdownMenuSeparator
+Línea divisoria entre secciones del menú.
+
+DropdownMenuShortcut
+Permite mostrar atajos de teclado o textos alineados a la derecha de los ítems, usando un <span> estilizado.
+
+DropdownMenuGroup
+Permite agrupar varios ítems bajo una lógica y/o estilo común.
+
+DropdownMenuPortal
+Renderiza el menú en un portal, fuera del flujo normal del DOM (útil para overlays).
+
+DropdownMenuSub, DropdownMenuSubTrigger, DropdownMenuSubContent
+Permiten crear submenús anidados:
+
+DropdownMenuSubTrigger: Elemento que activa un submenú, muestra una flecha (<ChevronRight />) al final.
+DropdownMenuSubContent: El contenido del submenú, con estilos y animaciones.
+DropdownMenuSub: Componente lógico para manejar el submenú.
+DropdownMenuRadioGroup
+Agrupa elementos radio para que sólo uno pueda estar seleccionado simultáneamente.
+
+Características Técnicas
+Accesibilidad:
+Usa Radix UI, asegurando roles ARIA, navegación por teclado y enfoque correcto.
+Estilizado:
+Utiliza la función cn para componer clases CSS dinámicamente (probablemente con Tailwind CSS).
+Iconografía:
+Usa íconos de lucide-react para checks, círculos y flechas de submenú.
+Animaciones y Layout:
+Aplican animaciones a la apertura/cierre de menús y submenús, y aseguran un layout moderno y responsivo.
+¿Qué NO hace este archivo?
+No implementa lógica de negocio ni maneja datos del menú; solo define la estructura y apariencia.
+No gestiona el estado externo de los ítems (checked, selected, etc.), eso depende de las props y el uso externo.
+No incluye ejemplos de uso ni lógica de integración directa con la aplicación.
+Ejemplo de Uso Básico
+TSX
+<DropdownMenu>
+  <DropdownMenuTrigger>Opciones</DropdownMenuTrigger>
+  <DropdownMenuContent>
+    <DropdownMenuLabel>Perfil</DropdownMenuLabel>
+    <DropdownMenuItem>Mi Cuenta</DropdownMenuItem>
+    <DropdownMenuSeparator />
+    <DropdownMenuGroup>
+      <DropdownMenuCheckboxItem checked={true}>Notificaciones</DropdownMenuCheckboxItem>
+      <DropdownMenuRadioGroup value="a">
+        <DropdownMenuRadioItem value="a">Modo A</DropdownMenuRadioItem>
+        <DropdownMenuRadioItem value="b">Modo B</DropdownMenuRadioItem>
+      </DropdownMenuRadioGroup>
+    </DropdownMenuGroup>
+    <DropdownMenuSub>
+      <DropdownMenuSubTrigger>Más opciones</DropdownMenuSubTrigger>
+      <DropdownMenuSubContent>
+        <DropdownMenuItem>Sub Opción 1</DropdownMenuItem>
+      </DropdownMenuSubContent>
+    </DropdownMenuSub>
+  </DropdownMenuContent>
+</DropdownMenu>
+En resumen:
+El archivo dropdown-menu.tsx implementa una suite modular y accesible de componentes para menús desplegables avanzados en React, soportando menús anidados, checkboxes, radios, grupos, atajos y más, todo con estilos modernos y listos para personalización.
