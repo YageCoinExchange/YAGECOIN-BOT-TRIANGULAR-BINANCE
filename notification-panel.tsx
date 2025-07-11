@@ -258,3 +258,47 @@ export function NotificationPanel() {
     </div>
   )
 }
+
+#Propósito General
+Este archivo define un componente de React llamado NotificationPanel que implementa un panel de configuración interactivo para las notificaciones del sistema del bot (por ejemplo, de trading automático). Permite a los usuarios configurar y probar notificaciones por Telegram y email, así como elegir qué tipos de eventos desean recibir, todo desde una interfaz gráfica amigable.
+
+Detalles Funcionales
+1. Configuración de Telegram
+Permite al usuario:
+Activar/desactivar notificaciones de Telegram mediante un switch.
+Ingresar el Bot Token (secreto, tipo password) y el Chat ID personal.
+Ofrece un botón para probar la configuración de Telegram, enviando un mensaje de prueba.
+Muestra instrucciones para crear un bot y obtener el Chat ID en Telegram.
+Si la prueba es exitosa/fallida, muestra un mensaje de estado visual.
+2. Configuración de Email
+Permite al usuario:
+Activar/desactivar notificaciones por email mediante un switch.
+Ingresar el email de destino.
+Proporciona un botón para probar la configuración de email (envía un mensaje de prueba).
+Ofrece instrucciones específicas para Gmail (autenticación en dos pasos y contraseñas de aplicación).
+Muestra un mensaje de prueba exitosa/fallida.
+3. Tipos de Notificaciones
+Permite al usuario seleccionar (activar/desactivar) qué tipos de eventos recibir:
+
+Operaciones Ejecutadas (trades exitosos)
+Errores del Bot (alertas críticas)
+Balance Bajo (alerta por saldo bajo en USDT/BNB)
+Estado del Bot (inicio, parada y cambios)
+Reporte Diario (resumen de operaciones cada día)
+Cada opción incluye un pequeño texto descriptivo.
+
+4. Resultado de Pruebas
+Al probar Telegram o email, el resultado (éxito o error) se muestra en una tarjeta destacada con icono e indicación visual (verde para éxito, rojo para error).
+5. Instrucciones
+Presenta, en la parte inferior, instrucciones detalladas para configurar tanto Telegram como Gmail, usando listas numeradas para guiar paso a paso.
+Detalles Técnicos
+useState administra los estados de configuración y los switches de tipos de notificación.
+useNotifications es un hook personalizado (no definido aquí, pero importado) que probablemente gestiona el envío real de notificaciones.
+Se usan componentes visuales reutilizables como Card, Switch, Input, Button, e íconos de Lucide React.
+El diseño es responsivo y utiliza utilidades de Tailwind CSS para la disposición y estilo.
+Resumido en pasos:
+Recolecta información de configuración de Telegram y email.
+Permite probar que las notificaciones lleguen correctamente a ambos canales.
+Deja elegir qué eventos generan notificación.
+Muestra el resultado de las pruebas de configuración.
+Guía al usuario para que configure correctamente sus servicios de notificación.
