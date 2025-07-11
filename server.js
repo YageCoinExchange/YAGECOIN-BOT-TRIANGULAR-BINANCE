@@ -294,3 +294,94 @@ const PORT = process.env.PORT || 3001
 server.listen(PORT, () => {
   console.log(`Servidor ejecutándose en puerto ${PORT}`)
 })
+## Análisis detallado de `server.js`
+
+El archivo `server.js` implementa el **backend principal** del bot de arbitraje triangular para Binance (y parcialmente KuCoin y OKX), usando Node.js con Express, Socket.IO y la librería ccxt. Este servidor expone tanto una API HTTP/REST como una API en tiempo real vía WebSockets, y gestiona la lógica central del bot de arbitraje.
+
+---
+
+## 1. **Tecnologías y dependencias usadas**
+- **Express:** Framework para construir la API HTTP.
+- **http & socket.io:** Para crear un servidor HTTP y exponer comunicación en tiempo real con los clientes.
+- **ccxt:** Librería para interactuar con APIs de exchanges de criptomonedas (Binance, KuCoin, OKX).
+- **cors:** Permite solicitudes entre dominios (CORS) para la API.
+
+---
+
+## 2. **Clase principal: `TriangularArbitrageBot`**
+
+### **Propiedades y estado**
+- `exchanges`: Instancias de exchanges soportados (Binance, KuCoin, OKX).
+- `isRunning`: Indica si el bot está ejecutándose.
+- `mode`: Modo de operación (`simulation` o `production`).
+- `opportunities`: Últimas oportunidades de arbitraje detectadas.
+- `minProfitThreshold`: Mínimo porcentaje de profit considerado.
+- `baseAsset`: Activo base para rutas (por defecto "USDT").
+
+### **Métodos clave**
+
+#### a. **Inicialización de exchanges**
+- Inicializa las instancias de ccxt para Binance y KuCoin con las credenciales del entorno y configuraciones según el modo.
+- Habilita sandbox en modo simulación.
+
+#### b. **Detección de pares triangulares**
+- Para un exchange dado, identifica rutas triangulares posibles usando activos comunes (USDT, BTC, ETH, BNB).
+- Solo devuelve las primeras 50 rutas encontradas para evitar sobrecargar la API.
+
+#### c. **Cálculo de oportunidad de arbitraje**
+- Dada una ruta triangular, obtiene los precios actuales (ask/bid) de los tres pares.
+- Simula una operación de arbitraje con $1000 USDT:  
+  1. Convierte USDT a Asset1 (compra al precio ask).
+  2. Convierte Asset1 a Asset2 (compra al precio ask).
+  3. Convierte Asset2 de regreso a USDT (vende al precio bid).
+- Calcula el profit porcentual y una "confianza" basada en el spread promedio de los tres pares.
+
+#### d. **Búsqueda de oportunidades**
+- Busca rutas triangulares en Binance (limitado a 20 rutas por iteración).
+- Calcula la oportunidad para cada ruta y las ordena por profit.
+- Emite los resultados a todos los clientes conectados vía Socket.IO.
+
+#### e. **Control de ejecución**
+- Métodos `start`, `stop` y `setMode` para controlar el ciclo de vida y modo de operación del bot.
+- El método `start` corre en loop cada 5 segundos mientras está activo.
+
+---
+
+## 3. **API HTTP REST**
+
+- `GET /api/status`: Devuelve el estado del bot (ejecutando, modo, número de oportunidades).
+- `POST /api/start`: Inicia el bot.
+- `POST /api/stop`: Detiene el bot.
+- `POST /api/mode`: Cambia el modo de operación (`simulation` o `production`).
+
+---
+
+## 4. **API en tiempo real con Socket.IO**
+
+- En cada conexión:
+  - Envía el estado inicial del bot y las oportunidades actuales.
+  - Soporta eventos: `start_bot`, `stop_bot`, y `change_mode`.
+  - Emite automáticamente nuevas oportunidades a todos los clientes cada vez que se detectan.
+
+---
+
+## 5. **Ejecución del servidor**
+- Escucha en el puerto configurado (por defecto `3001`).
+- Permite conexiones desde cualquier origen (CORS: `origin: '*'`).
+
+---
+
+## 6. **Resumen funcional**
+
+- **Orquesta la detección y simulación de oportunidades de arbitraje triangular.**
+- **Permite monitorear, controlar y recibir resultados en tiempo real** tanto por HTTP como por WebSocket.
+- **Soporta modos de simulación y producción**, lo que facilita pruebas sin arriesgar fondos reales.
+- **Es extensible para soportar más exchanges** (KuCoin, OKX), aunque en este archivo solo Binance está operacional por defecto.
+
+---
+
+### **En conclusión**
+
+Este archivo es el **núcleo del backend del bot de arbitraje**, gestionando tanto la lógica de trading como la comunicación con los clientes frontend. Permite automatizar el monitoreo de oportunidades de arbitraje en exchanges, controlar la ejecución del bot desde interfaces web y recibir información en tiempo real.
+
+¿Te gustaría que explique la lógica de arbitraje, los endpoints, o la integración con el frontend en detalle?
