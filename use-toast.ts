@@ -192,3 +192,79 @@ function useToast() {
 }
 
 export { useToast, toast }
+
+## Análisis detallado de `use-toast.ts`
+
+El archivo `use-toast.ts` implementa la **lógica central y el custom hook para un sistema de notificaciones tipo "toast"** en React, inspirado en la librería `react-hot-toast`. Este sistema permite mostrar mensajes emergentes y temporales en la interfaz, como avisos de éxito, error, información, etc.
+
+---
+
+## ¿Qué hace exactamente este archivo?
+
+### 1. **Definición de tipos y constantes**
+
+- **ToasterToast:**  
+  Tipo que representa un toast individual, incluyendo título, descripción, acciones, etc.
+- **TOAST_LIMIT:**  
+  Limita la cantidad máxima de toasts activos (en este caso, solo uno a la vez).
+- **TOAST_REMOVE_DELAY:**  
+  Indica el tiempo (en milisegundos) que un toast permanece antes de ser removido (por defecto, un tiempo extremadamente largo: 1,000,000 ms).
+
+---
+
+### 2. **Acciones y reducer**
+
+Define un patrón de gestión de estado similar a Redux para los toasts, con acciones como:
+- **ADD_TOAST:** Agrega un nuevo toast.
+- **UPDATE_TOAST:** Actualiza un toast existente.
+- **DISMISS_TOAST:** Marca el toast como cerrado (open: false) y lo programa para ser removido.
+- **REMOVE_TOAST:** Elimina el toast del estado.
+
+El **reducer** gestiona el arreglo de toasts y aplica las acciones anteriores.
+
+---
+
+### 3. **Gestión de tiempo y eliminación automática**
+
+- Usa un mapa `toastTimeouts` para manejar los timeouts que eliminan automáticamente los toasts después de cierto tiempo.
+- La función `addToRemoveQueue` garantiza que cada toast se remueva tras el delay definido.
+
+---
+
+### 4. **Gestión de listeners y estado global**
+
+- Se mantiene una variable `memoryState` como fuente de verdad global del estado de los toasts.
+- Un arreglo de `listeners` se utiliza para notificar a todos los componentes que usan el hook cuando hay cambios en el estado global, implementando así un patrón de suscripción.
+
+---
+
+### 5. **Función `toast`**
+
+- Permite crear un nuevo toast de forma programática.
+- Devuelve un objeto con métodos para actualizar (`update`) o cerrar (`dismiss`) ese toast específico.
+
+---
+
+### 6. **Hook `useToast`**
+
+- Permite que cualquier componente React acceda al estado actual de los toasts y a las funciones para emitir y cerrar toasts.
+- Se encarga de suscribir y desuscribir el componente a los cambios en el estado global de los toasts.
+
+---
+
+## **Resumen funcional**
+
+- **Provee una API para emitir, actualizar y cerrar notificaciones tipo toast** desde cualquier parte de la aplicación React.
+- Soporta solo un toast visible a la vez (por el TOAST_LIMIT).
+- Maneja la visibilidad y eliminación automática de los toasts tras un tiempo definido.
+- Permite acciones dentro de los toasts y control total sobre su ciclo de vida.
+- Su arquitectura desacopla la lógica de los toasts de la UI, facilitando su uso con cualquier componente visual que los renderice.
+
+---
+
+## **Ejemplo de uso**
+
+```tsx
+const { toast, dismiss } = useToast()
+
+toast({ title: "¡Éxito!", description: "El proceso se completó correctamente." })
