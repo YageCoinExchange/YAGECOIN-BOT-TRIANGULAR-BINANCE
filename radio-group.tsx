@@ -42,3 +42,71 @@ const RadioGroupItem = React.forwardRef<
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
 
 export { RadioGroup, RadioGroupItem }
+
+
+## Análisis detallado de `radio-group.tsx`
+
+El archivo `radio-group.tsx` define dos componentes reutilizables de React para construir **grupos de botones de opción (radio buttons)** personalizados, usando la librería [@radix-ui/react-radio-group](https://www.radix-ui.com/primitives/docs/components/radio-group) como base. Está optimizado para un diseño visual moderno y accesible.
+
+---
+
+## ¿Qué hace exactamente este archivo?
+
+### 1. **Importaciones**
+- **React**: Para crear componentes y manejar referencias (`forwardRef`).
+- **@radix-ui/react-radio-group**: Provee los componentes accesibles y la lógica de grupo de radio.
+- **Circle (lucide-react)**: Ícono SVG de círculo, usado como indicador visual del radio seleccionado.
+- **cn**: Función utilitaria para combinar clases CSS condicionalmente.
+
+---
+
+### 2. **Componentes definidos**
+
+#### a) `RadioGroup`
+- **Función:** Es el contenedor principal para el grupo de radios.
+- **Implementación:**  
+  - Usa el componente `Root` de Radix UI.
+  - Aplica un layout de grilla con separación (`grid gap-2`).
+  - Permite modificar estilos mediante la prop `className`.
+  - Usa `forwardRef` para compatibilidad con referencias.
+- **Propósito:** Agrupa varios radios para que sólo uno pueda estar seleccionado a la vez (comportamiento estándar de radio group).
+
+#### b) `RadioGroupItem`
+- **Función:** Representa cada opción individual (botón de radio) dentro del grupo.
+- **Implementación:**
+  - Usa el componente `Item` de Radix UI.
+  - Aplica estilos: forma circular, borde, color, foco accesible, tamaño fijo (`h-4 w-4`).
+  - Usa el componente `Indicator` de Radix para mostrar el círculo interior (ícono `Circle`) cuando el radio está seleccionado.
+  - Permite añadir clases personalizadas vía `className`.
+  - Usa `forwardRef` para referencias.
+- **Propósito:** Permite seleccionar una opción dentro del grupo, mostrando claramente cuál está activa.
+
+---
+
+### 3. **Accesibilidad**
+Ambos componentes, al estar basados en Radix UI, cumplen con buenas prácticas de accesibilidad (navegación por teclado, roles ARIA, foco visual, etc).
+
+---
+
+### 4. **Exportación**
+Se exportan ambos componentes (`RadioGroup`, `RadioGroupItem`) para ser usados en otras partes de la aplicación.
+
+---
+
+## **Resumen funcional**
+
+- Permite construir **grupos de botones de opción** con estilos personalizados y accesibles.
+- Cada grupo permite seleccionar solo una opción a la vez.
+- El estilo y el indicador visual (círculo relleno) son consistentes y modernos.
+- Es altamente reutilizable y fácil de integrar en formularios y paneles de configuración.
+
+---
+
+## **Ejemplo de uso**
+
+```tsx
+<RadioGroup defaultValue="option1">
+  <RadioGroupItem value="option1" />
+  <RadioGroupItem value="option2" />
+  <RadioGroupItem value="option3" />
+</RadioGroup>
