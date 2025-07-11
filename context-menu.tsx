@@ -198,3 +198,91 @@ export {
   ContextMenuSubTrigger,
   ContextMenuRadioGroup,
 }
+
+
+#Propósito general
+El archivo context-menu.tsx define una serie de componentes reutilizables en React para construir menús contextuales (menus que aparecen al hacer clic derecho o acción similar) accesibles y altamente personalizables, usando la librería @radix-ui/react-context-menu como base. Los componentes también emplean utilidades de Tailwind CSS para el estilo y algunos íconos de lucide-react para la presentación visual.
+
+Componentes principales
+El archivo reexporta y/o extiende varios componentes de Radix Context Menu:
+
+ContextMenu
+
+Componente raíz que envuelve toda la lógica del menú contextual.
+ContextMenuTrigger
+
+Elemento que desencadena la apertura del menú (por ejemplo, el área donde se hace clic derecho).
+ContextMenuContent
+
+El contenido principal del menú, mostrado en un portal para asegurar visibilidad y manejo correcto de capas/z-index.
+Añade estilos para fondo, borde, sombra y animaciones de apertura/cierre.
+ContextMenuItem
+
+Elemento de menú individual.
+Soporta la prop inset para mayor indentación.
+Gestiona estados como foco, selección y deshabilitado.
+ContextMenuCheckboxItem
+
+Elemento tipo casilla de verificación dentro del menú.
+Muestra un check (<Check />) cuando está seleccionado.
+ContextMenuRadioItem
+
+Elemento tipo opción de radio dentro del menú.
+Muestra un círculo (<Circle />) cuando está seleccionado.
+ContextMenuLabel
+
+Etiqueta/separador de sección del menú.
+Soporta indentación (inset).
+ContextMenuSeparator
+
+Línea divisoria entre secciones del menú.
+ContextMenuShortcut
+
+Permite mostrar atajos de teclado alineados a la derecha de los elementos del menú.
+ContextMenuGroup
+
+Agrupa elementos para organización visual y lógica.
+ContextMenuPortal
+
+Renderiza el menú en un portal React (fuera del flujo normal del DOM).
+ContextMenuSub / ContextMenuSubTrigger / ContextMenuSubContent
+
+Permiten menús contextuales anidados (submenús).
+El subtrigger añade un icono de flecha (<ChevronRight />) para indicar el submenú.
+ContextMenuRadioGroup
+
+Agrupa elementos de radio para selección exclusiva.
+Características técnicas
+Accesibilidad: Utiliza Radix UI para gestionar accesibilidad, estados y eventos de teclado.
+Estilizado: Usa clases utilitarias de Tailwind CSS y la función cn para combinar estilos.
+Iconografía: Usa íconos de lucide-react para checks, radios y flechas.
+Flexibilidad: Permite crear menús simples o complejos (con submenús, grupos, radios, checkboxes, etiquetas, separadores, atajos...).
+¿Qué NO hace este archivo?
+No introduce lógica personalizada de negocio ni manipulación de datos.
+No implementa lógica para mostrar/ocultar el menú (eso depende de los componentes Radix y el usuario).
+No contiene ejemplos de uso ni lógica de integración; solo define los componentes base y sus estilos.
+Ejemplo de uso básico
+TSX
+<ContextMenu>
+  <ContextMenuTrigger>
+    <div>Haz clic derecho aquí</div>
+  </ContextMenuTrigger>
+  <ContextMenuContent>
+    <ContextMenuItem>Opción 1</ContextMenuItem>
+    <ContextMenuItem inset>Opción 2</ContextMenuItem>
+    <ContextMenuSeparator />
+    <ContextMenuCheckboxItem checked={true}>Activar algo</ContextMenuCheckboxItem>
+    <ContextMenuRadioGroup>
+      <ContextMenuRadioItem value="a">Radio A</ContextMenuRadioItem>
+      <ContextMenuRadioItem value="b">Radio B</ContextMenuRadioItem>
+    </ContextMenuRadioGroup>
+    <ContextMenuSub>
+      <ContextMenuSubTrigger>Más opciones</ContextMenuSubTrigger>
+      <ContextMenuSubContent>
+        <ContextMenuItem>Subopción 1</ContextMenuItem>
+      </ContextMenuSubContent>
+    </ContextMenuSub>
+  </ContextMenuContent>
+</ContextMenu>
+Resumen:
+El archivo context-menu.tsx provee una infraestructura completa y accesible para menús contextuales en React, soportando submenús, grupos, atajos, radios, checkboxes y estilos visuales modernos, facilitando la construcción de menús contextuales avanzados en la aplicación.
