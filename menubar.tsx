@@ -234,3 +234,95 @@ export {
   MenubarSub,
   MenubarShortcut,
 }
+
+
+#Propósito general
+El archivo menubar.tsx define una suite de componentes reutilizables en React para construir barras de menú (menubars) interactivas y accesibles, usando la librería @radix-ui/react-menubar como base. Estos componentes permiten crear menús tipo "desktop application", como los menús de archivos o edición en aplicaciones de escritorio, pero para la web, con soporte para submenús, atajos, checkboxes, radios y grupos.
+
+Componentes principales y su función
+Menubar
+Componente raíz que representa la barra de menú completa.
+Estilizado con flexbox, bordes, fondo y padding.
+Soporta clases personalizadas.
+
+MenubarMenu
+Estructura lógica para un menú individual dentro de la barra (ejemplo: "Archivo", "Editar").
+
+MenubarTrigger
+Botón o elemento que activa la apertura de un menú.
+Soporta estados de foco y abierto con estilos visuales.
+
+MenubarContent
+Contenedor del contenido del menú desplegable.
+Renderizado en un portal para manejo de capas (z-index).
+Soporta alineación, offsets, animaciones y estilos de fondo/sombra.
+
+MenubarItem
+Opción individual del menú.
+Soporta foco, estados deshabilitados y una variante con indentación.
+
+MenubarSeparator
+Línea divisoria entre secciones del menú.
+
+MenubarLabel
+Etiqueta o título de sección dentro del menú.
+Soporta indentación.
+
+MenubarGroup
+Permite agrupar varios ítems bajo una lógica común.
+
+MenubarCheckboxItem
+Ítem que actúa como checkbox dentro del menú.
+Muestra un check cuando está seleccionado.
+
+MenubarRadioGroup
+Agrupa radio items para selección exclusiva.
+
+MenubarRadioItem
+Ítem tipo radio, muestra un círculo lleno si está seleccionado.
+
+MenubarSub / MenubarSubTrigger / MenubarSubContent
+Permiten menús anidados (submenús).
+MenubarSubTrigger muestra una flecha indicando submenú, y soporta indentación.
+MenubarSubContent muestra el contenido del submenú con animación y estilos.
+
+MenubarPortal
+Renderiza menús en un portal para asegurar visibilidad y correcta superposición.
+
+MenubarShortcut
+Permite mostrar atajos de teclado a la derecha de los ítems, estilizados y alineados.
+
+Características técnicas
+Accesibilidad: Usa Radix UI para roles ARIA, navegación por teclado, gestión del foco y estados.
+Estilizado: Usa utilidades CSS (probablemente Tailwind) y la función cn para combinar clases de manera dinámica y fácil personalización.
+Animaciones y estados: Soporta animaciones de apertura/cierre de menús y submenús, así como estilos para elementos activos, seleccionados o deshabilitados.
+Composición modular: Los componentes pueden combinarse para crear menús complejos y anidados de manera sencilla.
+¿Qué NO hace este archivo?
+No implementa lógica de negocio ni estados personalizados fuera de lo que provee Radix.
+No maneja el contenido específico de los menús, solo la infraestructura y el estilo.
+No implementa lógica de navegación o callbacks para ítems; eso lo define el desarrollador al usar los componentes.
+Ejemplo de uso
+TSX
+<Menubar>
+  <MenubarMenu>
+    <MenubarTrigger>Archivo</MenubarTrigger>
+    <MenubarContent>
+      <MenubarItem>Nuevo</MenubarItem>
+      <MenubarItem>Guardar</MenubarItem>
+      <MenubarSeparator />
+      <MenubarCheckboxItem checked={true}>Activar opción</MenubarCheckboxItem>
+      <MenubarRadioGroup value="1">
+        <MenubarRadioItem value="1">Modo 1</MenubarRadioItem>
+        <MenubarRadioItem value="2">Modo 2</MenubarRadioItem>
+      </MenubarRadioGroup>
+      <MenubarSub>
+        <MenubarSubTrigger>Más opciones</MenubarSubTrigger>
+        <MenubarSubContent>
+          <MenubarItem>Opción avanzada</MenubarItem>
+        </MenubarSubContent>
+      </MenubarSub>
+    </MenubarContent>
+  </MenubarMenu>
+</Menubar>
+En resumen:
+El archivo menubar.tsx implementa todos los componentes necesarios para construir barras de menú web avanzadas, accesibles, personalizables y con soporte para menús anidados, checkboxes, radios, atajos y más, basándose en Radix UI y utilidades de estilos modernos.
