@@ -127,3 +127,87 @@ export {
   ToastClose,
   ToastAction,
 }
+
+
+## Análisis detallado de `toast.tsx`
+
+El archivo `toast.tsx` define un **sistema de notificaciones tipo "toast"** como conjunto de componentes React reutilizables y personalizables, utilizando la librería [@radix-ui/react-toast](https://www.radix-ui.com/primitives/docs/components/toast) y utilidades modernas de estilización como Tailwind CSS y class-variance-authority. Estos toasts son mensajes emergentes, breves y no intrusivos que aparecen en la interfaz para informar al usuario de acciones, errores, éxitos, etc.
+
+---
+
+## ¿Qué hace exactamente este archivo?
+
+### 1. **Componentes principales y estructura**
+
+- **ToastProvider:**  
+  Proveedor de contexto que envuelve la aplicación o sección donde se quieren mostrar los toasts. Esencial para gestionar el ciclo de vida de las notificaciones.
+
+- **ToastViewport:**  
+  Define la zona de la pantalla donde se renderizan los toasts.  
+  - Estilizado para ser responsivo y posicionarse en la parte superior o inferior derecha, adaptándose a diferentes tamaños de pantalla.
+  - Permite scroll si hay múltiples toasts.
+
+- **Toast:**  
+  Componente principal de la notificación.  
+  - Usa la función `cva` para permitir variantes visuales (`default`, `destructive`), cambiando colores y estilos según la severidad del mensaje.
+  - Puede recibir clases y variantes para personalización.
+
+- **ToastAction:**  
+  Botón de acción dentro del toast (por ejemplo, "Deshacer", "Reintentar").
+  - Estilizado como botón pequeño, interactivo y accesible.
+
+- **ToastClose:**  
+  Botón para cerrar la notificación (ícono de "X").
+  - Se posiciona en la esquina superior derecha del toast.
+  - Solo aparece al hacer hover o tener foco, con transiciones de opacidad.
+
+- **ToastTitle y ToastDescription:**  
+  - `ToastTitle`: Muestra el título o encabezado del toast (fuente semibold, tamaño pequeño).
+  - `ToastDescription`: Texto descriptivo o información adicional (opacidad atenuada).
+
+---
+
+### 2. **Personalización y variantes**
+
+- **`toastVariants` con `cva`:**
+  - Permite cambiar el tipo de toast (`default` para notificaciones normales, `destructive` para errores o advertencias) aplicando diferentes colores y bordes.
+  - Facilita la extensión a otros estilos si es necesario.
+
+- **Props y Tipos:**
+  - `ToastProps` y `ToastActionElement` para tipar correctamente los componentes y acciones, ayudando al desarrollo seguro en TypeScript.
+
+---
+
+### 3. **Accesibilidad y usabilidad**
+
+- Los componentes de Radix aseguran roles ARIA correctos, navegación por teclado y foco visible.
+- Las transiciones y los estados hover/focus mejoran la experiencia de usuario.
+
+---
+
+### 4. **Exportación**
+
+- Exporta todos los componentes y tipos necesarios para construir un sistema de toasts completo y flexible.
+
+---
+
+## **Resumen funcional**
+
+- Permite crear un sistema de notificaciones toast **moderno, accesible y personalizable** para mostrar mensajes informativos, de error, advertencia, éxito, etc.
+- Soporta acciones rápidas y cierre manual de las notificaciones.
+- Fácil de integrar en cualquier parte de una aplicación React/Next.js.
+
+---
+
+## **Ejemplo de uso**
+
+```tsx
+<ToastProvider>
+  <ToastViewport />
+  <Toast variant="destructive">
+    <ToastTitle>Error</ToastTitle>
+    <ToastDescription>Ocurrió un problema inesperado.</ToastDescription>
+    <ToastAction altText="Reintentar">Reintentar</ToastAction>
+    <ToastClose />
+  </Toast>
+</ToastProvider>
