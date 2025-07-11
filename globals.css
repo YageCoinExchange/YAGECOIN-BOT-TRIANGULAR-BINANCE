@@ -92,3 +92,46 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+#Propósito general
+Este archivo globals.css define los estilos globales para la aplicación, utilizando Tailwind CSS como base. Establece variables CSS para temas claros y oscuros, personaliza utilidades de Tailwind, y asegura una apariencia consistente en todos los elementos de la interfaz.
+
+Detalle de funcionalidad
+1. Importación de Tailwind
+@tailwind base;, @tailwind components;, @tailwind utilities;
+Estas directivas importan las capas fundamentales de Tailwind CSS, que incluyen estilos base, componentes y utilidades, respectivamente.
+2. Fuente global
+El elemento body usa una fuente sans-serif estándar (Arial, Helvetica, sans-serif), asegurando legibilidad y coherencia visual.
+3. Definición de utilidades personalizadas
+Se añade una utilidad .text-balance usando @layer utilities, que aplica la propiedad CSS text-wrap: balance;.
+Esto ayuda a equilibrar el texto en líneas múltiples para una mejor presentación.
+4. Variables CSS para temas (light/dark)
+Bajo @layer base, se definen muchas variables CSS (--background, --foreground, --primary, etc.) que controlan los colores de fondo, texto, tarjetas, popovers, acentos, gráficos, sidebar y radios de borde.
+Hay dos secciones principales:
+:root: Define los colores para el tema claro (por defecto).
+.dark: Define los colores para el tema oscuro (cuando el body o root tiene la clase .dark).
+Ejemplos de variables:
+--background: Color de fondo principal.
+--primary: Color primario.
+--accent: Color de acento/resalte.
+--card, --popover, etc.: Colores para distintos componentes de la UI.
+--chart-1 a --chart-5: Colores específicos para gráficos.
+--sidebar-*: Colores para la barra lateral.
+--radius: Radio de borde global.
+Esto permite que toda la aplicación cambie de tema dinámicamente simplemente alternando la clase dark en el <html> o <body>.
+
+5. Estilos base globales
+Todos los elementos (*) aplican el color de borde global usando la clase de Tailwind border-border (que a su vez depende de las variables definidas).
+El body aplica el fondo y color de texto principal usando bg-background y text-foreground, asegurando que herede los colores definidos en las variables.
+¿Qué NO hace este archivo?
+No define estilos específicos para componentes individuales (solo utilidades y variables).
+No contiene reglas CSS complejas o animaciones (más allá de la utilidad .text-balance).
+No incluye media queries, fuentes externas ni reglas para layouts avanzados.
+Resumen visual
+Consistencia: Proporciona una base visual coherente usando variables y utilidades.
+Temas: Permite cambiar entre claro y oscuro de forma sencilla y eficiente.
+Extendibilidad: Facilita la personalización futura de colores y estilos.
+Integración con Tailwind: Aprovecha todo el poder de Tailwind para estilos rápidos y específicos.
+En resumen:
+El archivo globals.css configura la base estilística de la aplicación, definiendo colores, fuentes y utilidades para temas claros y oscuros usando Tailwind CSS y variables CSS, asegurando una apariencia moderna, coherente y fácilmente personalizable en toda la interfaz.
