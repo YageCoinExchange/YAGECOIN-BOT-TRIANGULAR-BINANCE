@@ -204,3 +204,42 @@ export function MobileApp({
     </div>
   )
 }
+
+
+#El archivo mobile-app.tsx define un componente React llamado MobileApp, orientado a servir como la interfaz principal de una aplicación móvil para monitorear y controlar un bot de arbitraje en Binance. El diseño y los controles están optimizados para dispositivos móviles, utilizando componentes UI personalizados y varios íconos de lucide-react para una experiencia moderna y visualmente atractiva.
+
+**Resumen detallado de su funcionamiento:**
+
+1. **Props recibidas:**
+   - `botActive`: Estado booleano que indica si el bot está activo.
+   - `setBotActive`: Función para activar/desactivar el bot.
+   - `opportunities`: Array con las oportunidades de arbitraje encontradas.
+   - `dailyStats`: Objeto con estadísticas del día (profit, operaciones, etc.).
+   - `usdtBalance`: Saldo actual en USDT.
+   - `botConfig`: Configuración relevante del bot (autoTrade, useBNBForFees, stopLossEnabled).
+
+2. **Estados internos:**
+   - `notifications`: Si las notificaciones están activas.
+   - `lastUpdate`: Fecha/hora de la última actualización, que se refresca cada 5 segundos con useEffect.
+
+3. **Estructura visual:**
+   - **Header:** Muestra el nombre e ícono del bot, subtítulo y botones de notificaciones y refresco.
+   - **Estado del Bot:** Card con el estado actual del bot (activo/parado), switch para autoTrade y botón para iniciar/detener el bot.
+   - **Estadísticas rápidas:** Cuatro cards que muestran oportunidades encontradas, profit del día, balance en USDT y operaciones del día, cada una con su ícono y color distintivo.
+   - **Mejores Oportunidades:** Card que lista hasta 3 oportunidades principales, mostrando ruta, confianza, profit y ganancia estimada. Si no hay oportunidades, muestra un mensaje de “buscando oportunidades”.
+   - **Configuración Rápida:** Card con switches para activar/desactivar notificaciones, uso de BNB para fees y stop loss.
+   - **Alertas:** Si el balance en USDT es menor a 1000, muestra una alerta visual advirtiendo al usuario.
+   - **Footer:** Muestra la hora de la última actualización y el estado de la conexión/rutas activas.
+
+4. **Estilizado y UX:**
+   - Usa clases de Tailwind CSS para un diseño oscuro, responsivo y moderno.
+   - Emplea cards, badges, switches y botones para una experiencia táctil y visual intuitiva.
+   - Los íconos aportan claridad rápida sobre cada sección y estado.
+
+**¿Qué NO hace este archivo?**
+- No implementa lógica de negocio del bot, sólo la presentación y control de su estado.
+- No realiza llamadas a APIs ni gestiona datos externos.
+- No se encarga de la navegación ni de la gestión de rutas de la app.
+
+**En resumen:**  
+Este archivo implementa la pantalla principal para la gestión de un bot de arbitraje en Binance desde el móvil, mostrando el estado del bot, métricas clave, oportunidades, configuración rápida y alertas, todo con una interfaz moderna y enfocada en la usabilidad móvil.
