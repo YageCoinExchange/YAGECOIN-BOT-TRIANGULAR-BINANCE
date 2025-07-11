@@ -69,3 +69,53 @@ const InputOTPSeparator = React.forwardRef<
 InputOTPSeparator.displayName = "InputOTPSeparator"
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
+
+
+#Propósito general
+El archivo input-otp.tsx define un conjunto de componentes reutilizables en React para construir un campo de entrada de código OTP (One-Time Password, o código de un solo uso) con una interfaz visual moderna y accesible. Utiliza la librería input-otp para la lógica principal y Radix UI junto a clases utilitarias para el estilo y la composición.
+
+Componentes definidos y sus funciones
+InputOTP
+
+Componente principal del input OTP, basado en el componente OTPInput de la librería input-otp.
+Permite personalizar las clases CSS del contenedor y del propio input.
+Se puede usar como un input controlado, recibiendo props estándares y referencias (ref).
+InputOTPGroup
+
+Componente contenedor para agrupar los slots individuales de cada dígito del OTP.
+Usa flexbox para la disposición horizontal de los slots.
+InputOTPSlot
+
+Representa un solo slot (casilla) para un dígito del OTP.
+Utiliza el contexto OTPInputContext para obtener el estado de cada slot (carácter ingresado, si tiene el caret, si está activo).
+Muestra el dígito ingresado, o un caret animado si la casilla está activa (para mejor usabilidad).
+Aplica estilos condicionales: borde, fondo, animación y enfoque visual con un anillo cuando es el slot activo.
+InputOTPSeparator
+
+Representa un separador visual entre grupos de dígitos del OTP (por ejemplo, para separar grupos de 3-3 o 2-2-2).
+Muestra un punto (ícono <Dot /> de lucide-react) y tiene el rol ARIA de "separator" para accesibilidad.
+Características técnicas
+Accesibilidad: Usa roles y estados visuales apropiados para indicar foco y separación.
+Estilizado: Utiliza clases utilitarias (probablemente Tailwind CSS) para estilos modernos y responsivos.
+Composición: Los componentes están diseñados para ser usados juntos y permiten construir inputs OTP con cualquier cantidad de dígitos y separadores personalizados.
+Animación: El caret (barra de escritura) parpadea cuando la casilla está activa, mejorando la experiencia de usuario.
+¿Qué NO hace este archivo?
+No maneja lógica de envío ni validación del OTP, solo la presentación y estructura del input.
+No integra lógica de backend ni comunicación con APIs.
+No impone un número fijo de slots; eso depende de cómo se use el componente.
+Ejemplo de uso
+TSX
+<InputOTP value={otp} onChange={setOtp} length={6}>
+  <InputOTPGroup>
+    <InputOTPSlot index={0} />
+    <InputOTPSlot index={1} />
+    <InputOTPSeparator />
+    <InputOTPSlot index={2} />
+    <InputOTPSlot index={3} />
+    <InputOTPSeparator />
+    <InputOTPSlot index={4} />
+    <InputOTPSlot index={5} />
+  </InputOTPGroup>
+</InputOTP>
+Resumen
+input-otp.tsx proporciona una infraestructura modular y estilizada para campos de entrada OTP en React, ofreciendo slots individuales, separadores visuales y una experiencia de usuario moderna y accesible, ideal para flujos de autenticación de dos factores o validación de códigos temporales.
