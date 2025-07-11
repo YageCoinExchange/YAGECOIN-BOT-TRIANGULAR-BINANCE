@@ -56,3 +56,6 @@ const AccordionContent = React.forwardRef<
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
+
+
+#El archivo define un conjunto de componentes personalizados de React para construir un acordeón (accordion), es decir, una interfaz de usuario que permite expandir y contraer secciones de contenido. Utiliza la librería @radix-ui/react-accordion para la funcionalidad base y agrega estilos y componentes personalizados para integrarlo con el diseño de la aplicación.
