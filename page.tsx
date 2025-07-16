@@ -2140,7 +2140,7 @@ export default function Dashboard() {
                   variant={mode === "simulation" ? "outline" : "default"}
                   size="sm"
                   onClick={() => setMode("simulation")}
-                  className={darkMode && mode !== "simulation" ? "text-white border-gray-600 hover:bg-gray-700" : ""}
+                  className={`${darkMode ? "text-white border-gray-600 hover:bg-gray-700" : ""} ${mode === "simulation" ? "font-bold" : ""}`}
                 >
                   🧪 Simulación
                 </Button>
@@ -2149,7 +2149,7 @@ export default function Dashboard() {
                   variant={mode === "production" ? "outline" : "default"}
                   size="sm"
                   onClick={() => setMode("production")}
-                  className={darkMode && mode !== "production" ? "text-white border-gray-600 hover:bg-gray-700" : ""}
+                  className={`${darkMode ? "text-white border-gray-600 hover:bg-gray-700" : ""} ${mode === "simulation" ? "font-bold" : ""}`}
                 >
                   🚀 Producción
                 </Button>
@@ -2251,73 +2251,3 @@ export default function Dashboard() {
     </div>
   )
 }
-
-
-## Análisis detallado de `page.tsx`
-
-El archivo `page.tsx` implementa el **dashboard principal** y la interfaz de usuario del bot de arbitraje triangular "YAGECOIN EXCHANGE". Es un componente React de alto nivel que simula y orquesta la experiencia de gestión de trading algorítmico, incluyendo visualización, configuración y simulación.
-
----
-
-## 1. **Propósito General**
-- Centraliza toda la operación y monitoreo del bot de arbitraje en una sola página con múltiples paneles y herramientas.
-- Brinda al usuario control total sobre rutas de trading, riesgos, balances, oportunidades, estrategias de IA, logs, fees y métricas en tiempo real.
-
----
-
-## 2. **Estructura y componentes principales**
-
-### 2.1. **Estados y Configuración**
-- **Bot y Modo:** Controla si el bot está activo, el modo (simulación/producción) y la configuración profesional (autoTrade, uso de BNB para fees, stop loss, operaciones simultáneas, etc.).
-- **Balances:** Simula balances de USDT y BNB tanto en modo demo como en modo producción.
-- **Rutas Profesionales:** Maneja un array de 30 rutas triangulares de arbitraje, clasificadas por prioridad, categoría y profit esperado.
-- **Oportunidades:** Simula oportunidades de arbitraje rentables actualizándose cada 4 segundos.
-- **Logs y Estadísticas:** Registra y muestra logs de operación, estadísticas diarias y permite visualizar el rendimiento del bot.
-- **Nuevas Rutas:** Permite agregar, activar/desactivar y eliminar rutas de arbitraje desde la interfaz.
-
-### 2.2. **Paneles de la Interfaz**
-La función `renderPanel()` muestra diferentes secciones según el panel activo, incluyendo:
-
-- **Precios Tiempo Real:** Resumen y tabla de todas las rutas, con profit actual, estado y switches de activación.
-- **Oportunidades:** Muestra oportunidades rentables filtradas por profit mínimo, configuración rápida de trading y tabla de oportunidades con botón para ejecutar.
-- **Balances:** Visualización y edición del balance de simulación y balances reales de Binance, con alertas de fondos insuficientes y análisis de capacidad operativa.
-- **Pares & Control:** Gestión avanzada de todas las rutas triangulares, formulario para crear nuevas rutas y estadísticas agregadas de rutas.
-- **IA & Estrategia:** Selección de estrategia de IA, configuración de ejecución automática, ajuste de thresholds y visualización de estado de la IA.
-- **Riesgo:** Configuración avanzada de gestión de riesgo (riesgo máximo, stop loss, liquidez, spread), parada de emergencia y estado de protecciones.
-- **Logs:** Registro de todas las actividades y operaciones en tiempo real.
-- **Fees:** Análisis de comisiones, comparativa y optimización automática usando BNB, y simulador de ganancias.
-- **Métricas:** Estadísticas detalladas de operaciones, profit, éxito, uptime y rendimiento del sistema.
-
-### 2.3. **Cabecera y Navegación**
-- **Header:** Muestra logo, nombre, badge de versión, controles de modo claro/oscuro, botones de modo (simulación/producción) y control de encendido/apagado del bot.
-- **Barra de Navegación:** Botones para cambiar de panel, con estilos dinámicos según el modo y el panel activo.
-
----
-
-## 3. **Simulación y Dinamismo**
-- Usa `setInterval` para simular y actualizar datos en tiempo real (oportunidades, estado de rutas, balances).
-- Permite editar y guardar balances, lanzar paradas de emergencia, crear y borrar rutas, y modificar parámetros críticos sin recargar la página.
-- Todos los cambios se reflejan inmediatamente en la interfaz gracias al manejo de estados de React.
-
----
-
-## 4. **Componentes UI Utilizados**
-- Botones, Cards, Badges, Switches, Sliders, Tablas, Progress bars, Inputs, Selects, todos estilizados y responsivos.
-- Íconos de Lucide-React para mejorar la comunicación visual y la experiencia de usuario.
-- Uso de componentes personalizados como `AppSidebar`, `SidebarProvider`, entre otros.
-
----
-
-## 5. **Características Profesionales**
-- Simulación profesional de fees de Binance según uso de BNB.
-- Control granular de riesgos y operaciones (incluyendo stop loss y emergencia).
-- Paneles avanzados para gestión de rutas y monitoreo de IA.
-- Estadísticas y métricas para análisis de rendimiento.
-
----
-
-## 6. **Conclusión**
-
-`page.tsx` es el **núcleo visual y operativo** del bot, integrando simulación, control y monitoreo de todo el flujo de arbitraje triangular en Binance. Permite a usuarios expertos gestionar, probar y optimizar estrategias desde una sola pantalla, con una experiencia profesional, interactiva y dinámica.
-
-**¿Quieres que explique cómo funciona algún panel o lógica en concreto?**
