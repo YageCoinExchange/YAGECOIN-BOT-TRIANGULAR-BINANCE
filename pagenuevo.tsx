@@ -545,7 +545,6 @@ export default function Dashboard() {
     expectedProfit: 0.5
   })
 
-  // --- NUEVO: Fetch de producción para oportunidades y balances ---
   useEffect(() => {
     let interval: any
 
@@ -584,7 +583,7 @@ export default function Dashboard() {
 
     if (mode === "production") {
       fetchProductionOpportunities()
-      interval = setInterval(fetchProductionOpportunities, 5000)
+      interval = setInterval(fetchProductionOpportunities, 3000) // Cambiado de 5000 a 3000 ms
     }
 
     return () => {
@@ -689,6 +688,36 @@ export default function Dashboard() {
         setBinanceBalances([
           { asset: "USDT", free: 0.11, locked: 0.0, total: 0.11, usdValue: 0.11 },
           { asset: "BNB", free: 0.002, locked: 0.0, total: 0.002, usdValue: 0.6 },
+        ])
+      } catch (e) {
+        setBinanceBalances([
+          { asset: "USDT", free: 0.0, locked: 0.0, total: 0.0, usdValue: 0.0 },
+          { asset: "BNB", free: 0.0, locked: 0.0, total: 0.0, usdValue: 0.0 },
+        ])
+      }
+    }
+  }
+
+  const refreshBinanceBalances = async () => {
+    if (mode === "production") {
+      try {
+        const res = await fetch("/api/balances")
+        const data = await res.json()
+        setBinanceBalances([
+          {
+            asset: "USDT",
+            free: data.USDT.free,
+            locked: data.USDT.locked,
+            total: data.USDT.total,
+            usdValue: data.USDT.total,
+          },
+          {
+            asset: "BNB",
+            free: data.BNB.free,
+            locked: data.BNB.locked,
+            total: data.BNB.total,
+            usdValue: data.BNB.total, // Puedes convertir a USD si lo deseas
+          },
         ])
       } catch (e) {
         setBinanceBalances([
@@ -2330,5 +2359,4 @@ export default function Dashboard() {
   // ... resto del archivo igual que original, con los paneles, renders, etc., pero con los cambios indicados arriba.
 
   // NOTA: El resto del código (componentes, rutas, configs) se mantiene igual.
-
 
