@@ -574,6 +574,39 @@ export default function Dashboard() {
             estimatedTime: 5,
           }))
         )
+    // Actualización automática de precios en tiempo real (para el panel de "Precios Tiempo Real")
+useEffect(() => {
+  let interval: any
+
+  const fetchRealRoutes = async () => {
+    try {
+      const res = await fetch("/api/routes")
+      const data = await res.json()
+      setAllRoutes(
+        (data.routes || []).map((route: any, idx: number) => ({
+          ...route,
+          id: (idx + 1).toString(),
+          currentProfit: route.currentProfit || 0,
+          lastUpdate: new Date().toLocaleTimeString(),
+          // Puedes agregar más campos si tu backend los envía
+        }))
+      )
+    } catch (e) {
+      // Si falla, no actualiza nada
+    }
+  }
+
+  if (mode === "production") {
+    fetchRealRoutes()
+    interval = setInterval(fetchRealRoutes, 3000)
+  }
+
+  return () => {
+    if (interval) clearInterval(interval)
+  }
+}, [mode])         
+
+
         setRealRoutes(data.opportunities || [])
       } catch (e) {
         setOpportunities([])
@@ -1284,28 +1317,30 @@ useEffect(() => {
                 {mode === "production" && (
                   <div className="space-y-2">
                     {(binanceBalances.find((b) => b.asset === "USDT")?.total || 0) < 0.10 && (
-                                                     <div className="p-3 bg-red-50 dark:bg-red-900 rounded-lg border border-red-200">
-                                                    <div className="flex items-center gap-2">
-                                                    <AlertTriangle className="w-4 h-4 text-red-500" />
-                                                   <span className="font-semibold text-red-700 dark:text-red-300">⚠️ USDT INSUFICIENTE</span>
-                                                   </div>
-                                                  <p className="text-sm text-red-600 dark:text-red-400 mt-1">
-                                                     Necesitas al menos $0.10 USDT para operar. Deposita más USDT en tu cuenta de Binance.
-                                                     </p>
-                                           </div>
-                                       )}
+                      <div className="p-3 bg-red-50 dark:bg-red-900 rounded-lg border border-red-200">
+                        <div className="flex items-center gap-2">
+                          <AlertTriangle className="w-4 h-4 text-red-500" />
+                          <span className="font-semibold text-red-700 dark:text-red-300">⚠️ USDT INSUFICIENTE</span>
+                        </div>
+                        <p className="text-sm text-red-600 dark:text-red-400 mt-1">
+                          Necesitas al menos $0.10 USDT para operar. Deposita más USDT en tu cuenta de Binance.
+                        </p>
+                      </div>
+                    )}
 
-                                                 {(binanceBalances.find((b) => b.asset === "BNB")?.total || 0) < 0.001 && botConfig.useBNBForFees && (
-                                                    <div className="p-3 bg-yellow-50 dark:bg-yellow-900 rounded-lg border border-yellow-200">
-                                                         <div className="flex items-center gap-2">
-                                                              <AlertTriangle className="w-4 h-4 text-yellow-500" />
-                                                              <span className="font-semibold text-yellow-700 dark:text-yellow-300">⚠️ BNB BAJO</span>
-                                                          </div>
-                                                          <p className="text-sm text-yellow-600 dark:text-yellow-400 mt-1">
-                                                               Tienes poco BNB para pagar fees. Deposita al menos 0.001 BNB para aprovechar el 25% de descuento.
-                                                         </p>
-                                                    </div>
-                                      )}
+                    {(binanceBalances.find((b) => b.asset === "BNB")?.total || 0) < 0.001 && botConfig.useBNBForFees && (
+                      <div className="p-3 bg-yellow-50 dark:bg-yellow-900 rounded-lg border border-yellow-200">
+                        <div className="flex items-center gap-2">
+                          <AlertTriangle className="w-4 h-4 text-yellow-500" />
+                          <span className="font-semibold text-yellow-700 dark:text-yellow-300">⚠️ BNB BAJO</span>
+                        </div>
+                        <p className="text-sm text-yellow-600 dark:text-yellow-400 mt-1">
+                          Tienes poco BNB para pagar fees. Deposita al menos 0.001 BNB para aprovechar el 25% de descuento.
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                )}
 
                 {mode === "simulation" && (
                   <div className="p-3 bg-blue-50 dark:bg-blue-900 rounded-lg border border-blue-200">
