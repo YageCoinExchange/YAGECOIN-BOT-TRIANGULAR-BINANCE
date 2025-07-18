@@ -30,13 +30,6 @@ class ProfessionalArbitrageBot {
       sandbox: false, // Datos reales
     })
 
-    getCategoryStats(opportunities) 
-  const stats = {};
-  opportunities.forEach(opp => {
-    stats[opp.category] = (stats[opp.category] || 0) + 1;
-  });
-  return stats;
-
 
     this.isRunning = false
     this.opportunities = []
@@ -302,6 +295,14 @@ class ProfessionalArbitrageBot {
     this.triangularRoutes.forEach((route) => {
       categories[route.category] = (categories[route.category] || 0) + 1
     })
+
+    getCategoryStats(opportunities) {
+  const stats = {};
+  opportunities.forEach(opp => {
+    stats[opp.category] = (stats[opp.category] || 0) + 1;
+  });
+  return stats;
+}
 
     console.log("📊 ESTADÍSTICAS DE RUTAS:")
     Object.entries(categories).forEach(([category, count]) => {
