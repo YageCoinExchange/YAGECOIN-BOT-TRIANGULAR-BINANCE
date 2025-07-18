@@ -426,6 +426,12 @@ class ProfessionalArbitrageBot {
 
     this.opportunities = realOpportunities
 
+    const filteredOpportunities = realOpportunities.filter(opp => opp.profit > 0.4)
+
+    this.opportunities = filteredOpportunities
+
+
+
     // Emitir datos reales a todos los clientes
     io.emit("arbitrage_opportunities", {
       opportunities: this.opportunities,
@@ -437,6 +443,18 @@ class ProfessionalArbitrageBot {
       processedRoutes: processedCount,
       categories: this.getCategoryStats(realOpportunities),
     })
+
+    // Y luego emite filteredOpportunities:
+io.emit("arbitrage_opportunities", {
+  opportunities: filteredOpportunities,
+  timestamp: new Date().toISOString(),
+  isReal: true,
+  isProfessional: true,
+  source: "Binance API - 30 Rutas Profesionales",
+  totalRoutes: this.triangularRoutes.length,
+  processedRoutes: processedCount,
+  categories: this.getCategoryStats(filteredOpportunities),
+})
 
     console.log(`📊 Procesadas ${processedCount}/30 rutas - ${realOpportunities.length} oportunidades encontradas`)
 
@@ -488,8 +506,8 @@ class ProfessionalArbitrageBot {
             isProfessional: true,
           })
 
-          // Esperar 5 segundos antes del próximo análisis (optimizado para 30 rutas)
-          await new Promise((resolve) => setTimeout(resolve, 5000))
+          // Esperar 3 segundos antes del próximo análisis (optimizado para 30 rutas)
+          await new Promise((resolve) => setTimeout(resolve, 3000))
         } catch (error) {
           console.error("❌ Error en el loop principal:", error.message)
           await new Promise((resolve) => setTimeout(resolve, 10000))
@@ -561,10 +579,16 @@ app.get("/api/balances", async (req, res) => {
     const usdtLocked = balances.used.USDT || 0
     const bnbLocked = balances.used.BNB || 0
 
-    res.json({
-      USDT: { total: usdt, free: usdtFree, locked: usdtLocked },
-      BNB: { total: bnb, free: bnbFree, locked: bnbLocked },
-    })
+    // Filtrar por mínimos
+    const result = {}
+    if (usdt >= 0.10) {
+      result.USDT = { total: usdt, free: usdtFree, locked: usdtLocked }
+    }
+    if (bnb >= 0.001) {
+      result.BNB = { total: bnb, free: bnbFree, locked: bnbLocked }
+    }
+
+    res.json(result)
   } catch (err) {
     res.status(500).json({ error: err.message })
   }
