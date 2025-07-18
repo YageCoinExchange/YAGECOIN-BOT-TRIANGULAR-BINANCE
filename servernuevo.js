@@ -3,6 +3,21 @@ const http = require("http")
 const socketIo = require("socket.io")
 const cors = require("cors")
 const ccxt = require("ccxt")
+const runProfessionalLoop = async () => {
+  while (this.isRunning) {
+    console.log("🔄 [LOOP] Analizando oportunidades..."); // <-- LOG CLAVE
+    try {
+      await this.findRealOpportunities()
+      io.emit("bot_status", { /* ... */ })
+      console.log("✅ [LOOP] Oportunidades analizadas y emitidas."); // <-- LOG CLAVE
+      await new Promise((resolve) => setTimeout(resolve, 5000))
+    } catch (error) {
+      console.error("❌ Error en el loop principal:", error.message)
+      await new Promise((resolve) => setTimeout(resolve, 10000))
+    }
+  }
+  console.log("🛑 [LOOP] Bot detenido."); // <-- LOG CLAVE
+}
 
 // Cargar variables de entorno
 require("dotenv").config()
@@ -303,63 +318,57 @@ class ProfessionalArbitrageBot {
     console.log(`📈 PROFIT PROMEDIO ESPERADO: ${avgProfit}%`)
   }
 
-  async getRealPrices(symbols) {
+   async getRealPrices(symbols) {
+    console.log(`[getRealPrices] Solicitando precios para símbolos: ${symbols.join(', ')}`);
     try {
-      const tickers = await this.binance.fetchTickers(symbols)
-      return tickers
+      const tickers = await this.binance.fetchTickers(symbols);
+      console.log(`[getRealPrices] Recibidos tickers para: ${Object.keys(tickers).join(', ')}`);
+      return tickers;
     } catch (error) {
-      console.error("Error obteniendo precios reales:", error.message)
-      return null
+      console.error("[getRealPrices] Error obteniendo precios reales:", error.message);
+      return null;
     }
   }
 
   async calculateRealArbitrage(routeData) {
+    console.log(`[calculateRealArbitrage] Analizando ruta: ${routeData.description}`);
     try {
       const { route, symbols, description, priority, expectedProfit, category } = routeData
+      const tickers = await this.getRealPrices(symbols);
+      if (!tickers) {
+        console.log(`[calculateRealArbitrage] No se obtuvieron tickers para la ruta: ${description}`);
+        return null;
+      }
 
-      // Obtener precios reales de Binance
-      const tickers = await this.getRealPrices(symbols)
-      if (!tickers) return null
+      const [symbol1, symbol2, symbol3] = symbols;
 
-      const [symbol1, symbol2, symbol3] = symbols
-
-      // Verificar que todos los símbolos existan
       if (!tickers[symbol1] || !tickers[symbol2] || !tickers[symbol3]) {
-        return null
+        console.log(`[calculateRealArbitrage] Algún símbolo no existe en tickers para: ${symbols.join(', ')}`);
+        return null;
       }
 
       // Precios reales
-      const price1 = tickers[symbol1].ask // Comprar primera moneda
-      const price2 = tickers[symbol2].ask // Comprar segunda moneda
-      const price3 = tickers[symbol3].bid // Vender por moneda base
+      const price1 = tickers[symbol1].ask;
+      const price2 = tickers[symbol2].ask;
+      const price3 = tickers[symbol3].bid;
 
-      // 🔧 LÓGICA CORREGIDA - Calcular arbitraje con $1000 USDT
-      const initialAmount = 1000
+      const initialAmount = 1000;
+      const amount1 = initialAmount / price1;
+      const amount2 = amount1 * price2;
+      const finalAmount = amount2 * price3;
 
-      // Paso 1: USDT → Primera moneda
-      const amount1 = initialAmount / price1
+      const profitAmount = finalAmount - initialAmount;
+      const profitPercentage = (profitAmount / initialAmount) * 100;
 
-      // Paso 2: Primera moneda → Segunda moneda
-      const amount2 = amount1 * price2 // ✅ CORREGIDO
+      const volume1 = tickers[symbol1].baseVolume || 0;
+      const volume2 = tickers[symbol2].baseVolume || 0;
+      const volume3 = tickers[symbol3].baseVolume || 0;
 
-      // Paso 3: Segunda moneda → USDT (o ETH/BNB)
-      const finalAmount = amount2 * price3
+      const avgVolume = (volume1 + volume2 + volume3) / 3;
+      let confidence = Math.min(95, Math.max(50, (avgVolume / 1000000) * 100));
 
-      // Calcular profit real
-      const profitAmount = finalAmount - initialAmount
-      const profitPercentage = (profitAmount / initialAmount) * 100
-
-      // Calcular confianza basada en volumen y categoría
-      const volume1 = tickers[symbol1].baseVolume || 0
-      const volume2 = tickers[symbol2].baseVolume || 0
-      const volume3 = tickers[symbol3].baseVolume || 0
-
-      const avgVolume = (volume1 + volume2 + volume3) / 3
-      let confidence = Math.min(95, Math.max(50, (avgVolume / 1000000) * 100))
-
-      // Ajustar confianza por categoría
-      if (category === "ULTRA_SAFE") confidence = Math.min(98, confidence + 10)
-      if (category === "HIGH_PROFIT" && profitPercentage > 1.5) confidence = Math.max(confidence - 5, 70)
+      if (category === "ULTRA_SAFE") confidence = Math.min(98, confidence + 10);
+      if (category === "HIGH_PROFIT" && profitPercentage > 1.5) confidence = Math.max(confidence - 5, 70);
 
       return {
         id: `prof_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
@@ -389,50 +398,41 @@ class ProfessionalArbitrageBot {
         isProfessional: true,
       }
     } catch (error) {
-      console.error("Error calculando arbitraje real:", error.message)
-      return null
+      console.error("[calculateRealArbitrage] Error calculando arbitraje real:", error.message);
+      return null;
     }
   }
 
   async findRealOpportunities() {
-    console.log("🔍 Analizando 30 RUTAS PROFESIONALES en Binance...")
-
-    const realOpportunities = []
-    let processedCount = 0
+    console.log("[findRealOpportunities] Iniciando análisis de rutas profesionales...");
+    const realOpportunities = [];
+    let processedCount = 0;
 
     for (const routeData of this.triangularRoutes) {
       try {
-        const opportunity = await this.calculateRealArbitrage(routeData)
+        console.log(`[findRealOpportunities] Procesando ruta #${processedCount + 1}: ${routeData.description}`);
+        const opportunity = await this.calculateRealArbitrage(routeData);
         if (opportunity) {
-          realOpportunities.push(opportunity)
-
-          // Log solo las más rentables para no saturar
+          realOpportunities.push(opportunity);
           if (opportunity.profit > 0.1) {
-            console.log(`✅ ${opportunity.description}: ${opportunity.profit.toFixed(4)}% (${opportunity.category})`)
+            console.log(`✅ ${opportunity.description}: ${opportunity.profit.toFixed(4)}% (${opportunity.category})`);
           }
+        } else {
+          console.log(`[findRealOpportunities] Oportunidad nula para ruta: ${routeData.description}`);
         }
-
-        processedCount++
-
-        // Pausa para evitar rate limits (optimizada)
-        await new Promise((resolve) => setTimeout(resolve, 50))
+        processedCount++;
+        await new Promise((resolve) => setTimeout(resolve, 50));
       } catch (error) {
-        console.error(`❌ Error en ruta ${routeData.description}:`, error.message)
+        console.error(`[findRealOpportunities] Error en ruta ${routeData.description}:`, error.message);
       }
     }
 
-    // Ordenar por profit (mayor a menor)
-    realOpportunities.sort((a, b) => b.profit - a.profit)
+    realOpportunities.sort((a, b) => b.profit - a.profit);
+    this.opportunities = realOpportunities;
+    const filteredOpportunities = realOpportunities.filter(opp => opp.profit > 0.4);
+    this.opportunities = filteredOpportunities;
 
-    this.opportunities = realOpportunities
-
-    const filteredOpportunities = realOpportunities.filter(opp => opp.profit > 0.4)
-
-    this.opportunities = filteredOpportunities
-
-
-
-    // Emitir datos reales a todos los clientes
+    console.log(`[findRealOpportunities] Emitiendo oportunidades. Total: ${filteredOpportunities.length}`);
     io.emit("arbitrage_opportunities", {
       opportunities: this.opportunities,
       timestamp: new Date().toISOString(),
@@ -442,61 +442,50 @@ class ProfessionalArbitrageBot {
       totalRoutes: this.triangularRoutes.length,
       processedRoutes: processedCount,
       categories: this.getCategoryStats(realOpportunities),
-    })
+    });
 
-    // Y luego emite filteredOpportunities:
-io.emit("arbitrage_opportunities", {
-  opportunities: filteredOpportunities,
-  timestamp: new Date().toISOString(),
-  isReal: true,
-  isProfessional: true,
-  source: "Binance API - 30 Rutas Profesionales",
-  totalRoutes: this.triangularRoutes.length,
-  processedRoutes: processedCount,
-  categories: this.getCategoryStats(filteredOpportunities),
-})
+    io.emit("arbitrage_opportunities", {
+      opportunities: filteredOpportunities,
+      timestamp: new Date().toISOString(),
+      isReal: true,
+      isProfessional: true,
+      source: "Binance API - 30 Rutas Profesionales",
+      totalRoutes: this.triangularRoutes.length,
+      processedRoutes: processedCount,
+      categories: this.getCategoryStats(filteredOpportunities),
+    });
 
-    console.log(`📊 Procesadas ${processedCount}/30 rutas - ${realOpportunities.length} oportunidades encontradas`)
-
-    return realOpportunities
-  }
-
-  getCategoryStats(opportunities) {
-    const stats = {}
-    opportunities.forEach((opp) => {
-      stats[opp.category] = (stats[opp.category] || 0) + 1
-    })
-    return stats
+    console.log(`📊 Procesadas ${processedCount}/30 rutas - ${realOpportunities.length} oportunidades encontradas`);
+    return realOpportunities;
   }
 
   async start() {
     if (this.isRunning) {
-      console.log("⚠️ El bot ya está ejecutándose")
-      return
+      console.log("⚠️ El bot ya está ejecutándose");
+      return;
     }
 
-    this.isRunning = true
-    console.log("🚀 BOT PROFESIONAL INICIADO - 30 RUTAS VERIFICADAS")
-    console.log("🔗 Conectando a Binance para datos REALES...")
+    this.isRunning = true;
+    console.log("🚀 BOT PROFESIONAL INICIADO - 30 RUTAS VERIFICADAS");
+    console.log("🔗 Conectando a Binance para datos REALES...");
 
-    // Verificar conexión a Binance
     try {
-      await this.binance.loadMarkets()
-      console.log("✅ Conectado exitosamente a Binance")
-      console.log(`🎯 Monitoreando ${this.triangularRoutes.length} rutas profesionales`)
+      await this.binance.loadMarkets();
+      console.log("✅ Conectado exitosamente a Binance");
+      console.log(`🎯 Monitoreando ${this.triangularRoutes.length} rutas profesionales`);
     } catch (error) {
-      console.error("❌ Error conectando a Binance:", error.message)
-      this.isRunning = false
-      return
+      console.error("❌ Error conectando a Binance:", error.message);
+      this.isRunning = false;
+      return;
     }
 
     // Loop principal con datos reales
     const runProfessionalLoop = async () => {
       while (this.isRunning) {
+        console.log("🔄 [LOOP] Iniciando ciclo de actualización de oportunidades...");
         try {
-          await this.findRealOpportunities()
+          await this.findRealOpportunities();
 
-          // Emitir estado del bot
           io.emit("bot_status", {
             isRunning: this.isRunning,
             mode: "PROFESSIONAL_30_ROUTES",
@@ -504,18 +493,19 @@ io.emit("arbitrage_opportunities", {
             totalRoutes: this.triangularRoutes.length,
             lastUpdate: new Date().toISOString(),
             isProfessional: true,
-          })
+          });
 
-          // Esperar 5 segundos antes del próximo análisis (optimizado para 30 rutas)
-          await new Promise((resolve) => setTimeout(resolve, 5000))
+          console.log("✅ [LOOP] Ciclo completado. Esperando 5 segundos...");
+          await new Promise((resolve) => setTimeout(resolve, 5000));
         } catch (error) {
-          console.error("❌ Error en el loop principal:", error.message)
-          await new Promise((resolve) => setTimeout(resolve, 10000))
+          console.error("❌ [LOOP] Error en el loop principal:", error.message);
+          await new Promise((resolve) => setTimeout(resolve, 10000));
         }
       }
-    }
+      console.log("🛑 [LOOP] Bot detenido.");
+    };
 
-    runProfessionalLoop()
+    runProfessionalLoop();
   }
 
   stop() {
