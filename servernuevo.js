@@ -559,11 +559,15 @@ app.get("/api/status", (req, res) => {
 app.get("/api/routes", (req, res) => {
   res.json({
     totalRoutes: professionalBot.triangularRoutes.length,
-    routes: professionalBot.triangularRoutes.map((route) => ({
-      description: route.description,
-      category: route.category,
-      expectedProfit: route.expectedProfit,
-      priority: route.priority,
+    routes: professionalBot.opportunities.map((opp) => ({
+      id: opp.id,
+      description: opp.description,
+      category: opp.category,
+      currentProfit: opp.profit,
+      expectedProfit: opp.expectedProfit,
+      lastUpdate: opp.timestamp,
+      status: opp.profit > 0 ? "PROFITABLE" : opp.profit < 0 ? "UNPROFITABLE" : "ANALYZING",
+      priority: opp.priority,
     })),
   })
 })
