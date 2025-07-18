@@ -3,21 +3,7 @@ const http = require("http")
 const socketIo = require("socket.io")
 const cors = require("cors")
 const ccxt = require("ccxt")
-const runProfessionalLoop = async () => {
-  while (this.isRunning) {
-    console.log("🔄 [LOOP] Analizando oportunidades..."); // <-- LOG CLAVE
-    try {
-      await this.findRealOpportunities()
-      io.emit("bot_status", { /* ... */ })
-      console.log("✅ [LOOP] Oportunidades analizadas y emitidas."); // <-- LOG CLAVE
-      await new Promise((resolve) => setTimeout(resolve, 5000))
-    } catch (error) {
-      console.error("❌ Error en el loop principal:", error.message)
-      await new Promise((resolve) => setTimeout(resolve, 10000))
-    }
-  }
-  console.log("🛑 [LOOP] Bot detenido."); // <-- LOG CLAVE
-}
+
 
 // Cargar variables de entorno
 require("dotenv").config()
@@ -39,10 +25,18 @@ class ProfessionalArbitrageBot {
     // Inicializar Binance (con claves, si las tienes)
     this.binance = new ccxt.binance({
       apiKey: process.env.BINANCE_API_KEY,
-      secret: process.env.BINANCE_API_SECRET,
+      secret: process.env.BINANCE_SECRET_KEY,
       enableRateLimit: true,
       sandbox: false, // Datos reales
     })
+
+    getCategoryStats(opportunities) 
+  const stats = {};
+  opportunities.forEach(opp => {
+    stats[opp.category] = (stats[opp.category] || 0) + 1;
+  });
+  return stats;
+
 
     this.isRunning = false
     this.opportunities = []
@@ -296,6 +290,8 @@ class ProfessionalArbitrageBot {
       },
     ]
 
+    
+
 
     console.log(`🎯 BOT INICIALIZADO CON ${this.triangularRoutes.length} RUTAS PROFESIONALES`)
     this.logRouteStats()
@@ -340,29 +336,26 @@ class ProfessionalArbitrageBot {
         return null;
       }
 
-      const [symbol1, symbol2, symbol3] = symbols;
+const [symbol1, symbol2, symbol3] = symbols;
 
-      if (!tickers[symbol1] || !tickers[symbol2] || !tickers[symbol3]) {
-        console.log(`[calculateRealArbitrage] Algún símbolo no existe en tickers para: ${symbols.join(', ')}`);
-        return null;
-      }
+// Convierte a formato ccxt (ejemplo: CHZUSDT -> CHZ/USDT)
+const symbol1_ccxt = symbol1.replace(/(USDT|BTC|ETH|BNB)$/, '/$1');
+const symbol2_ccxt = symbol2.replace(/(USDT|BTC|ETH|BNB)$/, '/$1');
+const symbol3_ccxt = symbol3.replace(/(USDT|BTC|ETH|BNB)$/, '/$1');
 
-      // Precios reales
-      const price1 = tickers[symbol1].ask;
-      const price2 = tickers[symbol2].ask;
-      const price3 = tickers[symbol3].bid;
+if (!tickers[symbol1_ccxt] || !tickers[symbol2_ccxt] || !tickers[symbol3_ccxt]) {
+  console.log(`[calculateRealArbitrage] Algún símbolo no existe en tickers para: ${symbols.join(', ')}`);
+  return null;
+}
 
-      const initialAmount = 1000;
-      const amount1 = initialAmount / price1;
-      const amount2 = amount1 * price2;
-      const finalAmount = amount2 * price3;
+// Precios reales
+const price1 = tickers[symbol1_ccxt].ask;
+const price2 = tickers[symbol2_ccxt].ask;
+const price3 = tickers[symbol3_ccxt].bid;
 
-      const profitAmount = finalAmount - initialAmount;
-      const profitPercentage = (profitAmount / initialAmount) * 100;
-
-      const volume1 = tickers[symbol1].baseVolume || 0;
-      const volume2 = tickers[symbol2].baseVolume || 0;
-      const volume3 = tickers[symbol3].baseVolume || 0;
+const volume1 = tickers[symbol1_ccxt].baseVolume || 0;
+const volume2 = tickers[symbol2_ccxt].baseVolume || 0;
+const volume3 = tickers[symbol3_ccxt].baseVolume || 0;
 
       const avgVolume = (volume1 + volume2 + volume3) / 3;
       let confidence = Math.min(95, Math.max(50, (avgVolume / 1000000) * 100));
