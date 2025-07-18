@@ -581,6 +581,40 @@ export default function Dashboard() {
       }
     }
 
+
+// Actualización automática de precios en tiempo real (para el panel de "Precios Tiempo Real")
+useEffect(() => {
+  let interval: any
+
+  const fetchRealRoutes = async () => {
+    try {
+      const res = await fetch("/api/routes")
+      const data = await res.json()
+      // Si tu backend expone los precios reales en otro endpoint, cámbialo aquí
+      setAllRoutes(
+        (data.routes || []).map((route: any, idx: number) => ({
+          ...route,
+          id: (idx + 1).toString(),
+          // Puedes agregar aquí más campos si tu backend los envía
+          currentProfit: route.currentProfit || 0,
+          lastUpdate: new Date().toLocaleTimeString(), // Actualiza el tiempo
+        }))
+      )
+    } catch (e) {
+      // Si falla, no actualiza nada
+    }
+  }
+
+  if (mode === "production") {
+    fetchRealRoutes()
+    interval = setInterval(fetchRealRoutes, 3000)
+  }
+
+  return () => {
+    if (interval) clearInterval(interval)
+  }
+}, [mode])
+
     if (mode === "production") {
       fetchProductionOpportunities()
       interval = setInterval(fetchProductionOpportunities, 3000) // Cambiado de 5000 a 3000 ms
@@ -680,22 +714,6 @@ export default function Dashboard() {
 
   const toggleRouteActive = (id: string) => {
     setAllRoutes((prev) => prev.map((route) => (route.id === id ? { ...route, isActive: !route.isActive } : route)))
-  }
-
-  const refreshBinanceBalances = async () => {
-    if (mode === "production") {
-      try {
-        setBinanceBalances([
-          { asset: "USDT", free: 0.11, locked: 0.0, total: 0.11, usdValue: 0.11 },
-          { asset: "BNB", free: 0.002, locked: 0.0, total: 0.002, usdValue: 0.6 },
-        ])
-      } catch (e) {
-        setBinanceBalances([
-          { asset: "USDT", free: 0.0, locked: 0.0, total: 0.0, usdValue: 0.0 },
-          { asset: "BNB", free: 0.0, locked: 0.0, total: 0.0, usdValue: 0.0 },
-        ])
-      }
-    }
   }
 
   const refreshBinanceBalances = async () => {
@@ -1265,33 +1283,29 @@ export default function Dashboard() {
                 {/* Alertas de balance */}
                 {mode === "production" && (
                   <div className="space-y-2">
-                    {(binanceBalances.find((b) => b.asset === "USDT")?.total || 0) < tradingAmount && (
-                      <div className="p-3 bg-red-50 dark:bg-red-900 rounded-lg border border-red-200">
-                        <div className="flex items-center gap-2">
-                          <AlertTriangle className="w-4 h-4 text-red-500" />
-                          <span className="font-semibold text-red-700 dark:text-red-300">⚠️ USDT INSUFICIENTE</span>
-                        </div>
-                        <p className="text-sm text-red-600 dark:text-red-400 mt-1">
-                          Necesitas al menos ${tradingAmount} USDT para operar. Deposita más USDT en tu cuenta de
-                          Binance.
-                        </p>
-                      </div>
-                    )}
+                    {(binanceBalances.find((b) => b.asset === "USDT")?.total || 0) < 0.10 && (
+                                                     <div className="p-3 bg-red-50 dark:bg-red-900 rounded-lg border border-red-200">
+                                                    <div className="flex items-center gap-2">
+                                                    <AlertTriangle className="w-4 h-4 text-red-500" />
+                                                   <span className="font-semibold text-red-700 dark:text-red-300">⚠️ USDT INSUFICIENTE</span>
+                                                   </div>
+                                                  <p className="text-sm text-red-600 dark:text-red-400 mt-1">
+                                                     Necesitas al menos $0.10 USDT para operar. Deposita más USDT en tu cuenta de Binance.
+                                                     </p>
+                                           </div>
+                                       )}
 
-                    {(binanceBalances.find((b) => b.asset === "BNB")?.total || 0) < 0.01 && botConfig.useBNBForFees && (
-                      <div className="p-3 bg-yellow-50 dark:bg-yellow-900 rounded-lg border border-yellow-200">
-                        <div className="flex items-center gap-2">
-                          <AlertTriangle className="w-4 h-4 text-yellow-500" />
-                          <span className="font-semibold text-yellow-700 dark:text-yellow-300">⚠️ BNB BAJO</span>
-                        </div>
-                        <p className="text-sm text-yellow-600 dark:text-yellow-400 mt-1">
-                          Tienes poco BNB para pagar fees. Deposita al menos 0.01 BNB para aprovechar el 25% de
-                          descuento.
-                        </p>
-                      </div>
-                    )}
-                  </div>
-                )}
+                                                 {(binanceBalances.find((b) => b.asset === "BNB")?.total || 0) < 0.001 && botConfig.useBNBForFees && (
+                                                    <div className="p-3 bg-yellow-50 dark:bg-yellow-900 rounded-lg border border-yellow-200">
+                                                         <div className="flex items-center gap-2">
+                                                              <AlertTriangle className="w-4 h-4 text-yellow-500" />
+                                                              <span className="font-semibold text-yellow-700 dark:text-yellow-300">⚠️ BNB BAJO</span>
+                                                          </div>
+                                                          <p className="text-sm text-yellow-600 dark:text-yellow-400 mt-1">
+                                                               Tienes poco BNB para pagar fees. Deposita al menos 0.001 BNB para aprovechar el 25% de descuento.
+                                                         </p>
+                                                    </div>
+                                      )}
 
                 {mode === "simulation" && (
                   <div className="p-3 bg-blue-50 dark:bg-blue-900 rounded-lg border border-blue-200">
