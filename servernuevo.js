@@ -506,8 +506,8 @@ io.emit("arbitrage_opportunities", {
             isProfessional: true,
           })
 
-          // Esperar 3 segundos antes del próximo análisis (optimizado para 30 rutas)
-          await new Promise((resolve) => setTimeout(resolve, 3000))
+          // Esperar 5 segundos antes del próximo análisis (optimizado para 30 rutas)
+          await new Promise((resolve) => setTimeout(resolve, 5000))
         } catch (error) {
           console.error("❌ Error en el loop principal:", error.message)
           await new Promise((resolve) => setTimeout(resolve, 10000))
