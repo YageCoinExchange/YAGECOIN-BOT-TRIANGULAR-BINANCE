@@ -574,7 +574,28 @@ export default function Dashboard() {
             estimatedTime: 5,
           }))
         )
-    // Actualización automática de precios en tiempo real (para el panel de "Precios Tiempo Real")
+
+
+        setRealRoutes(data.opportunities || [])
+      } catch (e) {
+        setOpportunities([])
+        setRealRoutes([])
+      }
+    }
+
+
+
+    if (mode === "production") {
+      fetchProductionOpportunities()
+      interval = setInterval(fetchProductionOpportunities, 3000) // Cambiado de 5000 a 3000 ms
+    }
+
+    return () => {
+      if (interval) clearInterval(interval)
+    }
+  }, [mode, tradingAmount])
+
+  // Actualización automática de precios en tiempo real (para el panel de "Precios Tiempo Real")
 useEffect(() => {
   let interval: any
 
@@ -588,49 +609,6 @@ useEffect(() => {
           id: (idx + 1).toString(),
           currentProfit: route.currentProfit || 0,
           lastUpdate: new Date().toLocaleTimeString(),
-          // Puedes agregar más campos si tu backend los envía
-        }))
-      )
-    } catch (e) {
-      // Si falla, no actualiza nada
-    }
-  }
-
-  if (mode === "production") {
-    fetchRealRoutes()
-    interval = setInterval(fetchRealRoutes, 3000)
-  }
-
-  return () => {
-    if (interval) clearInterval(interval)
-  }
-}, [mode])         
-
-
-        setRealRoutes(data.opportunities || [])
-      } catch (e) {
-        setOpportunities([])
-        setRealRoutes([])
-      }
-    }
-
-
-// Actualización automática de precios en tiempo real (para el panel de "Precios Tiempo Real")
-useEffect(() => {
-  let interval: any
-
-  const fetchRealRoutes = async () => {
-    try {
-      const res = await fetch("/api/routes")
-      const data = await res.json()
-      // Si tu backend expone los precios reales en otro endpoint, cámbialo aquí
-      setAllRoutes(
-        (data.routes || []).map((route: any, idx: number) => ({
-          ...route,
-          id: (idx + 1).toString(),
-          // Puedes agregar aquí más campos si tu backend los envía
-          currentProfit: route.currentProfit || 0,
-          lastUpdate: new Date().toLocaleTimeString(), // Actualiza el tiempo
         }))
       )
     } catch (e) {
@@ -647,16 +625,6 @@ useEffect(() => {
     if (interval) clearInterval(interval)
   }
 }, [mode])
-
-    if (mode === "production") {
-      fetchProductionOpportunities()
-      interval = setInterval(fetchProductionOpportunities, 3000) // Cambiado de 5000 a 3000 ms
-    }
-
-    return () => {
-      if (interval) clearInterval(interval)
-    }
-  }, [mode, tradingAmount])
 
   useEffect(() => {
     if (mode === "simulation") {
