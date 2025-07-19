@@ -948,63 +948,62 @@ useEffect(() => {
 
 
           // 👇 Aquí pega el bloque de socket.io 👇
-  useEffect(() => {
-    let socket: any
+useEffect(() => {
+  let socket: any
 
-    if (mode === "production") {
-      socket = io("http://localhost:3001", { transports: ["websocket"] })
+  if (mode === "production") {
+    socket = io("http://localhost:3001", { transports: ["websocket"] })
 
-      // Recibe oportunidades rentables
-      socket.on("arbitrage_opportunities", (data: any) => {
-        const filtered = (data.opportunities || []).filter((opp: any) => (opp.profit || 0) > 0.4)
-        setOpportunities(
-          filtered.map((opp: any) => ({
-            ...opp,
-            id: opp.id || opp.description || Math.random().toString(36),
-            grossProfit: opp.profit || 0,
-            netProfit: (opp.profit || 0) - TOTAL_FEES,
-            netProfitWithBNB: (opp.profit || 0) - TOTAL_FEES_WITH_BNB,
-            confidence: opp.confidence || 75,
-            amount: opp.amount || tradingAmount,
-            timestamp: opp.timestamp,
-            category: opp.category,
-            symbols: opp.symbols,
-            prices: opp.prices,
-            description: opp.description,
-            risk: "LOW",
-            fees: TOTAL_FEES,
-            feesWithBNB: TOTAL_FEES_WITH_BNB,
-            estimatedTime: 5,
-          }))
-        )
-        setRealRoutes(data.opportunities || [])
-      })
+    socket.on("arbitrage_opportunities", (data: any) => {
+      console.log("SOCKET DATA", data) // <-- Para comprobar en la consola del navegador
 
-      // Recibe rutas completas
-      socket.on("arbitrage_opportunities", (data: any) => {
-        setAllRoutes(
-          (data.opportunities || []).map((route: any, idx: number) => ({
-            ...route,
-            id: route.id || (idx + 1).toString(),
-            currentProfit: route.profit || route.currentProfit || 0,
-            lastUpdate: route.timestamp || new Date().toLocaleTimeString(),
-            status: route.status || (route.profit > 0 ? "PROFITABLE" : route.profit < 0 ? "UNPROFITABLE" : "ANALYZING"),
-            description: route.description,
-            symbols: route.symbols,
-            category: route.category,
-            expectedProfit: route.expectedProfit,
-            isActive: route.isActive !== undefined ? route.isActive : true,
-            priority: route.priority || 1,
-          }))
-        )
-      })
+      // Oportunidades rentables
+      const filtered = (data.opportunities || []).filter((opp: any) => (opp.profit || 0) > 0.4)
+      setOpportunities(
+        filtered.map((opp: any) => ({
+          ...opp,
+          id: opp.id || opp.description || Math.random().toString(36),
+          grossProfit: opp.profit || 0,
+          netProfit: (opp.profit || 0) - TOTAL_FEES,
+          netProfitWithBNB: (opp.profit || 0) - TOTAL_FEES_WITH_BNB,
+          confidence: opp.confidence || 75,
+          amount: opp.amount || tradingAmount,
+          timestamp: opp.timestamp,
+          category: opp.category,
+          symbols: opp.symbols,
+          prices: opp.prices,
+          description: opp.description,
+          risk: "LOW",
+          fees: TOTAL_FEES,
+          feesWithBNB: TOTAL_FEES_WITH_BNB,
+          estimatedTime: 5,
+        }))
+      )
+      setRealRoutes(data.opportunities || [])
 
-    }
+      // Rutas completas (para tabla de rutas)
+      setAllRoutes(
+        (data.opportunities || []).map((route: any, idx: number) => ({
+          ...route,
+          id: route.id || (idx + 1).toString(),
+          currentProfit: route.profit || route.currentProfit || 0,
+          lastUpdate: route.timestamp || new Date().toLocaleTimeString(),
+          status: route.status || (route.profit > 0 ? "PROFITABLE" : route.profit < 0 ? "UNPROFITABLE" : "ANALYZING"),
+          description: route.description,
+          symbols: route.symbols,
+          category: route.category,
+          expectedProfit: route.expectedProfit,
+          isActive: route.isActive !== undefined ? route.isActive : true,
+          priority: route.priority || 1,
+        }))
+      )
+    })
+  }
 
-    return () => {
-      if (socket) socket.disconnect()
-    }
-  }, [mode, tradingAmount])
+  return () => {
+    if (socket) socket.disconnect()
+  }
+}, [mode, tradingAmount])
 
       case "opportunities":
         return (
