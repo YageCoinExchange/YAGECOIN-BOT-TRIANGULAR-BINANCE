@@ -287,16 +287,28 @@ class ProfessionalArbitrageBot {
 
 
     console.log(`🎯 BOT INICIALIZADO CON ${this.triangularRoutes.length} RUTAS PROFESIONALES`)
-    this.logRouteStats()
-  }
+  this.logRouteStats()
+}
 
-  logRouteStats() {
-    const categories = {}
-    this.triangularRoutes.forEach((route) => {
-      categories[route.category] = (categories[route.category] || 0) + 1
-    })
+logRouteStats() {
+  const categories = {}
+  this.triangularRoutes.forEach((route) => {
+    categories[route.category] = (categories[route.category] || 0) + 1
+  })
 
-    getCategoryStats(opportunities) {
+  console.log("📊 ESTADÍSTICAS DE RUTAS:")
+  Object.entries(categories).forEach(([category, count]) => {
+    console.log(`   ${category}: ${count} rutas`)
+  })
+
+  const avgProfit = (
+    this.triangularRoutes.reduce((sum, route) => sum + route.expectedProfit, 0) / this.triangularRoutes.length
+  ).toFixed(3)
+  console.log(`📈 PROFIT PROMEDIO ESPERADO: ${avgProfit}%`)
+}
+
+// PEGAR ESTE MÉTODO DESPUÉS DEL ANTERIOR (¡NUEVO!)
+getCategoryStats(opportunities) {
   const stats = {};
   opportunities.forEach(opp => {
     stats[opp.category] = (stats[opp.category] || 0) + 1;
@@ -304,98 +316,95 @@ class ProfessionalArbitrageBot {
   return stats;
 }
 
-    console.log("📊 ESTADÍSTICAS DE RUTAS:")
-    Object.entries(categories).forEach(([category, count]) => {
-      console.log(`   ${category}: ${count} rutas`)
-    })
-
-    const avgProfit = (
-      this.triangularRoutes.reduce((sum, route) => sum + route.expectedProfit, 0) / this.triangularRoutes.length
-    ).toFixed(3)
-    console.log(`📈 PROFIT PROMEDIO ESPERADO: ${avgProfit}%`)
+async getRealPrices(symbols) {
+  console.log(`[getRealPrices] Solicitando precios para símbolos: ${symbols.join(', ')}`);
+  try {
+    const tickers = await this.binance.fetchTickers(symbols);
+    console.log(`[getRealPrices] Recibidos tickers para: ${Object.keys(tickers).join(', ')}`);
+    return tickers;
+  } catch (error) {
+    console.error("[getRealPrices] Error obteniendo precios reales:", error.message);
+    return null;
   }
-
-   async getRealPrices(symbols) {
-    console.log(`[getRealPrices] Solicitando precios para símbolos: ${symbols.join(', ')}`);
-    try {
-      const tickers = await this.binance.fetchTickers(symbols);
-      console.log(`[getRealPrices] Recibidos tickers para: ${Object.keys(tickers).join(', ')}`);
-      return tickers;
-    } catch (error) {
-      console.error("[getRealPrices] Error obteniendo precios reales:", error.message);
-      return null;
-    }
-  }
-
-  async calculateRealArbitrage(routeData) {
-    console.log(`[calculateRealArbitrage] Analizando ruta: ${routeData.description}`);
-    try {
-      const { route, symbols, description, priority, expectedProfit, category } = routeData
-      const tickers = await this.getRealPrices(symbols);
-      if (!tickers) {
-        console.log(`[calculateRealArbitrage] No se obtuvieron tickers para la ruta: ${description}`);
-        return null;
-      }
-
-const [symbol1, symbol2, symbol3] = symbols;
-
-// Convierte a formato ccxt (ejemplo: CHZUSDT -> CHZ/USDT)
-const symbol1_ccxt = symbol1.replace(/(USDT|BTC|ETH|BNB)$/, '/$1');
-const symbol2_ccxt = symbol2.replace(/(USDT|BTC|ETH|BNB)$/, '/$1');
-const symbol3_ccxt = symbol3.replace(/(USDT|BTC|ETH|BNB)$/, '/$1');
-
-if (!tickers[symbol1_ccxt] || !tickers[symbol2_ccxt] || !tickers[symbol3_ccxt]) {
-  console.log(`[calculateRealArbitrage] Algún símbolo no existe en tickers para: ${symbols.join(', ')}`);
-  return null;
 }
 
-// Precios reales
-const price1 = tickers[symbol1_ccxt].ask;
-const price2 = tickers[symbol2_ccxt].ask;
-const price3 = tickers[symbol3_ccxt].bid;
-
-const volume1 = tickers[symbol1_ccxt].baseVolume || 0;
-const volume2 = tickers[symbol2_ccxt].baseVolume || 0;
-const volume3 = tickers[symbol3_ccxt].baseVolume || 0;
-
-      const avgVolume = (volume1 + volume2 + volume3) / 3;
-      let confidence = Math.min(95, Math.max(50, (avgVolume / 1000000) * 100));
-
-      if (category === "ULTRA_SAFE") confidence = Math.min(98, confidence + 10);
-      if (category === "HIGH_PROFIT" && profitPercentage > 1.5) confidence = Math.max(confidence - 5, 70);
-
-      return {
-        id: `prof_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-        route: route,
-        symbols: symbols,
-        description: description,
-        exchange: "Binance",
-        profit: profitPercentage,
-        profitAmount: profitAmount,
-        confidence: Math.round(confidence),
-        amount: initialAmount,
-        priority: priority,
-        category: category,
-        expectedProfit: expectedProfit,
-        prices: {
-          [symbol1]: price1,
-          [symbol2]: price2,
-          [symbol3]: price3,
-        },
-        volumes: {
-          [symbol1]: volume1,
-          [symbol2]: volume2,
-          [symbol3]: volume3,
-        },
-        timestamp: new Date().toLocaleTimeString(),
-        isReal: true,
-        isProfessional: true,
-      }
-    } catch (error) {
-      console.error("[calculateRealArbitrage] Error calculando arbitraje real:", error.message);
+async calculateRealArbitrage(routeData) {
+  console.log(`[calculateRealArbitrage] Analizando ruta: ${routeData.description}`);
+  try {
+    const { route, symbols, description, priority, expectedProfit, category } = routeData;
+    const tickers = await this.getRealPrices(symbols);
+    if (!tickers) {
+      console.log(`[calculateRealArbitrage] No se obtuvieron tickers para la ruta: ${description}`);
       return null;
     }
+
+    const [symbol1, symbol2, symbol3] = symbols;
+
+    // Convierte a formato ccxt (ejemplo: CHZUSDT -> CHZ/USDT)
+    const symbol1_ccxt = symbol1.replace(/(USDT|BTC|ETH|BNB)$/, '/$1');
+    const symbol2_ccxt = symbol2.replace(/(USDT|BTC|ETH|BNB)$/, '/$1');
+    const symbol3_ccxt = symbol3.replace(/(USDT|BTC|ETH|BNB)$/, '/$1');
+
+    if (!tickers[symbol1_ccxt] || !tickers[symbol2_ccxt] || !tickers[symbol3_ccxt]) {
+      console.log(`[calculateRealArbitrage] Algún símbolo no existe en tickers para: ${symbols.join(', ')}`);
+      return null;
+    }
+
+    // Precios reales
+    const price1 = tickers[symbol1_ccxt].ask;
+    const price2 = tickers[symbol2_ccxt].ask;
+    const price3 = tickers[symbol3_ccxt].bid;
+
+    const initialAmount = 1000; // Monto inicial en USDT para la simulación
+    const amount1 = initialAmount / price1;      // USDT -> Moneda 1
+    const amount2 = amount1 * price2;            // Moneda 1 -> Moneda 2
+    const finalAmount = amount2 * price3;        // Moneda 2 -> USDT
+
+    const profitAmount = finalAmount - initialAmount;
+    const profitPercentage = (profitAmount / initialAmount) * 100;
+
+    const volume1 = tickers[symbol1_ccxt].baseVolume || 0;
+    const volume2 = tickers[symbol2_ccxt].baseVolume || 0;
+    const volume3 = tickers[symbol3_ccxt].baseVolume || 0;
+
+    const avgVolume = (volume1 + volume2 + volume3) / 3;
+    let confidence = Math.min(95, Math.max(50, (avgVolume / 1000000) * 100));
+
+    if (category === "ULTRA_SAFE") confidence = Math.min(98, confidence + 10);
+    if (category === "HIGH_PROFIT" && profitPercentage > 1.5) confidence = Math.max(confidence - 5, 70);
+
+    return {
+      id: `prof_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      route: route,
+      symbols: symbols,
+      description: description,
+      exchange: "Binance",
+      profit: profitPercentage,
+      profitAmount: profitAmount,
+      confidence: Math.round(confidence),
+      amount: initialAmount,
+      priority: priority,
+      category: category,
+      expectedProfit: expectedProfit,
+      prices: {
+        [symbol1]: price1,
+        [symbol2]: price2,
+        [symbol3]: price3,
+      },
+      volumes: {
+        [symbol1]: volume1,
+        [symbol2]: volume2,
+        [symbol3]: volume3,
+      },
+      timestamp: new Date().toLocaleTimeString(),
+      isReal: true,
+      isProfessional: true,
+    }
+  } catch (error) {
+    console.error("[calculateRealArbitrage] Error calculando arbitraje real:", error.message);
+    return null;
   }
+}
 
   async findRealOpportunities() {
     console.log("[findRealOpportunities] Iniciando análisis de rutas profesionales...");
