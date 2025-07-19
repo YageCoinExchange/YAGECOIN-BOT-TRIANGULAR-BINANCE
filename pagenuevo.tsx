@@ -1005,7 +1005,7 @@ useEffect(() => {
       if (socket) socket.disconnect()
     }
   }, [mode, tradingAmount])
-  
+
       case "opportunities":
         return (
           <div className="space-y-6">
