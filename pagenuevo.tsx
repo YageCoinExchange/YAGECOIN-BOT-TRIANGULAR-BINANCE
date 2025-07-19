@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import io from "socket.io-client"
 import { AppSidebar } from "@/components/app-sidebar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -129,6 +130,8 @@ export default function Dashboard() {
   const [usdtBalance, setUsdtBalance] = useState(5000.0) // Balance simulación
   const [editingBalance, setEditingBalance] = useState(false)
   const [newBalance, setNewBalance] = useState("5000")
+
+  
 
   // BALANCES REALES DE BINANCE
   const [binanceBalances, setBinanceBalances] = useState<BinanceBalance[]>([
@@ -943,6 +946,66 @@ useEffect(() => {
           </div>
         )
 
+
+          // 👇 Aquí pega el bloque de socket.io 👇
+  useEffect(() => {
+    let socket: any
+
+    if (mode === "production") {
+      socket = io("http://localhost:3001", { transports: ["websocket"] })
+
+      // Recibe oportunidades rentables
+      socket.on("arbitrage_opportunities", (data: any) => {
+        const filtered = (data.opportunities || []).filter((opp: any) => (opp.profit || 0) > 0.4)
+        setOpportunities(
+          filtered.map((opp: any) => ({
+            ...opp,
+            id: opp.id || opp.description || Math.random().toString(36),
+            grossProfit: opp.profit || 0,
+            netProfit: (opp.profit || 0) - TOTAL_FEES,
+            netProfitWithBNB: (opp.profit || 0) - TOTAL_FEES_WITH_BNB,
+            confidence: opp.confidence || 75,
+            amount: opp.amount || tradingAmount,
+            timestamp: opp.timestamp,
+            category: opp.category,
+            symbols: opp.symbols,
+            prices: opp.prices,
+            description: opp.description,
+            risk: "LOW",
+            fees: TOTAL_FEES,
+            feesWithBNB: TOTAL_FEES_WITH_BNB,
+            estimatedTime: 5,
+          }))
+        )
+        setRealRoutes(data.opportunities || [])
+      })
+
+      // Recibe rutas completas
+      socket.on("arbitrage_opportunities", (data: any) => {
+        setAllRoutes(
+          (data.opportunities || []).map((route: any, idx: number) => ({
+            ...route,
+            id: route.id || (idx + 1).toString(),
+            currentProfit: route.profit || route.currentProfit || 0,
+            lastUpdate: route.timestamp || new Date().toLocaleTimeString(),
+            status: route.status || (route.profit > 0 ? "PROFITABLE" : route.profit < 0 ? "UNPROFITABLE" : "ANALYZING"),
+            description: route.description,
+            symbols: route.symbols,
+            category: route.category,
+            expectedProfit: route.expectedProfit,
+            isActive: route.isActive !== undefined ? route.isActive : true,
+            priority: route.priority || 1,
+          }))
+        )
+      })
+
+    }
+
+    return () => {
+      if (socket) socket.disconnect()
+    }
+  }, [mode, tradingAmount])
+  
       case "opportunities":
         return (
           <div className="space-y-6">
